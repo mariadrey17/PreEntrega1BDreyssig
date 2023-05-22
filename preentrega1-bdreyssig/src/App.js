@@ -11,10 +11,9 @@ import Estrenos from './components/pages/home/Estrenos/Estrenos';
 import Peliculas from './components/pages/Peliculas/peliculas';
 import './App.css'
 import Series from './components/pages/Series/Series';
-import Form from './components/Layouts/Formularios/Formulario';
+
 import IniciarSesion from './components/Layouts/Formularios/IniciarSesion/IniciarSesion';
 
-import Contacto from './components/pages/Contacto/Contacto';
 
 
 
@@ -51,7 +50,7 @@ function App() {
 
 <Series></Series>
 
-<Contacto/>
+
 
 
 
