@@ -1,0 +1,13 @@
+
+ul.lista-peli-estreno {
+    text-decoration: none;
+    text-align: center;
+    color: beige;
+    
+}
+
+div .lista-estrenos {
+    background-image: url(../../../../../Assets/img/fondoHome.jpg);
+    background-size: cover;
+    background-position: center;
+}

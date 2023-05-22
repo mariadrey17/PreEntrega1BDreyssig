@@ -1,0 +1,8 @@
+div .container-home h2 {
+    color: bisque;
+    background-image: url(../../../Assets/img/fondoHome.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
