@@ -3,6 +3,17 @@ margin: 1em;
 padding: 1em;
 float: left;
 align-items: start;
+width: 288px;
+height: 948px;
     
+}
+
+img .card-img-top {
+width:255px ;
+height:359px;
+}
+
+button .btn.btn-primary {
+    margin-bottom: 50px;
 }
 
