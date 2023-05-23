@@ -13,8 +13,7 @@ import './App.css'
 import Series from './components/pages/Series/Series';
 
 import IniciarSesion from './components/Layouts/Formularios/IniciarSesion/IniciarSesion';
-import Footer from './components/pages/Footer';
-
+import Footer  from './components/pages/Footer/Footer';
 
 
 
@@ -51,7 +50,7 @@ function App() {
 
 <Series></Series>
 
-<Footer/>
+<Footer></Footer>
 
 
 
