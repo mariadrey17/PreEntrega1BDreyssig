@@ -7,7 +7,7 @@ const GeneroSeries=()=> {
     
             
         <div><h4>Géneros Series</h4>   
-         
+        
         <ul>
             <li>
             <a  aria-current="page" href="./">Drama</a>

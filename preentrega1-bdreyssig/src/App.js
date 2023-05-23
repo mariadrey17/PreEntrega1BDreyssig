@@ -14,6 +14,7 @@ import Series from './components/pages/Series/Series';
 
 import IniciarSesion from './components/Layouts/Formularios/IniciarSesion/IniciarSesion';
 import Footer  from './components/pages/Footer/Footer';
+import Contacto from './components/pages/Contacto/Contacto';
 
 
 
@@ -26,7 +27,7 @@ function App() {
 
 <NavBar></NavBar>
 
-<Home>
+{/*<Home>
 
 
 
@@ -42,15 +43,17 @@ function App() {
 </>
 
 
-</Home>
+</Home>*/}
 
-<Peliculas>
+{/*<Peliculas>
 
-</Peliculas>
+</Peliculas>*/}
 
 <Series></Series>
 
-<Footer></Footer>
+{/*<Contacto></Contacto>*/}
+
+<Footer/>
 
 
 

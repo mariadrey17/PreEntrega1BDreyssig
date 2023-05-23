@@ -15,7 +15,7 @@ import './CardSeries.css';
 function CardSeries() {
   return (
   
-    <div>
+    <div className='contenedor-card-general'>
           <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src=   {succession} />
       <Card.Body>

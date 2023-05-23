@@ -13,7 +13,7 @@ const Peliculas=()=> {
 
         <div className="container-peliculas">   
             
-        <div><h2>Películas</h2></div>   
+        <div><h2 className="titlefilms">Películas</h2></div>   
         
     
         <GenerosPeliculas></GenerosPeliculas>    

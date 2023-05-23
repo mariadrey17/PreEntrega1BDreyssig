@@ -10,9 +10,9 @@ const Series=()=> {
 
         <div className="container-series">   
             
-        <div><h2>Series</h2></div>   
+        <h2>Series</h2>  
         
-        <div className="contenedor-card-general"><CardSeries></CardSeries></div>
+        <CardSeries></CardSeries>
     
     
     

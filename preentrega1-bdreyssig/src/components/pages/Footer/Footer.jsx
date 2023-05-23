@@ -1,13 +1,15 @@
-import Contacto from '../Contacto/Contacto';
+
+import ContenidoFooter from './ContenidoFooter';
+import  './Footer.css';
 
 
 const Footer=()=> {
 return (
 <div className="contienealfooter">
-<Footer>
-<Contacto/>
 
-</Footer>
+
+
+<ContenidoFooter/>
 
 
 </div>
