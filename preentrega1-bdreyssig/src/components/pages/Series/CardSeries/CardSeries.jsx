@@ -21,9 +21,9 @@ function CardSeries() {
       <Card.Body>
         <Card.Title>Succession temporada 4</Card.Title>
         <Card.Text>
-        Una serie sobre una familia de gran Poder ¿quien se quedarcon waystar?
+        Una serie sobre una familia de gran Poder ¿quien se quedar con waystar?
         </Card.Text>
-        <Button variant="primary">comprar</Button>
+        <Button variant="primary" className='botones-cortos'>comprar</Button>
       </Card.Body>
     </Card>  
 
@@ -39,7 +39,7 @@ function CardSeries() {
         La serie narra su descenso de un equipo complicado pero próspero a clanes salvajes,
         al tiempo que rastrea las vidas que intentaron reconstruir casi 25 años después.
         </Card.Text>
-        <Button variant="primary">comprar</Button>
+        <Button className='botones largos'>comprar</Button>
       </Card.Body>
     </Card>
 

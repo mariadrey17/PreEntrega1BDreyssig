@@ -13,7 +13,11 @@ width:255px ;
 height:359px;
 }
 
-button .btn.btn-primary {
+button .botones-largos.btn.btn.primary {
     margin-bottom: 50px;
+}
+
+.card-text {
+    height: 432px;
 }
 
