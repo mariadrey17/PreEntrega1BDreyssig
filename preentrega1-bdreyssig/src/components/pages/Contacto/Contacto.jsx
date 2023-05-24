@@ -5,6 +5,7 @@ import './Contacto.css';
 const Contacto =()=> {
     return (
     <div className="contenedor-contacto">
+        
 
     <ContactoForm/>
     </div>

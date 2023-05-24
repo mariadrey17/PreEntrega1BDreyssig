@@ -27,7 +27,7 @@ function App() {
 
 <NavBar></NavBar>
 
-{/*<Home>
+<Home>
 
 
 
@@ -43,22 +43,25 @@ function App() {
 </>
 
 
-</Home>*/}
+</Home>
 
-{/*<Peliculas>
+<Peliculas>
 
-</Peliculas>*/}
+</Peliculas>
 
 <Series></Series>
 
-{/*<Contacto></Contacto>*/}
+
+<Contacto/>
+
+
 
 <Footer/>
 
 
 
 </>
-    
+
 
     );
     

@@ -21,9 +21,13 @@ function CardSeries() {
       <Card.Body>
         <Card.Title>Succession temporada 4</Card.Title>
         <Card.Text>
-        Una serie sobre una familia de gran Poder ¿quien se quedar con waystar?
+        Una serie sobre una familia de gran Poder,
+        ya que Logan logró superar una vez más a sus hijos y vender su empresa
+        La cuarta temporada tendrá que lidiar con las consecuencias de todo ello, 
+        siendo especialmente saber cuál será la reacción de Roman y Shiv 
+        tras verse derrotados por completo y sin opciones de suceder a su padre al frente de Waystar.
         </Card.Text>
-        <Button variant="primary" className='botones-cortos'>comprar</Button>
+        <Button variant="primary" >comprar</Button>
       </Card.Body>
     </Card>  
 
@@ -33,13 +37,12 @@ function CardSeries() {
       <Card.Body>
         <Card.Title>Yellow Jackets temporada 2</Card.Title>
         <Card.Text>
-        Esta épica de supervivencia,una historia de terror psicológico y 
-        un drama sobre la mayoría de edad a partes iguales cuenta la saga de un equipo de talentosas jugadoras de fútbol de secundaria 
-        que se convierten en las (desafortunadas) sobrevivientes de un accidente de avión en lo profundo del remoto desierto del norte. 
-        La serie narra su descenso de un equipo complicado pero próspero a clanes salvajes,
-        al tiempo que rastrea las vidas que intentaron reconstruir casi 25 años después.
+      Terror psicológico yun drama sobre la mayoría de edad , un equipo de talentosas jugadoras de fútbol de secundaria 
+      que se convierten en  sobrevivientes de un accidente de avión en lo profundo del remoto desierto del norte. 
+      La serie narra su descenso de un equipo complicado pero próspero a clanes salvajes,
+      al tiempo que rastrea las vidas que intentaron reconstruir casi 25 años después.
         </Card.Text>
-        <Button className='botones largos'>comprar</Button>
+        <Button variant="primary">comprar</Button>
       </Card.Body>
     </Card>
 
