@@ -5,12 +5,14 @@
     import NavDropdown from 'react-bootstrap/NavDropdown';
     import CartWidget from './CartWidget/CartWidget';
     import './nav.css';
+    import logo from '../../Assets/img/logo.jpg';
     
     function NavBar() {
     return (
         <Navbar  expand="lg" className='nav-style' >
         <Container >
             <h1>VisualFilm Shop</h1>
+            <img src={logo} alt="" />
         
             <Navbar.Brand href="#home">Las Mejores Películas y Series </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />

@@ -33,10 +33,10 @@ const ContactoForm = ()=> {
 
         <h5>Users Conectados</h5>
         <div><ListaUsuariosConectados name="Soledad" country="(Colombia)"/></div>
-        <div><ListaUsuariosConectados name="Jose" country="Argentina"/></div>
-        <div><ListaUsuariosConectados name="Octavio" country="Brasil"/></div>
-        <div> <ListaUsuariosConectados name="Sully" country="Colombia"/></div>
-        <div><ListaUsuariosConectados name="Ana" country="España"/></div>
+        <div><ListaUsuariosConectados name="Jose" country="(Argentina)"/></div>
+        <div><ListaUsuariosConectados name="Octavio" country="(Brasil)"/></div>
+        <div> <ListaUsuariosConectados name="Sully" country="(Colombia)"/></div>
+        <div><ListaUsuariosConectados name="Ana" country="(España)"/></div>
 
 
 
