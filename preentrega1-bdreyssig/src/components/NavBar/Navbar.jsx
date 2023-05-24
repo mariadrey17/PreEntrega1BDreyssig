@@ -11,8 +11,8 @@
     return (
         <Navbar  expand="lg" className='nav-style' >
         <Container >
-            <h1>VisualFilm Shop</h1>
-            <img src={logo} alt="" />
+        <img src={logo}  className='logo' alt="" /><h1>VisualFilm Shop</h1>
+    
         
             <Navbar.Brand href="#home">Las Mejores Películas y Series </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
