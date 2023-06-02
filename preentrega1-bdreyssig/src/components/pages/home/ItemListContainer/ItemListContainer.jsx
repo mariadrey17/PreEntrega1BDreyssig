@@ -1,6 +1,6 @@
 import React from "react";
 import ItemCount from "./ItemCount/ItemCount";
-import StockDeFilms from "./StockDeFilms";
+import StockDeFilms from "./StockDeFilms/StockDeFilms";
 
 
 function ItemListContainer (props) {
