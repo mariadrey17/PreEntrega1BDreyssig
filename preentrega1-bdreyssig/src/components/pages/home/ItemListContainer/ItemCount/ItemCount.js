@@ -1,9 +1,9 @@
 //creando estructura del itemcount
 
 import React from "react";
-import "./ItemCount.css";
+//import "./ItemCount.css";
 import {useState} from "react";
-import StockDeFilms from "../StockDeFilms";
+import { StockDeFilms } from "../StockDeFilms/StockDeFilms";
 
 export const ItemCount=({initial,StockDeFilms,onAdd})=>{
     const [count,setCount]=useState(initial);
