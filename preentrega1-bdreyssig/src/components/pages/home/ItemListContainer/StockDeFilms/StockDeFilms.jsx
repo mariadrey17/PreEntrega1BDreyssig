@@ -48,4 +48,4 @@ const StockDeFilms =()=>{
     );
 }
 
-export  {StockDeFilms};
+export default StockDeFilms;

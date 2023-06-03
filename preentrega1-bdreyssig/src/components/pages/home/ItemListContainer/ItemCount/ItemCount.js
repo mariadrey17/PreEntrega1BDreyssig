@@ -3,9 +3,9 @@
 import React from "react";
 //import "./ItemCount.css";
 import {useState} from "react";
-import { StockDeFilms } from "../StockDeFilms/StockDeFilms";
+import StockDeFilms from "../StockDeFilms/StockDeFilms";
 
-export const ItemCount=({initial,StockDeFilms,onAdd})=>{
+export const ItemCount=({initial,stockfilms,onAdd})=>{
     const [count,setCount]=useState(initial);
     const decrease=()=>{
         setCount(count -1);
