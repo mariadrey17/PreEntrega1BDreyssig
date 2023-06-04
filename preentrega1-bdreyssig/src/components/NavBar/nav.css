@@ -13,3 +13,7 @@ color: bisque;
     width:6rem ;
     height: 6rem;
 }
+
+.contador-carrito {
+    text-align: center;
+}

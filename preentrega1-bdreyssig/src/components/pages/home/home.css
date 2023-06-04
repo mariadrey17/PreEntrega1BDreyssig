@@ -6,3 +6,7 @@ div .container-home h2 {
     background-position: center;
     background-attachment: fixed;
 }
+
+div.counter {
+    text-align: center;
+}
