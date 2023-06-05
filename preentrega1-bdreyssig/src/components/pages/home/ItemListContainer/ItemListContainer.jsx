@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ItemCount from "./ItemCount/ItemCount";
 import StockDeFilms from "./StockDeFilms/StockDeFilms";
-import stockfilms from "./ItemCount/StockDeFilms/stockfilms.json";
+import  stockfilms from "./StockDeFilms/stockfilms.json";
 
 
 function ItemListContainer (props) {
