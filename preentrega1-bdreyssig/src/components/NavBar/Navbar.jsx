@@ -31,9 +31,7 @@
             </Nav>
             </Navbar.Collapse>
             <CartWidget></CartWidget>
-            <div className='contador-carrito'>
-            <ItemCount/>
-            </div>
+        
 
 
     

@@ -17,7 +17,7 @@ export const CartWidget =()=>{
         <p>0</p>
     </button>
     
-    <ItemCount initial ={0} StockDeFilms={6} onAdd={onAdd} />
+{/*<ItemCount initial ={0} StockDeFilms={6} onAdd={onAdd} />*/}
 
 
         </div>
