@@ -2,7 +2,7 @@ import { getMovies } from "../api"
 
 
 const Movies=()=>{
-const rtaM= getMovies().then ((data)=>{return data;});
+const rtaM= getMovies().then ((data)=>{data});
 
 return <h1>Movies</h1>
 

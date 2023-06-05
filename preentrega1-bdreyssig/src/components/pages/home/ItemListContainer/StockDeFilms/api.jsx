@@ -19,10 +19,10 @@ const getMovies= {
 	}
 };
 
-try {
+/*try {
 	const response = await fetch(url, getMovies);
 	const result = await response.text();
 	console.log(result);
-} catch (error) {
+} /*catch (error) {
 	console.error(error);
-}
+}*/
