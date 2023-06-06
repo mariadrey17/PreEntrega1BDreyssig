@@ -24,6 +24,7 @@ function ItemListContainer (props) {
         console.log (resultadoSeleccion(valor));
             
 
+
 return (
     <div>
         <h2>Hola {props.text}  </h2>
