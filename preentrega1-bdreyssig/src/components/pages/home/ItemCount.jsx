@@ -2,7 +2,7 @@
 import React from "react";
 import "./ItemCount.css";
 import {useState} from "react";
-//import { StockDeFilms } from "./StockDeFilm";
+import StockDeFilms from "./ItemListContainer/StockDeFilms/StockDeFilms";
 
 
 
@@ -36,7 +36,7 @@ export const ItemCount=({initial,StockDeFilms,onAdd, })=>{
         
 
             <div>
-                <button disabled={StockDeFilms<= 0} onClick={()=>onAdd(counter)}/* disabled={!StockDeFilms} */>Agregar carrito </button>
+                <button disabled={StockDeFilms<= 0} onClick={()=>onAdd(counter)}>Agregar carrito </button>
             </div>
 
 
