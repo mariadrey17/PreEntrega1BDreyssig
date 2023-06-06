@@ -4,7 +4,7 @@ import Estrenos from "./Estrenos/Estrenos";
 
 import Form from "../../Layouts/Formularios/Formulario";
 import ItemListContainer from "./ItemListContainer/ItemListContainer";
-import { Movies } from "./ItemListContainer/StockDeFilms/movies";
+
 
 const Home=()=> {
 
@@ -17,10 +17,7 @@ const Home=()=> {
         <ItemListContainer text ="Bienvenidos"/>
         </div>
 
-        <div>
-
-        <Movies/>
-        </div>
+    
         <div>
         <Form></Form>
         </div>

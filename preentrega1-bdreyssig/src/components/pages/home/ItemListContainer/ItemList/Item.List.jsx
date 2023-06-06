@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ItemCount from "./ItemCount/ItemCount";
+import ItemCount from "../../ItemCount";
 import { StockDeFilms } from "./ItemCount/StockDeFilm";
 import stockfilms from "./ItemCount/StockDeFilms/stockfilms.json";
 
