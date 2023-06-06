@@ -1,4 +1,5 @@
 import React from 'react';
+import {BrowserRouter,Route,Routes} from "react-router-dom";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar/Navbar';
@@ -22,7 +23,36 @@ import Contacto from './components/pages/Contacto/Contacto';
 
 function App() {
     return (
-<>
+
+<BrowserRouter>
+<Routes>
+
+<Route path="/" element={<NavBar/>}/>
+<Route path="/home/estrenos/estrenos" element={<Home><h1>Estrenos</h1></Home>}/>
+<Route path="/peliculas"element={<Peliculas><h1>esto es peliculs</h1> </Peliculas>} />
+<Route  path="/series" element= {<Series/>} />
+<Route  path="/contacto" element= {<Contacto/>} />
+<Route  path="/series" element= {<Footer/>} />
+
+
+
+
+
+
+
+
+
+</Routes>
+
+
+
+
+
+
+</BrowserRouter>
+
+
+/*<>
 
 
 <NavBar></NavBar>
@@ -60,7 +90,7 @@ function App() {
 
 
 
-</>
+</>*/
 
 
     );
