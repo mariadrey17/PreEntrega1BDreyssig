@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter,Route,Routes} from "react-router-dom";
+import {BrowserRouter,Route,Routes, NavLink,Link,} from "react-router-dom";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar/Navbar';
@@ -16,6 +16,8 @@ import Series from './components/pages/Series/Series';
 import IniciarSesion from './components/Layouts/Formularios/IniciarSesion/IniciarSesion';
 import Footer  from './components/pages/Footer/Footer';
 import Contacto from './components/pages/Contacto/Contacto';
+import ItemListContainer from './components/pages/home/ItemListContainer/ItemListContainer';
+
 
 
 
@@ -25,11 +27,15 @@ function App() {
     return (
 
 <BrowserRouter>
+<NavBar/>
+{/*<Home/>*/}
+
+
 <Routes>
 
-<Route path="/" element={<NavBar/>}/>
-<Route path="/home/estrenos/estrenos" element={<Home><h1>Estrenos</h1></Home>}/>
-<Route path="/peliculas"element={<Peliculas><h1>esto es peliculs</h1> </Peliculas>} />
+<Route path="/" element={<Home/>}/>
+<Route path="/" element={<ItemListContainer/>}/>
+<Route path="/peliculas"element={<Peliculas/>} />
 <Route  path="/series" element= {<Series/>} />
 <Route  path="/contacto" element= {<Contacto/>} />
 <Route  path="/series" element= {<Footer/>} />

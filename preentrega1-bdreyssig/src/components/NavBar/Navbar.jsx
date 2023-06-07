@@ -7,6 +7,7 @@
     import './nav.css';
     import logo from '../../Assets/img/logo.jpg';
     import ItemCount from '../pages/home/ItemCount';
+    import {NavLink} from 'react-router-dom';
 
     
     function NavBar() {
@@ -20,12 +21,12 @@
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-                <Nav.Link href="#home">Home</Nav.Link>
-                <Nav.Link href="#link">Peliculas</Nav.Link>
+                <Nav.Link to ="#home">Home</Nav.Link>
+                <Nav.Link to="#link">Peliculas</Nav.Link>
                 <NavDropdown title="Catálogo" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Series</NavDropdown.Item>
+                <NavDropdown.Item to="#action/3.1">Series</NavDropdown.Item>
                 
-                <NavDropdown.Item href="#action/3.3">Contacto</NavDropdown.Item>
+                <NavDropdown.Item to ="#action/3.3">Contacto</NavDropdown.Item>
                 
                 </NavDropdown>
             </Nav>
