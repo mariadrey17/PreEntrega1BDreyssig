@@ -19,6 +19,9 @@ import Contacto from './components/pages/Contacto/Contacto';
 import ItemListContainer from './components/pages/home/ItemListContainer/ItemListContainer';
 import CardSeries from './components/pages/Series/CardSeries/CardSeries';
 import StockDeFilms from './components/pages/home/ItemListContainer/StockDeFilms/StockDeFilms';
+import ItemList from './components/pages/home/ItemListContainer/ItemList/Item.List';
+import ItemDetail from './components/pages/home/ItemDetailContainer/ItemDetail/ItemDetail';
+import stockfilms from '../src/components/pages/home/ItemListContainer/StockDeFilms/stockfilms.json';
 
 
 
@@ -37,10 +40,11 @@ function App() {
 <Routes>
 
 <Route path="/" element={<Home/>}/>
-<Route path="/home/:id4"element={<ItemListContainer/>} />
+{/*<Route path="/home/:id4"element={<ItemListContainer/>} />*/}
 <Route path="/" element={<ItemListContainer/>}/>
 <Route path="/peliculas"element={<Peliculas/>} />
-
+<Route exact path ="/"element={<ItemList/>} />
+<Route path="/stockfims/:id" component={<ItemDetail/>} />
 <Route  path="/series" element= {<Series/>} />
 <Route  path="/contacto" element= {<Contacto/>} />
 <Route  path="/footer" element= {<Footer/>} />

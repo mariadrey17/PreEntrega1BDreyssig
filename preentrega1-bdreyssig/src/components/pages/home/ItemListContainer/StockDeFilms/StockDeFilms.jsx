@@ -1,6 +1,6 @@
 const StockDeFilms= ()=> {
     return (
-
+    
         //array de stock de films 
         [
             {
