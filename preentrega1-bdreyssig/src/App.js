@@ -17,6 +17,8 @@ import IniciarSesion from './components/Layouts/Formularios/IniciarSesion/Inicia
 import Footer  from './components/pages/Footer/Footer';
 import Contacto from './components/pages/Contacto/Contacto';
 import ItemListContainer from './components/pages/home/ItemListContainer/ItemListContainer';
+import CardSeries from './components/pages/Series/CardSeries/CardSeries';
+import StockDeFilms from './components/pages/home/ItemListContainer/StockDeFilms/StockDeFilms';
 
 
 
@@ -35,8 +37,10 @@ function App() {
 <Routes>
 
 <Route path="/" element={<Home/>}/>
+<Route path="/home/:id4"element={<ItemListContainer/>} />
 <Route path="/" element={<ItemListContainer/>}/>
-<Route path="series/peliculas"element={<Peliculas/>} />
+<Route path="/peliculas"element={<Peliculas/>} />
+
 <Route  path="/series" element= {<Series/>} />
 <Route  path="/contacto" element= {<Contacto/>} />
 <Route  path="/footer" element= {<Footer/>} />

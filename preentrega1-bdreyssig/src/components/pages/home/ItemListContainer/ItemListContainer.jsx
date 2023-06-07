@@ -43,6 +43,7 @@ stockfilms.map ((film,prod)=>  {
         <p>{film.nombre}</p>
         <p>{film.genero}</p>
         <p>{film.precio}</p>
+        <p>{film.image}</p>
     </div>
 
 

@@ -18,7 +18,7 @@ const Peliculas=()=> {
     
         <GenerosPeliculas></GenerosPeliculas>    
 
-    
+        
         
         
         
