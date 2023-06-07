@@ -36,7 +36,7 @@ function App() {
 
 <Route path="/" element={<Home/>}/>
 <Route path="/" element={<ItemListContainer/>}/>
-<Route path="//peliculas"element={<Peliculas/>} />
+<Route path="series/peliculas"element={<Peliculas/>} />
 <Route  path="/series" element= {<Series/>} />
 <Route  path="/contacto" element= {<Contacto/>} />
 <Route  path="/footer" element= {<Footer/>} />

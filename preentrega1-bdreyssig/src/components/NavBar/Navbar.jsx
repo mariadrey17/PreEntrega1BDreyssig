@@ -21,7 +21,7 @@
 
             <ul className='navstyle'>
             <li>
-                <NavLink to= "/peliculas">Películas</NavLink>
+                <NavLink to= "/peliculas">Películas y Series</NavLink>
     
                 </li>
             <li> <NavLink to= "/series">Series</NavLink></li>
