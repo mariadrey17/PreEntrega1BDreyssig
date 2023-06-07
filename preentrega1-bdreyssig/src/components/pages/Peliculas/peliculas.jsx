@@ -1,4 +1,4 @@
-import {} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import "./peliculas.css";
 
 import GenerosPeliculas from "./GenerosPelisculas/GenerosPeliculas";

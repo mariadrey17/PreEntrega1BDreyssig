@@ -28,17 +28,18 @@ function App() {
 
 <BrowserRouter>
 <NavBar/>
-{/*<Home/>*/}
+<Footer/>
+
 
 
 <Routes>
 
 <Route path="/" element={<Home/>}/>
 <Route path="/" element={<ItemListContainer/>}/>
-<Route path="/peliculas"element={<Peliculas/>} />
+<Route path="//peliculas"element={<Peliculas/>} />
 <Route  path="/series" element= {<Series/>} />
 <Route  path="/contacto" element= {<Contacto/>} />
-<Route  path="/series" element= {<Footer/>} />
+<Route  path="/footer" element= {<Footer/>} />
 
 
 
