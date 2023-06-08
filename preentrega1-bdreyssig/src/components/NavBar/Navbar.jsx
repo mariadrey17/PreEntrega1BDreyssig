@@ -31,7 +31,7 @@
             </Navbar.Collapse>
             <CartWidget></CartWidget>
 
-            <ItemCount/>
+            
         </Container>
         </Navbar>
     );
