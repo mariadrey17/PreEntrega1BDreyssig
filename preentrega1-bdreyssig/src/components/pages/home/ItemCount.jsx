@@ -2,13 +2,13 @@
 import React from "react";
 import "./ItemCount.css";
 import {useState} from "react";
-import StockDeFilms from "./ItemListContainer/StockDeFilms/StockDeFilms";
+import StockDeRecomendados from "../../DataPeliSerie/StockDeRecomendados";
 
 
 
 
 
-export const ItemCount=({initial,StockDeFilms,onAdd, })=>{
+export const ItemCount=({initial,StockDeRecomendados,onAdd, })=>{
     const [counter,setCount]=useState(initial);
     const decrease=()=>{
         setCount(counter -1);
@@ -32,11 +32,11 @@ export const ItemCount=({initial,StockDeFilms,onAdd, })=>{
         </button>
 
 
-            <button disabled={counter>=StockDeFilms} onClick={increase}>+</button>
+            <button disabled={counter>=StockDeRecomendados} onClick={increase}>+</button>
         
 
             <div>
-                <button disabled={StockDeFilms<= 0} onClick={()=>onAdd(counter)}>Agregar carrito </button>
+                <button disabled={StockDeRecomendados<= 0} onClick={()=>onAdd(counter)}>Agregar carrito </button>
             </div>
 
 

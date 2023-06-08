@@ -1,4 +1,4 @@
-const StockDeFilms= ()=> {
+export const StockDeRecomendados= ()=> {
     return (
     
         //array de stock de films 
@@ -54,6 +54,6 @@ const StockDeFilms= ()=> {
                 },
         ]
     );
-}
+} 
 
-export default StockDeFilms;
+export default StockDeRecomendados;

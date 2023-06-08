@@ -3,7 +3,7 @@
 import React from "react";
 //import "./ItemCount.css";
 import {useState} from "react";
-import StockDeFilms from "./ItemListContainer/StockDeFilms/StockDeFilms";
+import StockDeRecomendados from "../../DataPeliSerie/StockDeRecomendados";
 
 export const ItemCount=({initial,StockDeFilms,onAdd})=>{
     const [count,setCount]=useState(initial);
