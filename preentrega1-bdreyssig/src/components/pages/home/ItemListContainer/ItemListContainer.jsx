@@ -30,7 +30,6 @@ return (
 
 
     <ItemCount initial ={0} stockrecomendados={6} onAdd={(counter=> console.log('cantidad agregada',counter))}/>
-    
     <div>
         
         {
