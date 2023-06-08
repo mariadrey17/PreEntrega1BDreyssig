@@ -1,6 +1,7 @@
 //import React, { useEffect, useState } from "react";
 import ItemCount from "../ItemCount";
 import stockrecomendados from "../StockDeRecomendados/stockrecomendados";
+import { useState,useEffect } from "react";
 
 
 function ItemListContainer (props) {
@@ -21,7 +22,18 @@ function ItemListContainer (props) {
         
         const valor= true;
         console.log (resultadoSeleccion(valor));
-            
+    
+        
+        const [data,setData]=useState([]);
+        useEffect(()=>{
+            const getDataFilms=new Promise(resolve=>{
+                setTimeout(()=>{
+                resolve (stockfilms);
+                },2000);
+            });
+            getDataFilms.then(res=>setData (res));
+
+        })      
 
 
 return (
