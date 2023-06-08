@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+//import React, { useEffect, useState } from "react";
 import ItemCount from "../ItemCount";
-import StockDeRecomendados from "../../../DataPeliSerie/StockDeRecomendados";
-
+import stockrecomendados from "../StockDeRecomendados/stockrecomendados";
 
 
 function ItemListContainer (props) {
@@ -30,12 +29,12 @@ return (
         <h2>Hola {props.text}  </h2>
 
 
-    <ItemCount initial ={0} StockDeRecomendados={6} onAdd={(counter=> console.log('cantidad agregada',counter))}/>
+    <ItemCount initial ={0} stockrecomendados={6} onAdd={(counter=> console.log('cantidad agregada',counter))}/>
     
     <div>
         
         {
-StockDeRecomendados.map ((film,prod)=>  {
+stockrecomendados.map ((film,prod)=>  {
         
         return (
     <div key={prod}>
@@ -43,7 +42,8 @@ StockDeRecomendados.map ((film,prod)=>  {
         <p>{film.nombre}</p>
         <p>{film.genero}</p>
         <p>{film.precio}</p>
-        <p>{film.image}</p>
+        {/*<img>{film.image}</p>*/}
+        <img src={film.image} alt="" />
     </div>
 
 
@@ -51,7 +51,7 @@ StockDeRecomendados.map ((film,prod)=>  {
 
         )
         },
-        console.log (StockDeRecomendados)
+        console.log (stockrecomendados)
         )
         }
 

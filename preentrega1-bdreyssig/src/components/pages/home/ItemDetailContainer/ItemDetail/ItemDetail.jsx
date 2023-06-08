@@ -1,10 +1,10 @@
 import { useParams } from 'react-router-dom';
-import StockDeRecomendados from '../../../../DataPeliSerie/StockDeRecomendados';
+import stockrecomendados from "../../StockDeRecomendados/stockrecomendados";
 
 
 function ItemDetail() {
 const { id } = useParams();
-const stockfilms= StockDeRecomendados.filter(stockfilms => stockfilms.id === id);
+const stockfilms= stockrecomendados.filter(stockfilms => stockfilms.id === id);
 console.log(stockfilms);  
 return (
 <div>

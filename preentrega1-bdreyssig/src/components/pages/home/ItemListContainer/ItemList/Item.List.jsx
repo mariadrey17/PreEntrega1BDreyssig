@@ -1,8 +1,13 @@
-import React, { useEffect, useState } from "react";
-import StockDeRecomendados from "../../../../DataPeliSerie/StockDeRecomendados";
-import { Link } from "react-router-dom";
+//import React, { useEffect, useState } from "react"
+//import StockDeRecomendados from "../../StockDeRecomendados/StockDeRecomendados"
+//import { Link } from "react-router-dom";
 
-function ItemList () {
+
+
+
+
+
+/*function ItemList () {
 
 
 
@@ -16,13 +21,13 @@ return (
         <Link to={`/stockfilms/${stockfilms.id}`}>{stockfilms.nombre}</Link>
         </li>
         ))}
-    </ul>*/}
-    </div>
-);
+    </ul>*/
+    //</div>
+//);
     
 //console.log(stockfilms);  
 
 
-}
+//}
 
-export default ItemList;
+//export default ItemList;
