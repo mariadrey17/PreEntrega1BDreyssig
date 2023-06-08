@@ -1,6 +1,6 @@
 //import React, { useEffect, useState } from "react";
-import ItemCount from "../ItemCount";
-import stockrecomendados from "../StockDeRecomendados/stockrecomendados";
+import ItemCount from "../ItemDetailContainer/ItemCount/ItemCount";
+import stockrecomendados from "../StockRecomendados/stockrecomendados";
 
 
 function ItemListContainer (props) {
