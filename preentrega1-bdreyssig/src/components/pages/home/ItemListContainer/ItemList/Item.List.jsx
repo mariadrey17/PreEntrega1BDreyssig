@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function ItemList () {
 
-            
+
 
 return (
 
@@ -20,7 +20,7 @@ return (
     </div>
 );
     
-
+console.log(stockfilms);  
 
 
 }

@@ -40,7 +40,7 @@ function App() {
 <Routes>
 
 <Route path="/" element={<Home/>}/>
-{/*<Route path="/home/:id4"element={<ItemListContainer/>} />*/}
+<Route path="/home/:id4"element={<ItemListContainer/>} />
 <Route path="/" element={<ItemListContainer/>}/>
 <Route path="/peliculas"element={<Peliculas/>} />
 <Route exact path ="/"element={<ItemList/>} />

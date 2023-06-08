@@ -5,7 +5,7 @@ import {stockfilms} from '../../ItemListContainer/StockDeFilms/stockfilms.json';
 function ItemDetail() {
 const { id } = useParams();
 const stockfilms= stockfilms.filter(stockfilms => stockfilms.id === id);
-
+console.log(stockfilms);  
 return (
 <div>
     <h1>Detalles de la película</h1>
