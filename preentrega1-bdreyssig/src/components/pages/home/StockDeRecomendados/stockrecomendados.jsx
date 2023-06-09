@@ -2,7 +2,7 @@ const StockDeRecomendados=
         //array de stock de films 
         [
             {
-                id:"01",
+                id:"1",
                 nombre:"Start strek ,contacto",
                 genero:"ciencia ficcion",
                 precio:"$800",
@@ -10,7 +10,7 @@ const StockDeRecomendados=
                 },
             
                 {
-                    id:"02",
+                    id:"2",
                 nombre:"Lo que hacemos en las sombras ",
                     genero:"comedia",
                     precio:"$800",
@@ -18,7 +18,7 @@ const StockDeRecomendados=
                 },
             
                 {
-                    id:"03",
+                    id:"3",
                     nombre:"El padrino 3",
                     genero:"drama",
                     precio:"$950",
@@ -27,7 +27,7 @@ const StockDeRecomendados=
                 },
             
                 {
-                    id:"04",
+                    id:"4",
                     nombre:" Aquaman 2",
                     genero:"ciencia ficcion, aventura",
                     precio:"$2000",
@@ -35,7 +35,7 @@ const StockDeRecomendados=
                 },
             
                 {
-                    id:"05",
+                    id:"5",
                     nombre:"fenómenas",
                     genero:"comedia , terror",
                     precio:"$2800",

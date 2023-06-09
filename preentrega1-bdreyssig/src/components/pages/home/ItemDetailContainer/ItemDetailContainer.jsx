@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getProductFilm } from "../../Comp2/async";
+import { getProductFilm } from "../async";
 
 import ItemDetail from "./ItemDetail/ItemDetail";
 import stockrecomendados  from "../StockDeRecomendados/stockrecomendados";
@@ -9,7 +9,7 @@ const ItemDetailContainer =()=>{
 const [stockrecomendados,setStockrecomendados]=useState(null)
 
 useEffect(()=>{
-    getProductFilm ('04')
+    getProductFilm ('4')
     .then((response)=>{
         setStockrecomendados(response)
     })

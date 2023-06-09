@@ -49,12 +49,12 @@ function App() {
 <Route path="/peliculas"element={<Peliculas/>} />
 <Route exact path ="/itemlistcontainer/itemlist"element={<ItemList/>} />
 
-
 <Route  path="/series" element= {<Series/>} />
 <Route  path="/contacto" element= {<Contacto/>} />
 <Route  path="/footer" element= {<Footer/>} />
 
-<Route exact path ="/itemlistcontainer/:id04"element={<ItemDetailContainer/>} />
+<Route exact path ="/itemdetailcontainer"element={<ItemDetailContainer/>} />
+<Route exact path ="/itemdetailcontainer/itemdetail/:id4"element={<ItemDetail/>} />
 
 
 

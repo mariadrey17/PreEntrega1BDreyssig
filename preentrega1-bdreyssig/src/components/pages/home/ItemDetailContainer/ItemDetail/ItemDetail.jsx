@@ -3,14 +3,21 @@ import stockrecomendados from "../../StockDeRecomendados/stockrecomendados";
 import Card from 'react-bootstrap/Card';
 
 function ItemDetail() {
-/*const { id } = useParams();
-const stockfilms= stockrecomendados.filter(stockfilms => stockrecomendados.id === id);
-console.log(stockfilms);  */
+
+    const params=useParams()
+const { id } = useParams();
+const stockfilms= stockrecomendados.filter(stockrecomendados=> stockrecomendados.id===4);
+console.log(stockfilms);  
 return (
 <div>
 
-    <h1>Detalles de la película</h1>
-    {stockrecomendados.filter(stockrecomendados=>stockrecomendados.id===4).map ((film,prod)=>  {
+    <h1>Detalles de la película </h1>
+    <p>pelicula con ID {params.id4} </p>
+
+
+
+
+    {stockrecomendados.map ((film,prod)=>  {
         
         return (
     <div className="divCardMap"   key={prod} >
