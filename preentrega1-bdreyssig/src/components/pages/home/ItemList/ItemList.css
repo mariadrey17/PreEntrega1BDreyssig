@@ -3,19 +3,22 @@ div.divCardMap{margin: 1em;
     float: left;
     align-items: start;
     width: 288px;
-    height: 960px;
+    height: 971px;
         
+    }
+    div.card {
+        height : 625px;
     }
     
     .card-img, .card-img-top {
     width:255px ;
-    height:359px;
+    height:303px;
     }
     
     div.card-body {
-        height: 557px;
+        height: 622px;
     }
     
     .card-text {
-        height: 432px;
+        height: 48px;
     }
