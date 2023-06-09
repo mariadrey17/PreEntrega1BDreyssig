@@ -44,10 +44,10 @@ const StockRecomendados=
             
                 {
                     id:"06",
-                nombre:"Start strek ,contacto",
-                genero:"ciencia ficcion",
+                nombre:"Sky Rojo , Serie",
+                genero:"Acción , Drama",
                 precio:"$2000",
-                image:"https://es.web.img2.acsta.net/c_310_420/medias/nmedia/18/79/66/86/20136104.jpg",
+                image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd8qGdN98e6P7-THMljBrUK4baXaPC2WgcgA&usqp=CAU",
                 
                 },
         ]

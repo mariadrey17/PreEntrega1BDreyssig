@@ -25,7 +25,7 @@ function App() {
 <>
 
 
-<NavBar></NavBar>
+{/*<NavBar></NavBar>
 
 <Home>
 
@@ -56,7 +56,7 @@ function App() {
 
 
 
-<Footer/>
+<Footer/>*/}
 
 
 
