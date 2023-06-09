@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getProductFilm } from "../../Comp2/async";
-import { StockDeFilms } from "../StockDeFilms";
+
 import ItemDetail from "./ItemDetail/ItemDetail";
 import stockrecomendados  from "../StockDeRecomendados/stockrecomendados";
 

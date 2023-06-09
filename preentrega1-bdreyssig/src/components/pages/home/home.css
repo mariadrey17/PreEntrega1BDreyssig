@@ -10,3 +10,13 @@ div .container-home h2 {
 div.counter {
     text-align: center;
 }
+
+.homeText{
+    font-size: 2rem;
+    color: rgb(132, 113, 143);
+}
+
+.linkHome{
+    font-size: 2rem;
+    color: rgb(45, 14, 248);
+}

@@ -20,7 +20,7 @@ const Peliculas=()=> {
 
         
         
-        <p>Acá vas a encontrar las mejores peliculas para ver te recomendamos el top recomendado en stock Ir a top recomendado</p>
+        <p className="peliText">Acá vas a encontrar las mejores peliculas para ver te recomendamos el top recomendado en stock </p><Link to ="/" className="linkRecomendados">Ir a recomendados</Link>
         
         
         

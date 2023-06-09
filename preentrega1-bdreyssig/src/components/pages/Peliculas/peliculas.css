@@ -5,3 +5,11 @@ div .container-peliculas {
 .titlefilms {
     color:blueviolet
 }
+.peliText {
+    font-size: 2rem;
+}
+.linkRecomendados {
+    font-size: 2rem;
+    color: rgb(45, 14, 248);
+
+}

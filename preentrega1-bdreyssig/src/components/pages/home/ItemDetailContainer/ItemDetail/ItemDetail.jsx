@@ -17,7 +17,7 @@ return (
 
 
 
-<Card style={{ width: '18rem' }}>
+<Card style={{ width: '10rem' }}>
 <Card.Img variant="top" src=  {film.image} />
 <Card.Body>
 <Card.Text>{film.id}</Card.Text>

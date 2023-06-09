@@ -7,15 +7,19 @@ height: 960px;
     
 }
 
+div.LaCard.card{
+    height: 615px;
+}
+
 .card-img, .card-img-top {
 width:255px ;
-height:359px;
+height:248px;
 }
 
 div.card-body {
-    height: 557px;
+    height: 440px;
 }
 
-.card-text {
-    height: 432px;
+p.card-text {
+    height: 60px;
 }

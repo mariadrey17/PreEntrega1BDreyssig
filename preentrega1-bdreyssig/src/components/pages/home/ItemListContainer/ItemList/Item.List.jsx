@@ -23,7 +23,7 @@ const ItemList =({data=[]})=>{
 
 
 
-<Card style={{ width: '18rem' }}>
+<Card  className="LaCard" style={{ width: '18rem' }}>
 <Card.Img variant="top" src=  {film.image} />
 <Card.Body>
 <Card.Text>{film.id}</Card.Text>

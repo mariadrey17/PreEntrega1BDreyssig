@@ -1,4 +1,4 @@
-import Link from "react-router-dom";
+import {Link} from "react-router-dom";
 import Estrenos from "./Estrenos/Estrenos";
 
 
@@ -17,22 +17,29 @@ const Home=()=> {
         <ItemListContainer text ="Bienvenidos"/>
         </div>
 
-    
-        
-        <Form></Form>
-        
+        <div>
+        <Form/>
 
+        </div>
 
-
-        <div><h2>Estrenos</h2></div>   
+        <div><h2>Estrenos</h2>  
         
         <Estrenos></Estrenos>
         
-        
+        </div>
+
+
+        <div>
+            <p className="homeText ">Queres comunicarte con nosotros: <Link  to="/contacto"  className="linkHome">Ir a contacto</Link>click acá</p> 
+        </div>
         
         
 
         </div>
+
+
+
+
         
     
 

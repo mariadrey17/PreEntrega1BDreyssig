@@ -23,6 +23,7 @@ import ItemList from './components/pages/home/ItemListContainer/ItemList/Item.Li
 import ItemDetail from './components/pages/home/ItemDetailContainer/ItemDetail/ItemDetail';
 
 import stockderecomendados from "../src/components/pages/home/StockDeRecomendados/stockrecomendados"
+import ItemDetailContainer from './components/pages/home/ItemDetailContainer/ItemDetailContainer';
 
 
 
@@ -41,18 +42,19 @@ function App() {
 <Routes>
 
 <Route path="/" element={<Home/>}/>
-<Route exact path='/home/estrenos' element ={<Home/>}/>
 
 
-{/*<Route path="/itemlistcontainer" element={<ItemListContainer/>}/>*/}
+
+<Route path="/itemlistcontainer" element={<ItemListContainer/>}/>
 <Route path="/peliculas"element={<Peliculas/>} />
-<Route exact path ="/"element={<ItemList/>} />
-{/*<Route exact path ="/stockrecomendados"element={< stockrecomendados/>} />*/}
+<Route exact path ="/itemlistcontainer/itemlist"element={<ItemList/>} />
+
+
 <Route  path="/series" element= {<Series/>} />
 <Route  path="/contacto" element= {<Contacto/>} />
 <Route  path="/footer" element= {<Footer/>} />
 
-
+<Route exact path ="/itemlistcontainer/:id04"element={<ItemDetailContainer/>} />
 
 
 
