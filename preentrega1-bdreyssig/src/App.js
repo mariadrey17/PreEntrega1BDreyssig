@@ -21,7 +21,8 @@ import CardSeries from './components/pages/Series/CardSeries/CardSeries';
 
 import ItemList from './components/pages/home/ItemListContainer/ItemList/Item.List';
 import ItemDetail from './components/pages/home/ItemDetailContainer/ItemDetail/ItemDetail';
-//import stockderecomendados from "./components/pages/home/StockDeRecomendados/stockderecomendados"
+
+import stockderecomendados from "../src/components/pages/home/StockDeRecomendados/stockrecomendados"
 
 
 
@@ -40,12 +41,13 @@ function App() {
 <Routes>
 
 <Route path="/" element={<Home/>}/>
-<Route path="/home/id:4" element={<Home/>}/>
 
-<Route path="/" element={<ItemListContainer/>}/>
+
+
+{/*<Route path="/itemlistcontainer" element={<ItemListContainer/>}/>*/}
 <Route path="/peliculas"element={<Peliculas/>} />
 <Route exact path ="/"element={<ItemList/>} />
-
+{/*<Route exact path ="/stockrecomendados"element={< stockrecomendados/>} />*/}
 <Route  path="/series" element= {<Series/>} />
 <Route  path="/contacto" element= {<Contacto/>} />
 <Route  path="/footer" element= {<Footer/>} />

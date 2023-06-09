@@ -1,4 +1,4 @@
-import {NavLink} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 import "./peliculas.css";
 
 import GenerosPeliculas from "./GenerosPelisculas/GenerosPeliculas";
@@ -20,7 +20,7 @@ const Peliculas=()=> {
 
         
         
-        
+        <p>Acá vas a encontrar las mejores peliculas para ver te recomendamos el top recomendado en stock Ir a top recomendado</p>
         
         
         
