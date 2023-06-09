@@ -15,17 +15,52 @@ import {BrowserRouter,Route,Routes,NavLink,Link} from "react-router-dom";
 import IniciarSesion from './components/Layouts/Formularios/IniciarSesion/IniciarSesion';
 import Footer  from './components/pages/Footer/Footer';
 import Contacto from './components/pages/Contacto/Contacto';
-
+import ItemListContainer from './components/pages/home/ItemListContainer/ItemListContainer';
+import ItemList from './components/pages/home/ItemListContainer/ItemList/Item.List';
 
 
 
 
 function App() {
     return (
-<>
+
+<BrowserRouter>
+<NavBar/>
+<Footer/>
 
 
-{/*<NavBar></NavBar>
+
+<Routes>
+
+<Route path="/" element={<Home/>}/>
+<Route path="/home/id:4" element={<Home/>}/>
+
+<Route path="/" element={<ItemListContainer/>}/>
+<Route path="/peliculas"element={<Peliculas/>} />
+<Route exact path ="/"element={<ItemList/>} />
+
+<Route  path="/series" element= {<Series/>} />
+<Route  path="/contacto" element= {<Contacto/>} />
+<Route  path="/footer" element= {<Footer/>} />
+
+
+
+
+
+
+
+
+
+</Routes>
+
+
+
+
+
+
+</BrowserRouter>
+
+/*<NavBar></NavBar>
 
 <Home>
 
@@ -56,11 +91,11 @@ function App() {
 
 
 
-<Footer/>*/}
+<Footer/>*/
 
 
 
-</>
+
 
 
     );
