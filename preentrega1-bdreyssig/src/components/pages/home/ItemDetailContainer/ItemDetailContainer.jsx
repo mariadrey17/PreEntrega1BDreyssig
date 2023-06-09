@@ -2,15 +2,16 @@ import { useEffect, useState } from "react";
 import { getProductFilm } from "../../Comp2/async";
 import { StockDeFilms } from "../StockDeFilms";
 import ItemDetail from "./ItemDetail/ItemDetail";
+import stockrecomendados  from "../StockDeRecomendados/stockrecomendados";
 
 
 const ItemDetailContainer =()=>{
-const [StockDeFilms,setStockDeFilms]=useState(null)
+const [stockrecomendados,setStockrecomendados]=useState(null)
 
 useEffect(()=>{
-    getProductFilm ('01')
+    getProductFilm ('04')
     .then((response)=>{
-        setStockDeFilms(response)
+        setStockrecomendados(response)
     })
 
 .catch(error=>{
@@ -22,7 +23,7 @@ useEffect(()=>{
 
 return (
 <div className="ItemDetailContainer">
-<ItemDetail {...StockDeFilms}/>
+<ItemDetail {...stockrecomendados}/>
 </div>
 );
 }

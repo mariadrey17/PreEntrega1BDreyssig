@@ -26,6 +26,7 @@ function CardSeries() {
         La cuarta temporada tendrá que lidiar con las consecuencias de todo ello, 
         siendo especialmente saber cuál será la reacción de Roman y Shiv 
         tras verse derrotados por completo y sin opciones de suceder a su padre al frente de Waystar.
+        $2400
         </Card.Text>
         <Button variant="primary" >comprar</Button>
       </Card.Body>
