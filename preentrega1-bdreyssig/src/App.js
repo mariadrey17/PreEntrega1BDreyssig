@@ -41,7 +41,7 @@ function App() {
 <Routes>
 
 <Route path="/" element={<Home/>}/>
-
+<Route exact path='/home/estrenos' element ={<Home/>}/>
 
 
 {/*<Route path="/itemlistcontainer" element={<ItemListContainer/>}/>*/}

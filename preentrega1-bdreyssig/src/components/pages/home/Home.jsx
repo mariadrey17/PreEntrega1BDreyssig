@@ -18,9 +18,9 @@ const Home=()=> {
         </div>
 
     
-        <div>
+        
         <Form></Form>
-        </div>
+        
 
 
 
