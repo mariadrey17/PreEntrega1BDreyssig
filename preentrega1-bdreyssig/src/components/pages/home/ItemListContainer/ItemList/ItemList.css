@@ -1,0 +1,33 @@
+
+div.card {
+    margin: 1em;
+    padding: 1em;
+    float: left;
+    align-items: start;
+    width: 288px;
+    height: 960px;
+        
+    }
+    
+    .card-img, .card-img-top {
+    width:255px ;
+    height:359px;
+    }
+    
+    div.card-body {
+        height: 557px;
+    }
+    
+    .card-text {
+        height: 432px;
+    }
+
+    div.cardDivMap{
+        margin: 1em;
+        padding: 1em;
+        float: left;
+        align-items: start;
+        width: 288px;
+        height: 960px;
+            
+    }

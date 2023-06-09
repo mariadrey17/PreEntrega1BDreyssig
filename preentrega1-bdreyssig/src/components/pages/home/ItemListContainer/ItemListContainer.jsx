@@ -28,7 +28,7 @@ function ItemListContainer (props) {
         useEffect(()=>{
             const getDataFilms=new Promise(resolve=>{
                 setTimeout(()=>{
-                resolve (stockfilms);
+                resolve (stockrecomendados);
                 },2000);
             });
             getDataFilms.then(res=>setData (res));
