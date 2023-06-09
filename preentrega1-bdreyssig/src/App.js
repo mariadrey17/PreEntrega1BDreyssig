@@ -40,7 +40,8 @@ function App() {
 <Routes>
 
 <Route path="/" element={<Home/>}/>
-<Route exact path="/home/stockrecomendados/id:"element={<ItemListContainer/>}/>
+<Route path="/home/id:4" element={<Home/>}/>
+
 <Route path="/" element={<ItemListContainer/>}/>
 <Route path="/peliculas"element={<Peliculas/>} />
 <Route exact path ="/"element={<ItemList/>} />
