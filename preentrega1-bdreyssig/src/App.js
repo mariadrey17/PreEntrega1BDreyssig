@@ -16,7 +16,7 @@ import IniciarSesion from './components/Layouts/Formularios/IniciarSesion/Inicia
 import Footer  from './components/pages/Footer/Footer';
 import Contacto from './components/pages/Contacto/Contacto';
 import ItemListContainer from './components/pages/home/ItemListContainer/ItemListContainer';
-import ItemList from './components/pages/home/ItemListContainer/ItemList/Item.List';
+//import ItemList from './components/pages/home/ItemListContainer/ItemList/Item.List';
 
 
 
@@ -37,7 +37,7 @@ function App() {
 
 <Route path="/" element={<ItemListContainer/>}/>
 <Route path="/peliculas"element={<Peliculas/>} />
-<Route exact path ="/"element={<ItemList/>} />
+{/*<Route exact path ="/"element={<ItemList/>} />*/}
 
 <Route  path="/series" element= {<Series/>} />
 <Route  path="/contacto" element= {<Contacto/>} />

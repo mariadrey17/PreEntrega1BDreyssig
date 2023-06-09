@@ -11,10 +11,10 @@ const StockRecomendados=
             
                 {
                     id:"02",
-                nombre:"Lo que hacemos en las sombras ",
+                nombre:"Lo que hacemos en las sombras ,Serie ",
                     genero:"comedia",
-                    precio:"$800",
-                    image:"https://pics.filmaffinity.com/Lo_que_hacemos_en_las_sombras-587601603-large.jpg",
+                    precio:"$2400",
+                    image:"https://i.blogs.es/80bca2/lo-que-hacemos-en-las-sombras/1366_2000.jpeg",
                 },
             
                 {
@@ -22,7 +22,7 @@ const StockRecomendados=
                     nombre:"El padrino 3",
                     genero:"drama",
                     precio:"$950",
-                    image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgEy91ccbAzTtI-TnRSiIe2aGO440xH0o6rg&usqp=CAU",
+                    image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgEy91ccbAzTtI-TnRSiIe2aGO440xH0o6rg&usqp=CAU"
 
                 },
             
