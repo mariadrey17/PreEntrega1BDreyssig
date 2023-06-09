@@ -3,7 +3,8 @@ import React from "react";
 import stockrecomendados from "../../StockDeRecomendados/stockrecomendados";
 
 import Card from 'react-bootstrap/Card';
-import "../ItemList/ItemList.css";
+import "./ItemList.css";
+
 
 const ItemList =({data=[]})=>{
     return (
@@ -11,14 +12,14 @@ const ItemList =({data=[]})=>{
 
 
 
-    <div>
+    <div >
 
         <h3>Top recomendado</h3>
         
         {stockrecomendados.map ((film,prod)=>  {
         
         return (
-    <div  className="cardDivMap" key={prod} >
+    <div className="divCardMap"   key={prod} >
 
 
 

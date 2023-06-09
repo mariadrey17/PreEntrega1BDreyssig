@@ -2,6 +2,7 @@
 import ItemCount from "../ItemCount";
 import stockrecomendados from "../StockDeRecomendados/stockrecomendados";
 import { useState,useEffect } from "react";
+import ItemList from "./ItemList/Item.List";
 
 
 function ItemListContainer (props) {
@@ -43,19 +44,23 @@ return (
 
     <ItemCount initial ={0} stockrecomendados={6} onAdd={(counter=> console.log('cantidad agregada',counter))}/>
     
+
     <div>
+        <ItemList/>
+    </div>
+    {/*<div>
         
         {
 stockrecomendados.map ((film,prod)=>  {
         
         return (
-    <div key={prod}>
-        <p>{film.id}</p>
+    <div  className="divCardMap" key={prod}>
+        <p className="">{film.id}</p>
         <p>{film.nombre}</p>
         <p>{film.genero}</p>
         <p>{film.precio}</p>
         {/*<img>{film.image}</p>*/}
-        <img src={film.image} alt="" />
+        {/*<img src={film.image} alt="" />
     </div>
 
 
@@ -68,7 +73,7 @@ stockrecomendados.map ((film,prod)=>  {
         }
 
     
-    </div>
+    </div>*/}
     
     
 
