@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { getProductFilm } from "../async";
+import { getProductFilm } from "../../../../data/async";
 
 import ItemDetail from "./ItemDetail/ItemDetail";
-import stockrecomendados  from "../StockDeRecomendados/stockrecomendados";
+import stockrecomendados  from "../../../../data/stockrecomendados";
 
 
 const ItemDetailContainer =()=>{

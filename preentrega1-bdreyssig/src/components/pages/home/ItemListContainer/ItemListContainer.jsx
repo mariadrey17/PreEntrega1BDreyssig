@@ -1,89 +1,47 @@
-//import React, { useEffect, useState } from "react";
-import ItemCount from "../ItemCount";
-import stockrecomendados from "../StockDeRecomendados/stockrecomendados";
+import React from "react";
+import { useParams } from "react-router-dom";
+//import ItemCount from "../ItemCount";
+import stockrecomendados from "../../../../data/stockrecomendados";
 import { useState,useEffect } from "react";
-import ItemList from "./ItemList/Item.List";
+import {  getProductFilms } from "../../../../data/async";
+//import ItemList from "./ItemList/Item.List";
 
+import Home from "../Home";
 
-function ItemListContainer (props) {
-
-    /*const onAdd= (quantity)=>{
-    console.log('cantidad agregada' .quantity);
-    }*/
-
-    const resultadoSeleccion=(peliculaSeleccionada)=>{
-        return new Promise((resolve,reject)=>{
-        setTimeout(()=>{
-            peliculaSeleccionada===true?resolve ("hay stock"):reject ("no hay stock");
-        }
-        
-        )
-        })
-        }
-        
-        const valor= true;
-        console.log (resultadoSeleccion(valor));
+export const ItemListContainer=()=>{
+    const {id}=useParams();
+    const [stockrecomendados,setStockrecomendados]=useState([]);
+    useEffect(()=>{
+    getProductFilms().then((data)=>{
+    setStockrecomendados(data);
+    })
+    },[]
     
-        
-        const [data,setData]=useState([]);
-        useEffect(()=>{
-            const getDataFilms=new Promise(resolve=>{
-                setTimeout(()=>{
-                resolve (stockrecomendados);
-                },2000);
-            });
-            getDataFilms.then(res=>setData (res));
+    );
 
-        })      
+//return <div>{JSON.stringify(stockrecomendados)}</div>
 
 
 return (
-    <div>
-        <h2>Hola {props.text}  </h2>
-
-
-    <ItemCount initial ={0} stockrecomendados={6} onAdd={(counter=> console.log('cantidad agregada',counter))}/>
-    
-
-    <div >
-        <ItemList/>
-    </div>
-    {/*<div>
-        
-        {
-stockrecomendados.map ((film,prod)=>  {
-        
-        return (
-    <div  className="divCardMap" key={prod}>
-        <p className="">{film.id}</p>
-        <p>{film.nombre}</p>
-        <p>{film.genero}</p>
-        <p>{film.precio}</p>
-        {/*<img>{film.image}</p>*/}
-        {/*<img src={film.image} alt="" />
-    </div>
+<div>
+<div>
+    <Home/>
+</div>
 
 
 
 
-        )
-        },
-        console.log (stockrecomendados)
-        )
-        }
 
-    
-    </div>*/}
-    
-    
 
-    
-    
-    
-    </div>
 
-);
+
+
+
+</div>
+
+)
 
 }
+
 
 export default ItemListContainer;

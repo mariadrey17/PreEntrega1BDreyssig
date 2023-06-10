@@ -1,78 +1,68 @@
-import React from 'react';
-import {BrowserRouter,Route,Routes,NavLink,Link} from "react-router-dom";
+import React from "react";
+import { BrowserRouter, Route, Routes, NavLink, Link } from "react-router-dom";
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import NavBar from './components/NavBar/Navbar';
-import CartWidget from './components/NavBar/CartWidget/CartWidget';
-import { Button } from 'bootstrap';
-import { BiCartAdd } from "react-icons/bi" ; 
-import Home from './components/pages/home/Home';
-import Estrenos from './components/pages/home/Estrenos/Estrenos';
+import "bootstrap/dist/css/bootstrap.min.css";
+import NavBar from "./components/NavBar/Navbar";
+import CartWidget from "./components/NavBar/CartWidget/CartWidget";
+import { Button } from "bootstrap";
+import { BiCartAdd } from "react-icons/bi";
+import Home from "./components/pages/home/Home";
+import Estrenos from "./components/pages/home/Estrenos/Estrenos";
 
-import Peliculas from './components/pages/Peliculas/peliculas';
-import './App.css'
-import Series from './components/pages/Series/Series';
+import Peliculas from "./components/pages/Peliculas/peliculas";
+import "./App.css";
+import Series from "./components/pages/Series/Series";
 
-import IniciarSesion from './components/Layouts/Formularios/IniciarSesion/IniciarSesion';
-import Footer  from './components/pages/Footer/Footer';
-import Contacto from './components/pages/Contacto/Contacto';
-import ItemListContainer from './components/pages/home/ItemListContainer/ItemListContainer';
-import CardSeries from './components/pages/Series/CardSeries/CardSeries';
+import IniciarSesion from "./components/Layouts/Formularios/IniciarSesion/IniciarSesion";
+import Footer from "./components/pages/Footer/Footer";
+import Contacto from "./components/pages/Contacto/Contacto";
+import ItemListContainer from "./components/pages/home/ItemListContainer/ItemListContainer";
+import CardSeries from "./components/pages/Series/CardSeries/CardSeries";
 
-import ItemList from './components/pages/home/ItemListContainer/ItemList/Item.List';
-import ItemDetail from './components/pages/home/ItemDetailContainer/ItemDetail/ItemDetail';
+//import ItemList from "./components/pages/home/ItemListContainer/ItemList/Item.List";
+//import ItemDetail from "./components/pages/home/ItemDetailContainer/ItemDetail/ItemDetail";
 
-import stockderecomendados from "../src/components/pages/home/StockDeRecomendados/stockrecomendados"
-import ItemDetailContainer from './components/pages/home/ItemDetailContainer/ItemDetailContainer';
-
-
-
-
-
+import stockderecomendados from "./data/stockrecomendados";
+import Categories from "./data/categories";
+//import ItemDetailContainer from "./components/pages/home/ItemDetailContainer/ItemDetailContainer";
 
 function App() {
-    return (
+  return (
+    <BrowserRouter>
+      <NavBar />
+      <Footer />
 
-<BrowserRouter>
-<NavBar/>
-<Footer/>
+      <Routes>
+        {/*<Route path="/home" element={<Home/>}/>*/}
+        <Route path="/" element={<ItemListContainer />} />
+        <Route path="/category/:id" element={<ItemListContainer />} />
+        <Route path="/itemlistcotainer/home" element={<Home />} />
 
+        <Route path="/category" element={<Categories />} />
 
+        <Route path="/peliculas" element={<Peliculas />} />
+        {/*<Route
+          exact
+          path="/itemlistcontainer/itemlist"
+          element={<ItemList />}
+  />*/}
+        <Route path="/series" element={<Series />} />
+        <Route path="/contacto" element={<Contacto />} />
+        <Route path="/footer" element={<Footer />} />
+        {/*<Route
+          exact
+          path="/itemdetailcontainer"
+          element={<ItemDetailContainer />}
+  />*/}
+        {/*<Route
+          exact
+          path="/itemdetailcontainer/itemdetail/:id4"
+          element={<ItemDetail />}
+/>*/}
+      </Routes>
+    </BrowserRouter>
 
-<Routes>
-
-<Route path="/" element={<Home/>}/>
-
-
-
-<Route path="/itemlistcontainer" element={<ItemListContainer/>}/>
-<Route path="/peliculas"element={<Peliculas/>} />
-<Route exact path ="/itemlistcontainer/itemlist"element={<ItemList/>} />
-
-<Route  path="/series" element= {<Series/>} />
-<Route  path="/contacto" element= {<Contacto/>} />
-<Route  path="/footer" element= {<Footer/>} />
-
-<Route exact path ="/itemdetailcontainer"element={<ItemDetailContainer/>} />
-<Route exact path ="/itemdetailcontainer/itemdetail/:id4"element={<ItemDetail/>} />
-
-
-
-
-
-
-
-</Routes>
-
-
-
-
-
-
-</BrowserRouter>
-
-
-/*<>
+    /*<>
 
 
 <NavBar></NavBar>
@@ -111,12 +101,7 @@ function App() {
 
 
 </>*/
-
-
-    );
-    
-    }
+  );
+}
 
 export default App;
-
-

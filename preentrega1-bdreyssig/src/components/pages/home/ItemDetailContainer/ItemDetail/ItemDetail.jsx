@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import stockrecomendados from "../../StockDeRecomendados/stockrecomendados";
+import stockrecomendados from "../../../../../data/stockrecomendados";
 import Card from 'react-bootstrap/Card';
 
 function ItemDetail() {
