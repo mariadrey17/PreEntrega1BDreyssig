@@ -17,7 +17,7 @@
     <Link to='/' > <img src={logo} className='logo' alt="" /></Link><h1>VisualFilm Shop</h1> 
     
         
-            <NavLink to="/">home        Las Mejores Películas y Series </NavLink>
+            <NavLink to="/itemlistcontainer/home">home        Las Mejores Películas y Series </NavLink>
 
             <ul className='navstyle'>
             <li>

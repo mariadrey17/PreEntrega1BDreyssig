@@ -4,6 +4,7 @@ import stockrecomendados from "../../../../../data/stockrecomendados";
 
 import Card from 'react-bootstrap/Card';
 import "./ItemList.css";
+import Item from "./Item/Item";
 
 
 const ItemList =({data=[]})=>{
@@ -18,39 +19,19 @@ const ItemList =({data=[]})=>{
         
         {stockrecomendados.map ((film,prod)=>  {
         
-        return (
     <div className="divCardMap"   key={prod} >
 
 
+<Item name={film.nombre} image={film.image } genero ={film.genero} precio={film.precio} id={film.id}/>
 
-<Card  className="LaCard" style={{ width: '18rem' }}>
-<Card.Img variant="top" src=  {film.image} />
-<Card.Body>
-<Card.Text>{film.id}</Card.Text>
-<Card.Title>{film.nombre}</Card.Title>
-<Card.Text>{film.genero}</Card.Text>
-<Card.Text>{film.precio}</Card.Text>
-    
-</Card.Body>
-
-
-
-
-
-
-
-
-
-</Card>
 
     </div>
 
 
 
-
-        )
+        
         },
-        console.log (stockrecomendados)
+        //console.log (stockrecomendados)
         )
         }
 

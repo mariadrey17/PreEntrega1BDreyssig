@@ -8,6 +8,7 @@ import { getProductFilm, getProductFilms } from "../../../../data/async";
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Home from "../Home";
+import ItemList from "./ItemList/Item.List";
 
 export const ItemListContainer=()=>{
 
@@ -36,36 +37,16 @@ setStockrecomendados(data);
 
 <div className="divCardMap"   key={prod} >
 
-
-
-{/*<Card style={{ width: '10rem' }}>
-<Card.Img variant="top" src=  {film.image} />
-<Card.Body>
-<Card.Text>{film.id}</Card.Text>
-<Card.Title>{film.nombre}</Card.Title>
-<Card.Text>{film.genero}</Card.Text>
-<Card.Text>{film.precio}</Card.Text>
-
-    </Card.Body>*/}
+    <p></p>
 
 
 
 
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
-      <Card.Body>
-        <Card.Title> {film.nombre}</Card.Title>
-        <Card.Text>
-          {film.id}
-        </Card.Text>
-          
-        <Card.Text>
-        {film.genero}
-          </Card.Text>
-          
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
+
+<ItemList />
+
+
+    
 
 
 
@@ -74,7 +55,6 @@ setStockrecomendados(data);
 
 
 
-{/*</Card>*/}
 
 </div>
 

@@ -19,7 +19,7 @@ import Contacto from "./components/pages/Contacto/Contacto";
 import ItemListContainer from "./components/pages/home/ItemListContainer/ItemListContainer";
 import CardSeries from "./components/pages/Series/CardSeries/CardSeries";
 
-//import ItemList from "./components/pages/home/ItemListContainer/ItemList/Item.List";
+import ItemList from "./components/pages/home/ItemListContainer/ItemList/Item.List";
 //import ItemDetail from "./components/pages/home/ItemDetailContainer/ItemDetail/ItemDetail";
 
 import stockderecomendados from "./data/stockrecomendados";
@@ -30,25 +30,27 @@ function App() {
   return (
     <BrowserRouter>
       <NavBar />
+
       <Footer />
 
       <Routes>
         {/*<Route path="/home" element={<Home/>}/>*/}
         <Route path="/" element={<ItemListContainer />} />
         <Route path="/category/:id" element={<ItemListContainer />} />
-        <Route path="/itemlistcotainer/home" element={<Home />} />
+        <Route path="/itemlistcontainer/home" element={<Home />} />
 
         <Route path="/category" element={<Categories />} />
 
         <Route path="/peliculas" element={<Peliculas />} />
-        {/*<Route
+        <Route
           exact
           path="/itemlistcontainer/itemlist"
           element={<ItemList />}
-  />*/}
+        />
+
         <Route path="/series" element={<Series />} />
         <Route path="/contacto" element={<Contacto />} />
-        <Route path="/footer" element={<Footer />} />
+
         {/*<Route
           exact
           path="/itemdetailcontainer"
