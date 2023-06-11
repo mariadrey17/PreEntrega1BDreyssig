@@ -1,73 +1,49 @@
-import React from "react";
-import { useParams } from "react-router-dom";
-//import ItemCount from "../ItemCount";
-import stockrecomendados from "../../../../data/stockrecomendados";
-import { useState,useEffect } from "react";
-import { getProductFilm, getProductFilms } from "../../../../data/async";
-//import ItemList from "./ItemList/Item.List";
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
-import Home from "../Home";
-import ItemList from "./ItemList/Item.List";
+import React, { useEffect, useState } from "react";
+import ItemCount from "./ItemCount/ItemDetailContainer/ItemCount";
+import stockrecomendados from "../../../../data/stockrecomendados"
+import ItemList from "./ItemList";
 
-export const ItemListContainer=()=>{
-
-const {id}=useParams();
-const [stockrecomendados,setStockrecomendados]=useState([]);
-useEffect(()=>{
-getProductFilms().then((data)=>{
-setStockrecomendados(data);
-})
-},[]
-
-);
-
-//return <div>{JSON.stringify(stockrecomendados)}</div>
+import { getProductFilms } from "./Comp2/async";
 
 
-{stockrecomendados.map ((film,prod)=>  {
-        
-    return (
-
-<>
-<div>
-    <Home/>
-</div>
-
-
-<div className="divCardMap"   key={prod} >
-
-    <p></p>
-
-
-
-
-
-<ItemList />
+function ItemListContainer (props) {
 
 
     
+    const [stockrecomendados,setStockrecomendados]=useState([]);
+    useEffect (()=>{
+        getProductFilms().then(response=>{
+            setStockrecomendados(response)
+        })
+        .catch(error=>console.error(error))
+    },[])
+
+ 
 
 
 
+return (
+    <div>
+        <h2>Hola {props.text}  </h2>
+
+     
+    
 
 
+    <ItemCount initial ={0} stockrecomendados={6} onAdd={(counter=> console.log('cantidad agregada',counter))}/>
+    <ItemList  />
+    
 
+    
+    
 
+    
+    
+    
+    </div>
 
-
-</div>
-
-</>
-
-
-    );
-    },
-    //console.log (stockrecomendados)
-    );
-    }
-        
-
+);
 
 }
+
 export default ItemListContainer;
