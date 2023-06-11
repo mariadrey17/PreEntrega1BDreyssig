@@ -1,0 +1,10 @@
+import { useParams } from 'react-router-dom';
+import stockrecomendados from "../../../../../data/stockrecomendados";
+import Card from 'react-bootstrap/Card';
+
+const ItemDetail =()=>({id,nombre, descripcion, categoryId})=>{
+
+    return(
+        <div></div>
+    )
+}

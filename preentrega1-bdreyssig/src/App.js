@@ -25,7 +25,7 @@ function App() {
       <Footer />
 
       <Routes>
-        <Route path="/" element={<ItemListContainer />} />
+        <Route path="/" element={<ItemListContainer text="Bienvenidos" />} />
         {/* <Route path="/" element={<Home />} />*/}
         <Route path="/home" element={<Home />} />
 
