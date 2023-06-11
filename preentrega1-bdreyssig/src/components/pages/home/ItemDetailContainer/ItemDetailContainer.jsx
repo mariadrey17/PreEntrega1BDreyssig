@@ -3,10 +3,11 @@ import { getProductFilm } from "../../../../data/async";
 
 import ItemDetail from "./ItemDetail/ItemDetail";
 import stockrecomendados  from "../../../../data/stockrecomendados";
+import { useParams } from "react-router-dom";
 
 
 const ItemDetailContainer =()=>{
-const [stockrecomendados,setStockrecomendados]=useState(null)
+/*const [stockrecomendados,setStockrecomendados]=useState(null)
 
 useEffect(()=>{
     getProductFilm ('4')
@@ -19,12 +20,14 @@ useEffect(()=>{
 })
 }
 
-)
+)*/
+
+const {}   =useParams()
 
 return (
-<div className="ItemDetailContainer">
+/*<div className="ItemDetailContainer">
 <ItemDetail {...stockrecomendados}/>
-</div>
+</div>*/
 );
 }
 export default ItemDetailContainer;
