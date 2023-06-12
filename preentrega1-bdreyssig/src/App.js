@@ -22,8 +22,8 @@ import CardSeries from "./components/pages/Series/CardSeries/CardSeries";
 import ItemList from "./components/pages/home/ItemListContainer/ItemList/Item.List";
 //import ItemDetail from "./components/pages/home/ItemDetailContainer/ItemDetail/ItemDetail";
 
-import stockderecomendados from "./data/stockrecomendados";
-import Categories from "./data/categories";
+import stockderecomendados from "./components/pages/home/StockRecomendados/stockrecomendados";
+import Categories from "./datos/Categories/categories";
 //import ItemDetailContainer from "./components/pages/home/ItemDetailContainer/ItemDetailContainer";
 
 function App() {

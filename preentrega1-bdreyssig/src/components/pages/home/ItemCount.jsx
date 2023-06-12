@@ -2,7 +2,7 @@
 import React from "react";
 import "./ItemCount.css";
 import {useState} from "react";
-import stockrecomendados from "../../../data/stockrecomendados";
+import stockrecomendados from "../home/StockRecomendados/stockrecomendados";
 
 
 

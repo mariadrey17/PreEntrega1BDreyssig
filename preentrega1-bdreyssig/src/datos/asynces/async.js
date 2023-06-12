@@ -1,6 +1,6 @@
-import stockrecomendados from "../data/stockrecomendados";
+import stockrecomendados from "../../../src/components/pages/home/StockRecomendados/stockrecomendados";
 
-import categories from "../data/categories";
+import categories from "../Categories/categories";
 
 const getCategories = async () => {
   return new Promise((resolve, reject) => resolve(categories.find));

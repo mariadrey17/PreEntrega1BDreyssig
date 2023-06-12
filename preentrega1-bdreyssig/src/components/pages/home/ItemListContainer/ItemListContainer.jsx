@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import ItemCount from "../ItemCount"
-import stockrecomendados from "../../../../data/stockrecomendados"
+import stockrecomendados from "../StockRecomendados/stockrecomendados"
 import ItemList from "./ItemList/Item.List";
-import { getProductFilms } from "../../../../data/async";
+import { getProductFilms } from "../../../../datos/asynces/async";
 
 
 function ItemListContainer (props) {
