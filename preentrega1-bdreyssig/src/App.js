@@ -20,10 +20,11 @@ import ItemListContainer from "./components/pages/home/ItemListContainer/ItemLis
 import CardSeries from "./components/pages/Series/CardSeries/CardSeries";
 
 import ItemList from "./components/pages/home/ItemListContainer/ItemList/Item.List";
-//import ItemDetail from "./components/pages/home/ItemDetailContainer/ItemDetail/ItemDetail";
+import ItemDetail from "./components/pages/home/ItemDetailContainer/ItemDetail/ItemDetail";
 
 import stockderecomendados from "./components/pages/home/StockRecomendados/stockrecomendados";
 import Categories from "./datos/Categories/categories";
+import ItemDetailContainer from "./components/pages/home/ItemDetailContainer/ItemDetailContainer";
 //import ItemDetailContainer from "./components/pages/home/ItemDetailContainer/ItemDetailContainer";
 
 function App() {
@@ -36,7 +37,9 @@ function App() {
       <Routes>
         {/*<Route path="/home" element={<Home/>}/>*/}
         <Route path="/" element={<ItemListContainer />} />
-        <Route path="/category/:id" element={<ItemListContainer />} />
+        <Route path="/category" element={<ItemListContainer />} />
+        <Route path="/item/:id" element={<ItemDetailContainer />} />
+        <Route path="/detalle" element={<ItemDetail />} />
         <Route path="/itemlistcontainer/home" element={<Home />} />
 
         <Route path="/peliculas" element={<Peliculas />} />
@@ -54,11 +57,11 @@ function App() {
           path="/itemdetailcontainer"
           element={<ItemDetailContainer />}
   />*/}
-        {/*<Route
+        <Route
           exact
-          path="/itemdetailcontainer/itemdetail/:id4"
-          element={<ItemDetail />}
-/>*/}
+          path="/itemdetailcontainer"
+          element={<ItemDetailContainer />}
+        />
       </Routes>
     </BrowserRouter>
 

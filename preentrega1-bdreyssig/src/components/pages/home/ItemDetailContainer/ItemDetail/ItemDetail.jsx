@@ -1,25 +1,33 @@
 import { useParams } from "react-router-dom";
-import stockrecomendados from "../../StockDeFilms/stockfilms.json";
-import Item from "../../../Comp2/Item";
-import ItemCount from "../ItemCount";
+import stockrecomendados from "../../StockRecomendados/stockrecomendados";
+import Item from "../../ItemListContainer/ItemList/Item/Item";
+import ItemCount from "../../ItemCount";
+import { useState } from "react";
+import React from "react";
 
-const ItemDetail = () => {
-  const { filmId } = useParams();
+const ItemDetail = ({image,nombre,precio,id}) => {
+ /* const { filmId } = useParams();
   const film = stockrecomendados.find((film) => film.id === filmId);
-  
+
+const [item,setItem]=useState(undefined);*/
+
+    
   return (
     <div className="SectionFilm">
       <p> Este es el detalle del film </p>
 
-      <div>
+      {/*<div>
         <Item
           id={"04"}
           nombre={"Aquaaman"}
           genero={"Aventura"}
           precio={"2000"}
-          categoryId={"peliculas"}
-        />
-      </div>
+          image ={"https://i.blogs.es/36305a/captura-de-pantalla-2022-09-06-a-las-13.08.10/450_1000.jpeg"}
+          categoryId={"peliculas"}/>
+          
+
+        
+      </div>*/}
       {/*<div className="CardBody">
         <ul>
           {id}
@@ -39,13 +47,15 @@ const ItemDetail = () => {
   </div>
       </div>*/}
 
-      <div>
-        <ItemCount
-          initial={0}
-      stockrecomendados={6}
-          onAdd={(counter) => console.log("cantidad agregada", counter)}
-        />
+
+      <div className="contieneDetalle">
+        <image src={image} alt=""/>
+        <h1>{nombre}</h1>
+        <p>{precio}</p>
+        <p>{id}</p>
       </div>
+
+
     </div>
   );
 };

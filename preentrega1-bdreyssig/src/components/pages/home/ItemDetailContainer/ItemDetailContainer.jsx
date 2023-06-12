@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail/ItemDetail";
-import { getProductStock } from "../../Comp2/async";
+import { getProductStock } from "../../../../datos/asynces/async"
 import { useState } from "react";
-import stockrecomendados from "../../../../data/stockrecomendados"
+import stockrecomendados from "../StockRecomendados/stockrecomendados"
 
 /*const ItemDetailContainer =()=>{
 const [StockDeFilms,setStockDeFilms]=useState(null)
@@ -44,20 +44,28 @@ export default ItemDetailContainer;*/
 export default ItemDetailContainer;*/
 
 const ItemDetailContainer = () => {
-  const [stockrecomendados, setStockrecomendados] = useState();
+
+    const[data,setData]=useState({});
+    useEffect(()=>{const getData=  new Promise(resolve=>{setTimeout(()=>{resolve(stockrecomendados);} ,2000);
+}  );
+
+getData.then(res=>setData(res));
+
+})
+  /*const [stockrecomendados, setStockrecomendados] = useState();
 
   useEffect(() => {
-    getProductStock("04").then((stockfilms) => {
+    getProductStock("04").then((stockrecomendados) => {
       setStockrecomendados();
     });
   }, []);
   const { id } = useParams();
   console.log(id);
-  if (!stockfilms)
+  if (!stockrecomendados)*/
     return (
       <div>
         Cargando .... espere en breve estará listo !
-        <ItemDetail />
+        <ItemDetail  />
         <button>ver detalle</button>
       </div>
     );
