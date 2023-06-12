@@ -1,17 +1,15 @@
 import React from "react";
 
-const Item =({info})=> {
-    return (
-        <div className="filmCardContainer">
-        <div className="filmCard"> 
-        <p>{info.nombre} </p>
-        <img src={info.image} className="filmCardImage"/>
-        <p>{info.genero}</p>
-        <p>{info.precio}</p>
-        </div>
-
-        </div>
-
-    )
-}
+const Item = ({ nombre, image, genero, precio }) => {
+  return (
+    <div className="filmCardContainer">
+      <div className="filmCard">
+        <p>{nombre} </p>
+        <img src={image} className="filmCardImage" />
+        <p>{genero}</p>
+        <p>{precio}</p>
+      </div>
+    </div>
+  );
+};
 export default Item;
