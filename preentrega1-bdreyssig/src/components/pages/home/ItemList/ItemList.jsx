@@ -3,12 +3,12 @@ import React from "react";
 import stockrecomendados from "../StockRecomendados/stockrecomendados";
 
 import Card from 'react-bootstrap/Card';
-import "./ItemList.css";
+import "../ItemList/ItemList.css";
 
 
 const ItemList =({data=[]})=>{
     return (
-    //data.map(stockrecomendados=><Item key={stockrecomendados.id} info={stockrecomendados}/>)
+    
 
 
 
