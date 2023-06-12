@@ -1,4 +1,4 @@
-import stockrecomendados from "../../components/pages/home/StockRecomendados/stockrecomendados";
+import stockrecomendados from "../../../src/components/pages/home/StockRecomendados/stockrecomendados";
 
 import Categories from "./Categories/Categories";
 

@@ -1,9 +1,9 @@
 //import Item from "./Item/Item";
 import React from "react";
-import stockrecomendados from "../../../../../data/stockrecomendados";
+import stockrecomendados from "../../StockRecomendados/stockrecomendados";
 
 import Card from 'react-bootstrap/Card';
-import "../ItemList/ItemList.css";
+
 import Item from "../../Item/Item";
 
 
