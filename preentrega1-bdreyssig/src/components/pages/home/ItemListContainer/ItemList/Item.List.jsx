@@ -3,8 +3,8 @@ import React from "react";
 import stockrecomendados from "../../StockRecomendados/stockrecomendados";
 
 import Card from 'react-bootstrap/Card';
-import "./ItemList.css";
-import Item from "./Item/Item";
+
+import Item from "../../Item/Item";
 
 
 const ItemList =({data=[]})=>{
