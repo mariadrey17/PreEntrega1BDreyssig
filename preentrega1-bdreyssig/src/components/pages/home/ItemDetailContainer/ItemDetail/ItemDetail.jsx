@@ -16,18 +16,18 @@ const [item,setItem]=useState(undefined);*/
     <div className="SectionFilm">
       <p> Este es el detalle del film </p>
 
-      {/*<div>
+      
         <Item
           id={"04"}
           nombre={"Aquaaman"}
           genero={"Aventura"}
           precio={"2000"}
           image ={"https://i.blogs.es/36305a/captura-de-pantalla-2022-09-06-a-las-13.08.10/450_1000.jpeg"}
-          categoryId={"peliculas"}/>
+          categoryId={"peliculas"}
           
-
+         />
         
-      </div>*/}
+    
       {/*<div className="CardBody">
         <ul>
           {id}
@@ -48,12 +48,12 @@ const [item,setItem]=useState(undefined);*/
       </div>*/}
 
 
-      <div className="contieneDetalle">
+      {/*<div className="contieneDetalle">
         <image src={image} alt=""/>
         <h1>{nombre}</h1>
         <p>{precio}</p>
         <p>{id}</p>
-      </div>
+    </div>*/}
 
 
     </div>

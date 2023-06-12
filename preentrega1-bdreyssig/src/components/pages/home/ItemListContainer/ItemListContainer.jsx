@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 import ItemCount from "../ItemCount"
 import stockrecomendados from "../StockRecomendados/stockrecomendados"
 import ItemList from "./ItemList/Item.List";
-import { getProductFilms } from "../../../../datos/asynces/async";
-import { useParams } from "react-router-dom";
+import { getCategories, getProductFilms } from "../../../../datos/asynces/async";
+import { NavLink, useParams } from "react-router-dom";
 
 
+import categories from "../../../../datos/Categories/categories";
 function ItemListContainer (props) {
 
 const [data,setData]=useState([]);
@@ -20,7 +21,18 @@ getData.then(res=>setData(res)  )
 },[])
 
 
+;
+const [stockrecomendados, setStockrecomendados]=useState([]);
+const [categories,SetCategories]=useState([]);
 
+useEffect(()=>{
+    getProductFilms().then((data)=>{
+        setStockrecomendados(data);
+    });
+    getCategories().then ((data)=>{
+        SetCategories(data);
+    })
+})
     
     /*const [stockrecomendados,setStockrecomendados]=useState([]);
     useEffect (()=>{
@@ -48,10 +60,31 @@ return (
 
     <h3>Top de recomendados</h3>
 
-    <ItemList data={data} />
+  
     
+   
+    <div>
 
-    
+ <nav>
+<ul>
+
+
+    {categories.map((category)=>(
+
+<li>
+<NavLink to = {`/category/${category.id}`}>{category.nombre} </NavLink>
+</li>
+
+
+    ))}
+
+</ul>
+
+ </nav>
+
+ <ItemList data={data} />
+
+    </div>
     
 
     

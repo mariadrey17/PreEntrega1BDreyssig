@@ -38,16 +38,12 @@ function App() {
         {/*<Route path="/home" element={<Home/>}/>*/}
         <Route path="/" element={<ItemListContainer />} />
         <Route path="/category" element={<ItemListContainer />} />
-        <Route path="/item/:id" element={<ItemDetailContainer />} />
+        <Route path="/itemlistcontainer" element={<ItemList />} />
         <Route path="/detalle" element={<ItemDetail />} />
         <Route path="/itemlistcontainer/home" element={<Home />} />
 
         <Route path="/peliculas" element={<Peliculas />} />
-        <Route
-          exact
-          path="/itemlistcontainer/itemlist"
-          element={<ItemList />}
-        />
+        <Route exact path="/item/:id" element={<ItemDetail />} />
 
         <Route path="/series" element={<Series />} />
         <Route path="/contacto" element={<Contacto />} />

@@ -11,6 +11,10 @@
 
     
     function NavBar() {
+
+        const InicioEntrar=()=>{
+
+        }
     return (
         <Navbar  expand="lg" className='nav-style' >
         <Container >
@@ -45,8 +49,8 @@
             </Nav>
     </Navbar.Collapse>*/}
             <CartWidget></CartWidget>
-        
-
+   
+       
 
     
         </Container>

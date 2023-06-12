@@ -15,12 +15,7 @@ const ItemList =({data=[]})=>{
 
 
 
-      
-   
-        
 
-    
-   
 
 
 
