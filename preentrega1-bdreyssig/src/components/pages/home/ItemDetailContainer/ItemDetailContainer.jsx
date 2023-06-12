@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { getProductFilm } from "../../../../data/async";
+import { getProductFilm } from "../../../../datos/asyncses/async";
 
 import ItemDetail from "./ItemDetail/ItemDetail";
-import stockrecomendados  from "../../../../data/stockrecomendados";
+import stockrecomendados  from "../StockRecomendados/stockrecomendados";
 import { useParams } from "react-router-dom";
 
 

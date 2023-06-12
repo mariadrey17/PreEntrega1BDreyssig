@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ItemCount from "../ItemDetailContainer/ItemCount/ItemCount"
-import StockRecomendados from "../../components/pages/home/StockRecomendados/stockrecomendados";
+import stockrecomendados  from "../StockRecomendados/stockrecomendados";
 import ItemList from "./ItemList/Item.List";
 import { getProductFilms } from "../../../../../src/datos/asyncses/async";
 
@@ -25,7 +25,7 @@ return (
     <div>
         <h2>Hola {props.text}  </h2>
 
-     
+    
     
 
 
