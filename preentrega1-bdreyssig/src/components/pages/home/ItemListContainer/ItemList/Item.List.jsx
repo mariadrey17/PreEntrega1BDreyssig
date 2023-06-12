@@ -4,7 +4,7 @@ import stockrecomendados from "../../StockRecomendados/stockrecomendados";
 
 import Card from 'react-bootstrap/Card';
 
-import Item from "../../Item/Item";
+import Item from "./Item/Item";
 
 
 const ItemList =({data=[]})=>{

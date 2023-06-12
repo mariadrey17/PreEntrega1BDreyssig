@@ -2,6 +2,7 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { useNavigate } from "react-router-dom";
+import "./Item.css";
 const Item = ({ info }) => {
   const navigate = useNavigate();
   return (
@@ -12,7 +13,7 @@ const Item = ({ info }) => {
         <p>{info.genero}</p>
   <p>{info.precio}</p>*/}
 
-        <Card style={{ width: "10rem" }}>
+        <Card className="cardList" style={{ width: "20 rem" }}>
           <Card.Img variant="top" src={info.image} />
           <Card.Body>
             <Card.Text>{info.id}</Card.Text>
