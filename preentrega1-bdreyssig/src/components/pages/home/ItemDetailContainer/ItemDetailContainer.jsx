@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getProductFilm } from "../../../../datos/asyncses/async";
+import { getProductFilm, getProductStock } from "../../../../datos/asyncses/async";
 
 import ItemDetail from "./ItemDetail/ItemDetail";
 import stockrecomendados  from "../StockRecomendados/stockrecomendados";
@@ -22,13 +22,18 @@ useEffect(()=>{
 
 )*/
 
-const {}   =useParams()
+const {id}   =useParams()
+const[item,setItem]=useState();
+
+useEffect(()=>getProductStock(id).then(data=>{setItem(data)}))
 
 return (
 /*<div className="ItemDetailContainer">
 <ItemDetail {...stockrecomendados}/>
 </div>*/
-<div></div>
+<div>
+    <ItemDetail  id={item.id}  nombre= {item.nombre}  descripcion={item.descripcion}    categoryId ={item.categoryId} genero={item.genero}   precio ={item.precio}  />
+</div>
 );
 }
 export default ItemDetailContainer;
