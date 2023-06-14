@@ -2,7 +2,7 @@ const StockDeRecomendados=
         //array de stock de films 
         [
             {
-                id:"1",
+                id:1,
                 nombre:"film1",
                 titulo:"Start strek ,contacto",
                 categoryId:"peliculas",
@@ -12,7 +12,7 @@ const StockDeRecomendados=
                 },
             
                 {
-                    id:"2",
+                    id:2,
                 nombre:"film2",
                 titulo:"Lo que hacemos en las sombras ",
                 categoryId:"estrenos",
@@ -22,7 +22,7 @@ const StockDeRecomendados=
                 },
             
                 {
-                    id:"3",
+                    id:3,
                     nombre:"El padrino 3",
                     categoryId:"peliculas",
                     genero:"drama",
@@ -32,7 +32,7 @@ const StockDeRecomendados=
                 },
             
                 {
-                    id:"4",
+                    id:4,
                     nombre:" Aquaman 2",
                     categoryId:"estrenos",
                     genero:"ciencia ficcion, aventura",
@@ -41,7 +41,7 @@ const StockDeRecomendados=
                 },
             
                 {
-                    id:"5",
+                    id:5,
                     nombre:"fenómenas",
                     categoryId:"peliculas",
                     genero:"comedia , terror",
@@ -50,7 +50,7 @@ const StockDeRecomendados=
                 },
             
                 {
-                    id:"06",
+                    id:6,
                 nombre:"Start strek ,contacto",
                 categoryId:"series",
                 genero:"ciencia ficcion",

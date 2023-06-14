@@ -6,12 +6,14 @@ import { useState } from "react";
 import stockrecomendados from "../StockRecomendados/stockrecomendados"
 
 const ItemDetailContainer =()=>{
-const [stockrecomendados ,setStockrecomendados]=useState(null)
+
+const{id}=useParams(null);
+const [stock ,setStock]=useState()
 
 useEffect(()=>{
-    getProductStock ('01')
+    getProductStock ('1')
     .then((response)=>{
-        setStockrecomendados(response)
+        setStock(response)
     })
 
 .catch(error=>{
@@ -65,7 +67,12 @@ getData.then(res=>setData(res));
     return (
       <div>
         Cargando .... espere en breve estará listo !
-        <ItemDetail  />
+        <ItemDetail    id={stock.id}
+          nombre={stock.nombre}
+          genero={stock.genero}
+          precio={stock.precio}
+          image ={stock.image}
+          categoryId={stock.categoryId} />
         <button>ver detalle</button>
       </div>
     );

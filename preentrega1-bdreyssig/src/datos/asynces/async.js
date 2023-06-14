@@ -8,7 +8,7 @@ const getCategories = async () => {
 
 const getCategory = async (id) => {
   return new Promise((resolve, reject) => {
-    resolve(categories.find((category) => category.id === id));
+    resolve(categories.find((category) => category.id === parseInt(id)));
   });
 };
 
@@ -23,7 +23,7 @@ const getProductFilms = () => {
 const getProductStock = (id) => {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve(stockrecomendados.find((film) => film.id === id));
+      resolve(stockrecomendados.find((film) => film.id === parseInt(id)));
     }, 2000);
   });
 };

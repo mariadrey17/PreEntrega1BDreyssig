@@ -1,11 +1,11 @@
 import { useParams } from "react-router-dom";
 import stockrecomendados from "../../StockRecomendados/stockrecomendados";
-import Item from "../../ItemListContainer/ItemList/Item/Item";
+
 import ItemCount from "../../ItemCount";
 import { useState } from "react";
 import React from "react";
 
-const ItemDetail = ({image,nombre,precio,id}) => {
+const ItemDetail = ({image,nombre,precio,id, genero,categoryId}) => {
  /* const { filmId } = useParams();
   const film = stockrecomendados.find((film) => film.id === filmId);
 
@@ -16,16 +16,19 @@ const [item,setItem]=useState(undefined);*/
     <div className="SectionFilm">
       <p> Este es el detalle del film </p>
 
-      
-        <Item
-          id={"04"}
-          nombre={"Aquaaman"}
-          genero={"Aventura"}
-          precio={"2000"}
-          image ={"https://i.blogs.es/36305a/captura-de-pantalla-2022-09-06-a-las-13.08.10/450_1000.jpeg"}
-          categoryId={"peliculas"}
+      <ul>
+        <li>{id}</li>
+        <li>{nombre}</li>
+        <li>{genero}</li>
+        <li>{precio}</li>
+        <li>{image}</li>
+        <li>{categoryId}</li>
+        <li></li>
+      </ul>
+        
+         
           
-         />
+        
         
     
       {/*<div className="CardBody">
