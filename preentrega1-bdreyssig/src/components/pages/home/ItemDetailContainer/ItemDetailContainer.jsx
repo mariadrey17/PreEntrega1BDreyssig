@@ -5,13 +5,13 @@ import { getProductStock } from "../../../../datos/asynces/async"
 import { useState } from "react";
 import stockrecomendados from "../StockRecomendados/stockrecomendados"
 
-/*const ItemDetailContainer =()=>{
-const [StockDeFilms,setStockDeFilms]=useState(null)
+const ItemDetailContainer =()=>{
+const [stockrecomendados ,setStockrecomendados]=useState(null)
 
 useEffect(()=>{
-    getProductFilm ('01')
+    getProductStock ('01')
     .then((response)=>{
-        setStockDeFilms(response)
+        setStockrecomendados(response)
     })
 
 .catch(error=>{
@@ -21,7 +21,7 @@ useEffect(()=>{
 
 )
 
-return (
+/*return (
 <div className="ItemDetailContainer">
 <ItemDetail {...StockDeFilms}/>
 </div>
@@ -43,7 +43,7 @@ export default ItemDetailContainer;*/
 }
 export default ItemDetailContainer;*/
 
-const ItemDetailContainer = () => {
+/*const ItemDetailContainer = () => {
 
     const[data,setData]=useState({});
     useEffect(()=>{const getData=  new Promise(resolve=>{setTimeout(()=>{resolve(stockrecomendados);} ,2000);

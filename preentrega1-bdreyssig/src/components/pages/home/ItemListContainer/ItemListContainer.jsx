@@ -9,7 +9,7 @@ import { NavLink, useParams } from "react-router-dom";
 import categories from "../../../../datos/Categories/categories";
 function ItemListContainer (props) {
 
-const [data,setData]=useState([]);
+const [data,setData]=useState([null]);
 
 const{id}=useParams
 
