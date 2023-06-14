@@ -17,6 +17,7 @@ import Footer from "./components/pages/Footer/Footer";
 import Contacto from "./components/pages/Contacto/Contacto";
 import ItemListContainer from "./components/pages/home/ItemListContainer/ItemListContainer";
 import ItemDetailContainer from "./components/pages/home/ItemDetailContainer/ItemDetailContainer";
+import ItemDetail from "./components/pages/home/ItemDetailContainer/ItemDetail/ItemDetail";
 //import ItemList from './components/pages/home/ItemListContainer/ItemList/Item.List';
 
 function App() {
@@ -27,21 +28,17 @@ function App() {
 
       <Routes>
         <Route path="/" element={<ItemListContainer text="Bienvenidos" />} />
-        <Route
-          path="/category/:id"
-          element={<ItemListContainer text="Bienvenidos" />}
-        />
-        <Route path="/itemdetail/:id" element={<ItemDetailContainer />} />
+
+        <Route path="/item/:id" element={<ItemDetailContainer />} />
 
         {/* <Route path="/" element={<Home />} />*/}
         <Route path="/home" element={<Home />} />
 
         <Route path="/peliculas" element={<Peliculas />} />
-        {/*<Route exact path ="/"element={<ItemList/>} />*/}
+        <Route exact path="/itemdetail" element={<ItemDetail />} />
 
         <Route path="/series" element={<Series />} />
         <Route path="/contacto" element={<Contacto />} />
-        <Route path="/footer" element={<Footer />} />
       </Routes>
     </BrowserRouter>
 
