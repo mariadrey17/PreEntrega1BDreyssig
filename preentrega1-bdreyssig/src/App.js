@@ -24,22 +24,16 @@ function App() {
   return (
     <BrowserRouter>
       <NavBar />
-      <Footer />
-
       <Routes>
-        <Route path="/" element={<ItemListContainer text="Bienvenidos" />} />
-
-        <Route path="/item/:id" element={<ItemDetailContainer />} />
-
-        {/* <Route path="/" element={<Home />} />*/}
+        <Route path="/" element={<ItemListContainer />} />
+        <Route path="/category/:id" element={<ItemListContainer />} />
+        <Route path="/detalle/:id" element={<ItemDetailContainer />} />
         <Route path="/home" element={<Home />} />
-
         <Route path="/peliculas" element={<Peliculas />} />
-        <Route exact path="/itemdetail" element={<ItemDetail />} />
-
         <Route path="/series" element={<Series />} />
         <Route path="/contacto" element={<Contacto />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
 
     /*<NavBar></NavBar>
