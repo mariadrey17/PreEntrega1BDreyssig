@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail/ItemDetail";
-import { getProductStock } from "../../../../datos/asyncses/async";
+import { getCategory, getProductStock } from "../../../../datos/asyncses/async";
 import { useState } from "react";
 import stockrecomendados from "../StockRecomendados/stockrecomendados"
 import ItemCount from "./ItemCount/ItemCount";
@@ -12,7 +12,7 @@ const ItemDetailContainer =()=>{
     const [stock ,setStock]=useState({})
     
     useEffect(()=>{
-        getProductStock ('1')
+        getProductStock (1)
         .then((response)=>{
             setStock(response)
         })
@@ -23,6 +23,20 @@ const ItemDetailContainer =()=>{
     }
     
     )
+
+
+    //armando categorias
+
+    const {itemId}=useParams()
+   
+
+    useEffect (()=>{
+     getCategory= (itemId)
+        .then((response)=>{
+            setStock(response)
+
+        })
+    },[itemId])
     
    
         return (
@@ -30,6 +44,7 @@ const ItemDetailContainer =()=>{
             Cargando .... espere en breve estará listo !
             <ItemDetail    id={stock.id}
               nombre={stock.nombre}
+              titulo={stock.titulo}
               genero={stock.genero}
               precio={stock.precio}
               image ={stock.image}

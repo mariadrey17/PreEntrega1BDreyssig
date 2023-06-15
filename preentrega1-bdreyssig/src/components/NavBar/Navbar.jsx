@@ -20,11 +20,28 @@ return (
         <NavLink to="/">home        Las Mejores Películas y Series </NavLink>
 
         <ul className='navstyle'>
-        <li>
-            <NavLink to= "/peliculas">Películas </NavLink>
+        <h2>Categorías</h2>
 
-            </li>
-        <li> <NavLink to= "/series">Series</NavLink></li>
+ 
+<nav>
+                <ul>
+                   
+                        <li>
+                            <NavLink to={`/category/estrenos`} className={({isActive})=>isActive?'ActiveOtion':Option}>Estrenos</NavLink>
+                        </li>
+
+                        
+                        <li>
+                            <NavLink to={`/category/series`}className={({isActive})=>isActive?'ActiveOtion':Option}> Series</NavLink>
+                        </li>
+
+                        
+                        <li>
+                            <NavLink to={`/category/peliculas`}className={({isActive})=>isActive?'ActiveOtion':Option}>Peliculas</NavLink>
+                        </li>
+                  
+                </ul>
+            </nav>
         <li>
             <NavLink  to="/contacto" >Contacto</NavLink> </li>
 

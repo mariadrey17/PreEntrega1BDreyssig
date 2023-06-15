@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import ItemList from "./ItemList/Item.List";
 import { getCategories, getProductFilms, getProductStock } from "../../../../datos/asyncses/async";
 import { NavLink, useParams } from "react-router-dom";
-import categories from  "../../../Categories/categories";
+import categories from "../../../Categories/categories";
 
 
 function ItemListContainer(props) {
@@ -20,7 +20,6 @@ function ItemListContainer(props) {
         })
     }, [])
 
-   
 
 
     return (
@@ -28,17 +27,9 @@ function ItemListContainer(props) {
             <h2>Hola {props.text}  </h2>
             <h3>Top de recomendados</h3>
 
-<div>
 
-    <nav>
-
-    </nav>
-</div>
             
-    <h2>Categorías</h2>
 
- 
-  
 
 
 
@@ -55,4 +46,5 @@ function ItemListContainer(props) {
         </div>
     );
 }
+
 export default ItemListContainer;
