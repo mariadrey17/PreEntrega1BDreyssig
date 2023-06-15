@@ -8,7 +8,7 @@ import ItemCount from "../ItemCount";
 
 const ItemDetailContainer =()=>{
 
-const{id}=useParams(null);
+const{id}=useParams();
 const [stock ,setStock]=useState({})
 
 useEffect(()=>{
