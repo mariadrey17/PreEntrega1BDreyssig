@@ -3,7 +3,7 @@ import stockrecomendados from "../../../src/components/pages/home/StockRecomenda
 import categories from "../Categories/categories";
 
 const getCategories = async () => {
-  return new Promise((resolve, reject) => resolve(categories.find));
+  return new Promise((resolve, reject) => resolve(categories));
 };
 
 const getCategory = async (id) => {

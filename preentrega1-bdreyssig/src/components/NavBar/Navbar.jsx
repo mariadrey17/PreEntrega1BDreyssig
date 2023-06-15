@@ -8,6 +8,7 @@
     import logo from '../../Assets/img/logo.jpg';
     import ItemCount from '../pages/home/ItemCount';
     import {Link, NavLink} from 'react-router-dom';
+    import categories from '../../datos/Categories/categories';
 
     
     function NavBar() {
@@ -24,11 +25,28 @@
             <NavLink to="/itemlistcontainer/home">home        Las Mejores Películas y Series </NavLink>
 
             <ul className='navstyle'>
-            <li>
+            {/*<li>
                 <NavLink to= "/peliculas">Películas y Series</NavLink>
     
                 </li>
-            <li> <NavLink to= "/series">Series</NavLink></li>
+    <li> <NavLink to= "/series">Series</NavLink></li>*/}
+
+<div>
+
+    <h2>Categorías</h2>
+<li>
+        <Link to ={`/category/peliculas`}>Peliculas</Link>
+      </li>
+      
+      <li>
+        <Link to ={`/category/series`}>Series</Link>
+      </li>
+
+      <li>
+        <Link to ={`/category/estrenos`}>Estrenos</Link>
+      </li>
+                    
+</div>
             <li>
                 <NavLink  to="/contacto" >Contacto</NavLink> </li>
 

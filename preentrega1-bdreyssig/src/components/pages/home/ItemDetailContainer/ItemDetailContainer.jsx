@@ -4,11 +4,12 @@ import ItemDetail from "./ItemDetail/ItemDetail";
 import { getProductStock } from "../../../../datos/asynces/async"
 import { useState } from "react";
 import stockrecomendados from "../StockRecomendados/stockrecomendados"
+import ItemCount from "../ItemCount";
 
 const ItemDetailContainer =()=>{
 
 const{id}=useParams(null);
-const [stock ,setStock]=useState()
+const [stock ,setStock]=useState({})
 
 useEffect(()=>{
     getProductStock ('1')
@@ -74,6 +75,14 @@ getData.then(res=>setData(res));
           image ={stock.image}
           categoryId={stock.categoryId} />
         <button>ver detalle</button>
+
+
+
+        <div>
+        <ItemCount initial ={0} stockrecomendados={6} onAdd={(counter=> console.log('cantidad agregada',counter))}/>
+
+
+        </div>
       </div>
     );
 };
