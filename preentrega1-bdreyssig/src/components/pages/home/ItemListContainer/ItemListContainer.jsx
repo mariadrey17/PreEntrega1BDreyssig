@@ -52,7 +52,15 @@ function ItemListContainer(props) {
     <h2>Categorías</h2>
 
  
-  
+    <nav>
+                    <ul>
+                        {categories.map((category) => (
+                            <li>
+                                <NavLink to={`/category/${category.id}`}>{category.nombre} </NavLink>
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
 
 
 
