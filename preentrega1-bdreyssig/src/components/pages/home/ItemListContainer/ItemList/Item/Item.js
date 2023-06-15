@@ -8,12 +8,7 @@ const Item = ({ info }) => {
   return (
     <div className="filmCardContainer">
       <div className="filmCard">
-        {/* <p>{info.nombre} </p>
-        <img src={info.image} className="filmCardImage" />
-        <p>{info.genero}</p>
-  <p>{info.precio}</p>*/}
-
-        <Card className="cardList" style={{ width: "20 rem" }}>
+        <Card className="card" style={{ width: "20rem" }}>
           <Card.Img variant="top" src={info.image} />
           <Card.Body>
             <Card.Text>{info.id}</Card.Text>
