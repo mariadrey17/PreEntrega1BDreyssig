@@ -1,66 +1,53 @@
 import React, { useEffect, useState } from "react";
-import ItemCount from "../ItemDetailContainer/ItemCount/ItemCount"
-import stockrecomendados from "../StockRecomendados/stockrecomendados"
 import ItemList from "./ItemList/Item.List";
-
-import { useParams } from "react-router-dom";
-
-
-function ItemListContainer (props) {
-
-const [data,setData]=useState([]);
-
-const{id}=useParams
-
-useEffect(()=>{
-const getData =new Promise(resolve=>setTimeout(()=>{
-    resolve(stockrecomendados)
-},2000));
-getData.then(res=>setData(res)  )
-},[])
+import { getCategories, getProductFilms, getProductStock } from "../../../../datos/asyncses/async";
+import { NavLink, useParams } from "react-router-dom";
+import categories from "../../../../datos/asyncses/Categories/categories";
 
 
+function ItemListContainer(props) {
+    const { id } = useParams();
 
-    
-    /*const [stockrecomendados,setStockrecomendados]=useState([]);
-    useEffect (()=>{
-        getProductFilms().then(response=>{
-            setStockrecomendados(response)
+    const [stockrecomendados, setStockrecomendados] = useState([]);
+    const [categories, SetCategories] = useState([]);
+
+    useEffect(() => {
+        getProductFilms().then((data) => {
+            setStockrecomendados(data);
+        });
+        getCategories().then((data) => {
+            SetCategories(data);
         })
-        .catch(error=>console.error(error))
-    },[])*/
+    }, [])
+
+   
+
+
+    return (
+        <div>
+            <h2>Hola {props.text}  </h2>
+            <h3>Top de recomendados</h3>
+
+
+            
+    <h2>Categorías</h2>
 
  
+  
 
 
 
-return (
-    <div>
-        <h2>Hola {props.text}  </h2>
-
-
-    
-
-
- 
 
 
 
-    <h3>Top de recomendados</h3>
+            <div>
 
-    <ItemList data={data} />
-    
 
-    
-    
-
-    
-    
-    
-    </div>
-
-);
-
+                
+             
+                <ItemList data={stockrecomendados} />
+            </div>
+        </div>
+    );
 }
-
 export default ItemListContainer;
