@@ -1,23 +1,38 @@
-import { useParams } from 'react-router-dom';
+import { useParams } from "react-router-dom";
 import stockrecomendados from "../../StockRecomendados/stockrecomendados";
-import Card from 'react-bootstrap/Card';
 
-const ItemDetail =()=>({id,nombre, descripcion, categoryId,genero,precio})=>{
+import ItemCount from "../ItemCount/ItemCount";
+import { useState } from "react";
+import React from "react";
 
-    return(
-        <div>
-         <ul>
+const ItemDetail = ({image,nombre,precio,id, genero,categoryId}) => {
+ /* const { filmId } = useParams();
+  const film = stockrecomendados.find((film) => film.id === filmId);
 
-          <li>{id}</li>
-          <li>{nombre}</li>
-          <li>{descripcion}</li>
-          <li>{categoryId}</li>
-          <li>{genero}</li>
-          <li>{precio}</li>
-         </ul>
+const [item,setItem]=useState(undefined);*/
 
-        </div>
-    )
-}
+    
+  return (
+    <div className="SectionFilm">
+      <p> Este es el detalle del film </p>
 
+      <ul>
+        <li>{id}</li>
+        <li>{nombre}</li>
+        <li>{genero}</li>
+        <li>{precio}</li>
+        <li>{image}</li>
+        <li>{categoryId}</li>
+        <li></li>
+      </ul>
+        
+         
+          
+        
+   
+
+
+    </div>
+  );
+};
 export default ItemDetail;
