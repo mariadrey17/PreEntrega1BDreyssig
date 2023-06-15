@@ -1,20 +1,20 @@
-import { useEffect, useState } from "react";
-import { getProductFilm, getProductStock } from "../../../../datos/asyncses/async";
-
-import ItemDetail from "./ItemDetail/ItemDetail";
-import stockrecomendados  from "../StockRecomendados/stockrecomendados";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Item from "../ItemListContainer/ItemList/Item/Item";
+import ItemDetail from "./ItemDetail/ItemDetail";
+import { getProductStock } from "../../../../datos/asyncses/async";
+import { useState } from "react";
+import stockrecomendados from "../StockRecomendados/stockrecomendados"
 import ItemCount from "./ItemCount/ItemCount";
 
-
 const ItemDetailContainer =()=>{
-/*const [stockrecomendados,setStockrecomendados]=useState(null)
+
+const{id}=useParams(null);
+const [stock ,setStock]=useState({})
 
 useEffect(()=>{
-    getProductFilm ('4')
+    getProductStock ('1')
     .then((response)=>{
-        setStockrecomendados(response)
+        setStock(response)
     })
 
 .catch(error=>{
@@ -22,24 +22,28 @@ useEffect(()=>{
 })
 }
 
-)*/
+)
 
 
-const {id}   =useParams()
-const[item,setItem]=useState();
-const data= stockrecomendados.id
-useEffect(()=>getProductStock(id).then(data=>{setItem(data)}))
+    return (
+      <div>
+        Cargando .... espere en breve estará listo !
+        <ItemDetail    id={stock.id}
+          nombre={stock.nombre}
+          genero={stock.genero}
+          precio={stock.precio}
+          image ={stock.image}
+          categoryId={stock.categoryId} />
+        <button>ver detalle</button>
 
-return (
-/*<div className="ItemDetailContainer">
-<ItemDetail {...stockrecomendados}/>
-</div>*/
-<div>
 
-<ItemCount initial ={0} stockrecomendados={6} onAdd={(counter=> console.log('cantidad agregada',counter))}/>
 
-    <ItemDetail   data={data} />
-</div>
-);
-}
+        <div>
+        <ItemCount initial ={0} stockrecomendados={6} onAdd={(counter=> console.log('cantidad agregada',counter))}/>
+
+
+        </div>
+      </div>
+    );
+};
 export default ItemDetailContainer;
