@@ -1,25 +1,26 @@
-div.divCardMap{margin: 1em;
-padding: 1em;
-float: left;
-align-items: start;
-width: 288px;
-height: 960px;
-    
+div.divCardMap {
+  margin: 1em;
+  padding: 1em;
+  float: left;
+  align-items: start;
+  width: 288px;
+  height: 960px;
 }
 
-div.LaCard.card{
-    height: 615px;
+div.LaCard.card {
+  height: 823px;
 }
 
-.card-img, .card-img-top {
-width:255px ;
-height:248px;
+.card-img,
+.card-img-top {
+  width: 255px;
+  height: 248px;
 }
 
 div.card-body {
-    height: 440px;
+  height: 440px;
 }
 
 p.card-text {
-    height: 60px;
+  height: 93px;
 }

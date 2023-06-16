@@ -19,6 +19,7 @@ const Item = ({ info }) => {
             <Card.Text>{info.id}</Card.Text>
             <Card.Title>{info.nombre}</Card.Title>
             <Card.Text>{info.genero}</Card.Text>
+            <Card.Text>{info.descripcion}</Card.Text>
             <Card.Text>{info.precio}</Card.Text>
             <Button
               variant="primary"

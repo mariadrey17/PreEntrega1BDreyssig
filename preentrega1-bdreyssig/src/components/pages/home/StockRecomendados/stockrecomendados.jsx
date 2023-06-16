@@ -7,6 +7,7 @@ const StockDeRecomendados=
                 titulo:"Start strek ,contacto",
                 categoryId:"peliculas",
                 genero:"ciencia ficcion",
+                descripcion:"Picard, Riker y otros se preparan para evitar que el medio-robot Borg sabotee el histórico vuelo de un cohete en el año 2063.",
                 precio:"$800",
                 image:"https://es.web.img2.acsta.net/c_310_420/medias/nmedia/18/79/66/86/20136104.jpg",
                 },
@@ -17,6 +18,7 @@ const StockDeRecomendados=
                 titulo:"Lo que hacemos en las sombras ",
                 categoryId:"estrenos",
                     genero:"comedia",
+                    descripcion:"Picard, Riker y otros se preparan para evitar que el medio-robot Borg sabotee el histórico vuelo de un cohete en el año 2063.",
                     precio:"$800",
                     image:"https://pics.filmaffinity.com/Lo_que_hacemos_en_las_sombras-587601603-large.jpg",
                 },
@@ -26,6 +28,7 @@ const StockDeRecomendados=
                     nombre:"El padrino 3",
                     categoryId:"peliculas",
                     genero:"drama",
+                    descripcion:"Picard, Riker y otros se preparan para evitar que el medio-robot Borg sabotee el histórico vuelo de un cohete en el año 2063.",
                     precio:"$950",
                     image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgEy91ccbAzTtI-TnRSiIe2aGO440xH0o6rg&usqp=CAU",
 
