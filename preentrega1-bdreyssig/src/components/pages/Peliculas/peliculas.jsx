@@ -2,7 +2,7 @@
 import "./peliculas.css";
 
 import GenerosPeliculas from "./GenerosPelisculas/GenerosPeliculas";
-
+import { Link } from "react-router-dom";
 
 
 const Peliculas=()=> {
@@ -20,7 +20,7 @@ const Peliculas=()=> {
 
     
         
-        
+        <p className="peliText">Acá vas a encontrar las mejores peliculas para ver te recomendamos el top recomendado en stock </p><Link to ="/" className="linkRecomendados">Ir a recomendados</Link>
         
         
         

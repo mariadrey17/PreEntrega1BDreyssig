@@ -18,3 +18,12 @@ p.headerP {
   color: rgb(38, 10, 177);
   font-size: 20px;
 }
+
+p.peliText {
+  color: blue;
+  font-size: 25px;
+}
+
+a.linkRecomendados {
+  font-size: 25px;
+}
