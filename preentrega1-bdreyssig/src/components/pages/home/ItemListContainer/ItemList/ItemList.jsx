@@ -39,9 +39,10 @@ const ItemList =({data=[]})=>{
 <Card.Body>
 <Card.Text>{film.id}</Card.Text>
 <Card.Title>{film.nombre}</Card.Title>
-<Card.Text>{film.genero}</Card.Text>
-<Card.Text>{film.descripcion}</Card.Text>
-<Card.Text>{film.precio}</Card.Text>
+<Card.Title>{film.titulo}</Card.Title>
+<Card.Text  >{film.genero}</Card.Text>
+<Card.Text className= "descripcionTextRecomendados">{film.descripcion}{film.precio}</Card.Text>
+
 <Link className="ver-mas" to={`/detalle/${Item.id}`}>Ver detalle </Link>
 </Card.Body>
 

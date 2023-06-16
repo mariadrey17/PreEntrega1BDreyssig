@@ -15,9 +15,13 @@ const Item = ({ info }) => {
             <Card.Body>
               <Card.Text>{info.id}</Card.Text>
               <Card.Title>{info.nombre}</Card.Title>
+              <Card.Title>{info.titulo}</Card.Title>
               <Card.Text>{info.genero}</Card.Text>
-              <Card.Text>{info.descripcion}</Card.Text>
-              <Card.Text>{info.precio}</Card.Text>
+
+              <Card.Text className="descripcionText">
+                {info.descripcion}
+                {info.precio}
+              </Card.Text>
               <Button
                 variant="primary"
                 onClick={() => navigate(`/detalle/${info.id}`)}
