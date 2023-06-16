@@ -25,12 +25,7 @@ const ItemDetailContainer =()=>{
     )
     
 
-    useEffect(()=>{
-        getCategories(id).then((data)=>{
-            setStock(data)
-        })
-    })
-    
+   
    
         return (
           <div>
