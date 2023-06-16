@@ -31,7 +31,7 @@ const ItemDetailContainer =()=>{
    
 
     useEffect (()=>{
-     getCategory= (itemId)
+     getCategory (itemId)
         .then((response)=>{
             setStock(response)
 
