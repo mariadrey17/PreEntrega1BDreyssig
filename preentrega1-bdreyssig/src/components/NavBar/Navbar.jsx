@@ -12,62 +12,38 @@ import {Link, NavLink} from 'react-router-dom';
 
 function NavBar() {
 return (
-    <Navbar  expand="lg" className='nav-style' >
-    <Container >
+    <div>
 <Link to='/' > <img src={logo} className='logo' alt="" /></Link><h1>VisualFilm Shop</h1> 
 
     
-        <NavLink to="/">home        Las Mejores Películas y Series </NavLink>
+        <NavLink to="/"  className='navstyle'  >home        Las Mejores Películas y Series </NavLink>
 
-        <ul className='navstyle'>
-        <h2>Categorías</h2>
+        <Navbar className='navstyle'>
+      <Container  >
+        <h1>VisualFilm Shop</h1>
 
- 
-<nav>
-                <ul>
-                   
-                        <li>
-                            <NavLink to={`/category/estrenos`} className={({isActive})=>isActive?'ActiveOtion':Option}>Estrenos</NavLink>
-                        </li>
+        <Navbar.Brand to="7home">
+          Las Mejores Películas y Series{" "}
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="#home">Home</Nav.Link>
 
-                        
-                        <li>
-                            <NavLink to={`/category/series`}className={({isActive})=>isActive?'ActiveOtion':Option}> Series</NavLink>
-                        </li>
-
-                        
-                        <li>
-                            <NavLink to={`/category/peliculas`}className={({isActive})=>isActive?'ActiveOtion':Option}>Peliculas</NavLink>
-                        </li>
-                  
-                </ul>
-            </nav>
-        <li>
-            <NavLink  to="/contacto" >Contacto</NavLink> </li>
-
-        </ul>
-
-
-        {/*<Navbar.Toggle aria-controls to="basic-navbar-nav" />
-        <Navbar.Collapse id to="basic-navbar-nav">
-        <Nav className="me-auto">
-            <Nav.Link to ="/">Home</Nav.Link>
-            <Nav.Link to="/">Peliculas</Nav.Link>
-            <NavDropdown title  ="Catálogo" id="basic-nav-dropdown">
-            <NavDropdown.Item to="/series">Series</NavDropdown.Item>
-            
-            <NavDropdown.Item to ="7contacto">Contacto</NavDropdown.Item>
-            
+            <NavDropdown title="Categorias" id="basic-nav-dropdown">
+              <NavLink to="/home">Estrenos</NavLink >
+              <NavLink to="/peliculas">Películas</NavLink>
+              <NavLink to="/series">Series</NavLink>
+              <NavLink to="/contacto">Contacto</NavLink>
             </NavDropdown>
-        </Nav>
-</Navbar.Collapse>*/}
+          </Nav>
+        </Navbar.Collapse>
         <CartWidget></CartWidget>
-    
-
-
-
-    </Container>
+      </Container>
     </Navbar>
+
+    </div>
+    
 );
 }
 
