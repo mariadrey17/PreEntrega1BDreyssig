@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail/ItemDetail";
-import { getCategories, getProductStock } from "../../../../datos/asyncses/async";
+import { getCategories, getProductStock } from "../../../../datos/asynces/async";
 import { useState } from "react";
 import stockrecomendados from "../StockRecomendados/stockrecomendados"
 import ItemCount from "./ItemCount/ItemCount";

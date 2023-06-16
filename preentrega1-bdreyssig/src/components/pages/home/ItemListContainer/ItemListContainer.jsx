@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ItemList from "./ItemList/Item.List";
-import { getCategories, getProductFilms, getProductStock } from "../../../../datos/asyncses/async";
+import { getCategories, getProductFilms, getProductStock } from "../../../../datos/asynces/async";
 import { NavLink, useParams } from "react-router-dom";
 import categories from "../../../Categories/categories";
 
