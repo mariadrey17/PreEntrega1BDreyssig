@@ -29,3 +29,16 @@ const getProductStock = (id) => {
 };
 
 export { getCategories, getCategory, getProductFilms, getProductStock };
+
+export const getProductByCategory = (categoryId) => {
+  const data = stockrecomendados;
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      const filteredData = data.filter(
+        (data) => data.categoryId === categoryId
+      );
+      resolve(filteredData);
+    }, 500);
+  });
+};
+export default getProductByCategory;

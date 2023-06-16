@@ -17,6 +17,18 @@ export const ItemCount=({initial,stockrecomendados,onAdd, })=>{
     const increase=()=>{
         setCount(counter+1);
     }
+
+
+    
+const [goToCart,setGoToCart]=useState('false')
+
+
+const [itemCount, setItemCount] = useState(0);
+const [addedToCart, setAddedToCart] = useState(false);
+
+const handleAddToCart = () => {
+  setAddedToCart(true);
+};
     return (
         <div>
             <h3>Carrito</h3>
@@ -36,8 +48,15 @@ export const ItemCount=({initial,stockrecomendados,onAdd, })=>{
         
 
             <div>
-                <button disabled={stockrecomendados<= 0} onClick={()=>onAdd(counter)}>Agregar carrito </button>
-            </div>
+            <p>Contador: {itemCount}</p>
+      {addedToCart ? (
+        <button>Terminar compra</button>
+      ) : (
+        <button onClick={handleAddToCart}>Agregar al carrito</button>
+      )}
+               
+             
+      </div>
 
 
             </div>
