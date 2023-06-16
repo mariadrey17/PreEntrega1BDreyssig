@@ -30,10 +30,10 @@ function App() {
         <Route path="/detalle/:id" element={<ItemDetailContainer />} />
         <Route path="/" element={<ItemDetailContainer />} />
         <Route path="/Cart" element={<ItemDetail />} />
-        <Route path="/home" element={<Estrenos />} />
-        <Route path="/peliculas" element={<Peliculas />} />
-        <Route path="/series" element={<Series />} />
-        <Route path="/contacto" element={<Contacto />} />
+        <Route path="category/home" element={<Estrenos />} />
+        <Route path="category/peliculas" element={<Peliculas />} />
+        <Route path="category/series" element={<Series />} />
+        <Route path="category/contacto" element={<Contacto />} />
       </Routes>
       <Footer />
     </BrowserRouter>

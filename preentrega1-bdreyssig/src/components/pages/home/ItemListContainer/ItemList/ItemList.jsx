@@ -1,19 +1,29 @@
 //import Item from "./Item/Item";
 import React from "react";
-import stockrecomendados from "../StockRecomendados/stockrecomendados";
-
+import stockrecomendados from "../../StockRecomendados/stockrecomendados";
+import Container from "react-bootstrap/esm/Container";
 import Card from 'react-bootstrap/Card';
-import "./ItemList.css";
 
+import Button from "react-bootstrap/Button";
+import Item from "./Item/Item";
+import { useNavigate } from "react-router-dom";
+import {Link}from "react-router-dom";
 
 const ItemList =({data=[]})=>{
-    return (
-    
-    
 
+    const Navegar=useNavigate()
+    return (
+
+        <div>
+             <div>
+
+            {data.map(stockrecomendados=><Item key={stockrecomendados.id} info={stockrecomendados}/>)}</div>
+
+
+
+    
 
     <div >
-    
 
         <h3>Top recomendado</h3>
         
@@ -23,7 +33,7 @@ const ItemList =({data=[]})=>{
     <div className="divCardMap"   key={prod} >
 
 
-
+  <Container>
 <Card style={{ width: '18rem' }}>
 <Card.Img variant="top" src=  {film.image} />
 <Card.Body>
@@ -32,7 +42,7 @@ const ItemList =({data=[]})=>{
 <Card.Text>{film.genero}</Card.Text>
 <Card.Text>{film.descripcion}</Card.Text>
 <Card.Text>{film.precio}</Card.Text>
-    
+<Link className="ver-mas" to={`/detalle/${Item.id}`}>Ver detalle </Link>
 </Card.Body>
 
 
@@ -44,7 +54,7 @@ const ItemList =({data=[]})=>{
 
 
 </Card>
-
+</Container>
     </div>
 
 
@@ -58,6 +68,13 @@ const ItemList =({data=[]})=>{
 
     
     </div>
+
+      
+   
+        
+
+    
+   </div>
 
 
 

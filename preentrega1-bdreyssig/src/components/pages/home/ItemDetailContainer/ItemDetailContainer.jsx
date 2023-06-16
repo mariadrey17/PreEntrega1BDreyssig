@@ -28,11 +28,12 @@ const ItemDetailContainer =()=>{
    
         return (
           <div>
-            Cargando .... espere en breve estará listo !
+            <p>Cargando .... espere en breve estará listo !</p>
             <ItemDetail    id={stock.id}
               nombre={stock.nombre}
               titulo={stock.titulo}
               genero={stock.genero}
+              descripcion={stock.descripcion}
               precio={stock.precio}
               image ={stock.image}
               categoryId={stock.categoryId} />

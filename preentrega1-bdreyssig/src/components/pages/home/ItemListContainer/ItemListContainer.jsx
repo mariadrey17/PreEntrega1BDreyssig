@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ItemList from "./ItemList/Item.List";
+import ItemList from "./ItemList/ItemList";
 import { getCategories, getCategory, getProductFilms, getProductStock } from "../../../../datos/asynces/async";
 import { NavLink, useParams } from "react-router-dom";
 import categories from "../../../Categories/categories";
@@ -57,7 +57,7 @@ const {categoryId}=useParams()
     return (
         <div>
             <h2>Hola {props.text}  </h2>
-            <h3>Top de recomendados</h3>
+            
 
 
             

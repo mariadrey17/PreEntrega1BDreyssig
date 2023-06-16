@@ -31,9 +31,9 @@ return (
             <Nav.Link href="#home">Home</Nav.Link>
 
             <NavDropdown title="Categorias" id="basic-nav-dropdown">
-              <NavLink to="/home">Estrenos</NavLink >
-              <NavLink to="/peliculas">Películas</NavLink>
-              <NavLink to="/series">Series</NavLink>
+              <NavLink to="category/home">Estrenos</NavLink >
+              <NavLink to="/category/peliculas">Películas</NavLink>
+              <NavLink to="category/series">Series</NavLink>
               <NavLink to="/contacto">Contacto</NavLink>
             </NavDropdown>
           </Nav>
