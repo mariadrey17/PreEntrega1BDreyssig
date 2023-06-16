@@ -4,6 +4,8 @@ div.cardList {
 
 .filmCardContainer {
   width: 21rem;
+
+  height: 64rem;
 }
 p.descripcionText-card {
   height: 24px;

@@ -25,7 +25,7 @@ function App() {
     <BrowserRouter>
       <NavBar />
       <Routes>
-        <Route path="/" element={<ItemListContainer />} />
+        <Route path="/" element={<ItemListContainer text="Bienvenidos" />} />
         <Route path="/category/:id" element={<ItemListContainer />} />
         <Route path="/detalle/:id" element={<ItemDetailContainer />} />
         <Route path="/" element={<ItemDetailContainer />} />
@@ -33,7 +33,7 @@ function App() {
         <Route path="category/home" element={<Estrenos />} />
         <Route path="category/peliculas" element={<Peliculas />} />
         <Route path="category/series" element={<Series />} />
-        <Route path="category/contacto" element={<Contacto />} />
+        <Route path="/contacto" element={<Contacto />} />
       </Routes>
       <Footer />
     </BrowserRouter>

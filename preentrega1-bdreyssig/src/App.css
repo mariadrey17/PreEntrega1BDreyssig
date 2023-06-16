@@ -1,21 +1,20 @@
 /*estilos generales*/
 
 body {
-    background-color: rgb(21, 20, 20);
-    
+  background-color: rgb(21, 20, 20);
 }
-
 
 footer div .elpieultimo {
-        background-color: rgb(208, 172, 241);
-    
-
+  background-color: rgb(208, 172, 241);
 }
 h1 {
-    text-align: center;
-
-
+  text-align: center;
+}
+div.headerInicio {
+  background-image: url(../src/Assets/img/corn\ fondo.jpg);
 }
 
-
-
+p.headerP {
+  color: rgb(38, 10, 177);
+  font-size: 20px;
+}

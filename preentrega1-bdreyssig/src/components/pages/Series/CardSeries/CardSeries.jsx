@@ -20,7 +20,7 @@ function CardSeries() {
       <Card.Img variant="top" src=   {succession} />
       <Card.Body>
         <Card.Title>Succession temporada 4</Card.Title>
-        <Card.Text>
+        <Card.Text className='serieDescripcion'>
         Una serie sobre una familia de gran Poder,
         ya que Logan logró superar una vez más a sus hijos y vender su empresa
         La cuarta temporada tendrá que lidiar con las consecuencias de todo ello, 

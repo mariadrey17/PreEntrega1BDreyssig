@@ -28,14 +28,13 @@ return (
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-
-            <NavDropdown title="Categorias" id="basic-nav-dropdown">
+             <NavDropdown title="Categorias" id="basic-nav-dropdown">
               <NavLink to="category/home">Estrenos</NavLink >
               <NavLink to="/category/peliculas">Películas</NavLink>
               <NavLink to="category/series">Series</NavLink>
-              <NavLink to="/contacto">Contacto</NavLink>
+             
             </NavDropdown>
+            <NavLink to="/contacto">Contacto</NavLink>
           </Nav>
         </Navbar.Collapse>
         <CartWidget></CartWidget>

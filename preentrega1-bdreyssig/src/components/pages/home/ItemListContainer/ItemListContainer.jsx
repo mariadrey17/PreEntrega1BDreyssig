@@ -56,13 +56,22 @@ const {categoryId}=useParams()
 
     return (
         <div>
-            <h2>Hola {props.text}  </h2>
+            <div className="headerInicio">
+
+            <header ><h2>Hola {props.text}</h2>
+            <h3>Top Recomendados</h3>
+            <p className="headerP"> Si queres ver mas peliculas y series  en cartelera click acá                 y para series click acá</p>
+            
+            </header>
+
+            </div>
+            
             
 
 
             
 
-
+   
 
 
 
