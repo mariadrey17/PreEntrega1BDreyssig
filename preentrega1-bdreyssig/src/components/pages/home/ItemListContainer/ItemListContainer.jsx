@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ItemList from "./ItemList/ItemList";
 import { getCategories, getCategory, getProductFilms, getProductStock } from "../../../../datos/asynces/async";
-import { NavLink, useParams } from "react-router-dom";
+import { Link, NavLink, useParams } from "react-router-dom";
 import categories from "../../../Categories/categories";
 import getProductByCategory from "../../../../datos/asynces/async";
 
@@ -60,7 +60,7 @@ const {categoryId}=useParams()
 
             <header ><h2>Hola {props.text}</h2>
             <h3>Top Recomendados</h3>
-            <p className="headerP"> Si queres ver mas peliculas y series  en cartelera click acá                 y para series click acá</p>
+            <p className="headerP"> Si queres ver mas peliculas y series  en cartelera click acá <Link to="category/peliculas" >ir a películas</Link> y para series click acá <Link to="category/series" >ir a Series</Link></p>
             
             </header>
 

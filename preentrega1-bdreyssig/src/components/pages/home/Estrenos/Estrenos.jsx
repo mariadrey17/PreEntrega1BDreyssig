@@ -4,7 +4,7 @@ import evildead from '../../../../Assets/img/evildead.jpg';
 import lasirenita from '../../../../Assets/img/lasirenita.jpg';
 import rapidoyfurioso from '../../../../Assets/img/rapidoyfurioso.jpg';
 import succession from '../../../../Assets/img/succession.jpg';
-
+import { Link } from "react-router-dom";
 import yellowjackets from '../../../../Assets/img/yellowjackets.jpg';
 
 
@@ -41,7 +41,9 @@ const Estrenos=()=> {
         <ListaPeliculasEstreno></ListaPeliculasEstreno>
         
     
-    
+        <div>
+            <p className="homeText ">Queres comunicarte con nosotros: <Link  to="/contacto"  className="linkHome">Ir a contacto</Link>click acá</p> 
+        </div>
     
     
     
