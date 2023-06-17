@@ -12,7 +12,7 @@ const ItemDetailContainer =()=>{
     const [stock ,setStock]=useState({})
     
     useEffect(()=>{
-        getProductStock (1)
+        getProductStock (4)
         .then((response)=>{
             setStock(response)
         })
@@ -37,7 +37,7 @@ const ItemDetailContainer =()=>{
               precio={stock.precio}
               image ={stock.image}
               categoryId={stock.categoryId} />
-            <button>ver detalle</button>
+            
     
     
     
