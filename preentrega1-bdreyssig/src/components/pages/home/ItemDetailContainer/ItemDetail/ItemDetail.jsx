@@ -24,7 +24,6 @@ const ItemDetail = ({image,nombre,titulo,precio,id, genero,descripcion,categoryI
         <li>{descripcion}</li>
         <li>{precio}</li>
         <img src={image} alt=""/>
-       {/*<img src="https://es.web.img2.acsta.net/c_310_420/medias/nmedia/18/79/66/86/20136104.jpg" alt="" /> */}
         <li>{categoryId}</li>
         
       </ul>
