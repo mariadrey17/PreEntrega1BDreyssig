@@ -12,7 +12,7 @@ const ItemDetailContainer =()=>{
     const [stock ,setStock]=useState({})
     
     useEffect(()=>{
-        getProductStock (4)
+        getProductStock (id)
         .then((response)=>{
             setStock(response)
         })

@@ -15,7 +15,7 @@ function ItemListContainer(props) {
         getProductFilms().then((data) => {
             setStockrecomendados(data);
         });
-        getCategories(id).then((data) => {
+        getProductByCategory(id).then((data) => {
             SetCategories(data);
         })
     }, [])
