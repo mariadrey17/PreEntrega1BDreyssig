@@ -29,9 +29,9 @@ function App() {
         <Route path="/category/:id" element={<ItemListContainer />} />
         <Route path="/detalle/:id" element={<ItemDetailContainer />} />
         <Route path="/" element={<ItemDetailContainer />} />
-        <Route path="category/home" element={<Estrenos />} />
-        <Route path="category/peliculas" element={<Peliculas />} />
-        <Route path="category/series" element={<Series />} />
+        {/*<Route path="category/home" element={<Estrenos />} />}
+        {/*<Route path="category/peliculas" element={<Peliculas />} />*/}
+        {/*/*<Route path="category/series" element={<Series />} />*/}
         <Route path="/contacto" element={<Contacto />} />
       </Routes>
       <Footer />
