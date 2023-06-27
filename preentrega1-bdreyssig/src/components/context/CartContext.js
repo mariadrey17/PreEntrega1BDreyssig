@@ -1,37 +1,33 @@
-import { createContext, useState } from "react";
+import React, { createContext, useState } from "react";
 
-export const CartContext = createContext({ cart: [] });
+// Crea el contexto del carrito
+export const CartContext = createContext();
 
+// Crea el proveedor del contexto del carrito
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-  console.log(cart);
 
-  const addItem = (item, quantity) => {
-    if (!isInCart(item.id)) {
-      setCart((prev) => [...prev, { ...item, quantity }]);
-    } else {
-      console.error("el producto ya fue agregado");
-    }
+  // Función para agregar una película al carrito
+  const addToCart = (film) => {
+    setCart([...cart, film]);
   };
 
-  const removeItem = (id) => {
-    const cartUpdate = cart.filter((data) => data.id !== id);
-    setCart(cartUpdate);
+  // Función para eliminar una película del carrito
+  const removeFromCart = (id) => {
+    const updatedCart = cart.filter((film) => film.id !== id);
+    setCart(updatedCart);
   };
 
-  const clearCart = () => {
-    setCart([]);
-  };
-
-  const isInCart = (id) => {
-    return cart.some((data) => data.id === id);
+  // Valor proporcionado por el proveedor del contexto
+  const cartContextValue = {
+    cart,
+    addToCart,
+    removeFromCart,
   };
 
   return (
-    <CartContext.Provider value={{ cart, addItem, removeItem, clearCart }}>
+    <CartContext.Provider value={cartContextValue}>
       {children}
     </CartContext.Provider>
   );
 };
-
-export default CartProvider;
