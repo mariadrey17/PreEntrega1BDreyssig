@@ -23,7 +23,7 @@ const films =
         "Picard, Riker y otros se preparan para evitar que el medio-robot Borg sabotee el histórico vuelo de un cohete en el año 2063.",
       precio: "$800",
       image:
-        "https://pics.filmaffinity.com/Lo_que_hacemos_en_las_sombras-587601603-large.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNMtJkMckhDYaErXd8DYZTb5mWp6LP9VtGlA&usqp=CAU",
     },
     {
       id: 3,
@@ -56,12 +56,12 @@ const films =
     },
     {
       id: 6,
-      nombre: "Start strek ,contacto",
+      nombre: "Sky Rojo ",
       categoryId: "series",
-      genero: "ciencia ficcion",
+      genero: "Drama,acción",
       precio: "$2000",
       image:
-        "https://es.web.img2.acsta.net/c_310_420/medias/nmedia/18/79/66/86/20136104.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFHfLOu6sHC9DH59kOgBYFvHn5TWupMC4BWA&usqp=CAU",
     },
   ];
 

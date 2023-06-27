@@ -21,9 +21,10 @@ const [item,setItem]=useState(undefined);*/
         <li>{nombre}</li>
         <li>{genero}</li>
         <li>{precio}</li>
-        <li>{image}</li>
+        <img src= {image}/>
         <li>{categoryId}</li>
         <li>{descripcion}</li>
+       
       </ul>
         
          

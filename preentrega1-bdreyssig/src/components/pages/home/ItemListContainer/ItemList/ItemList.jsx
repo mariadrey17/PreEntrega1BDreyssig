@@ -1,6 +1,6 @@
 //import Item from "./Item/Item";
 import React from "react";
-import stockrecomendados from "../../StockRecomendados/stockrecomendados";
+import films from "../../../../../datos/peliculas";
 import Container from "react-bootstrap/esm/Container";
 import Card from 'react-bootstrap/Card';
 
@@ -9,9 +9,9 @@ import Item from "./Item/Item";
 import { useNavigate } from "react-router-dom";
 import {Link}from "react-router-dom";
 
-const ItemList =({data=[stockrecomendados]})=>{
+const ItemList =({data=[films]})=>{
     return (
-    data.map(stockrecomendados=><Item key={stockrecomendados.id} info={stockrecomendados}/>)
+    data.map(films=><Item key={films.id} info={films}/>)
 
 
 
