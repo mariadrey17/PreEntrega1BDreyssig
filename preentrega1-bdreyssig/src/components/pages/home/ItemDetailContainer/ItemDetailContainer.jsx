@@ -1,18 +1,15 @@
-import React, { useEffect } from "react";
+
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail/ItemDetail";
 import { getFilmsById } from "../../../../datos/peliculas";
-import { useState } from "react";
-import films from "../../../../datos/peliculas";
 
-import ItemCount from "../ItemCount";
+
 
 const ItemDetailContainer =()=>{
-
   const [film ,setFilm]=useState({})
   const{id}=useParams();
-
-  useEffect(()=>{
+useEffect(()=>{
     getFilmsById(id)
     .then((response)=>{
       setFilm(response)
@@ -20,8 +17,9 @@ const ItemDetailContainer =()=>{
 .catch(error=>{
     console.log (error)
 })
+},[id])
 
-  },[id])
+
 
 
 /*return (
