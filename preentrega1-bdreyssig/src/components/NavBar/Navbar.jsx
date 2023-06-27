@@ -8,7 +8,7 @@
     import logo from '../../Assets/img/logo.jpg';
     import ItemCount from '../pages/home/ItemCount';
     import {Link, NavLink} from 'react-router-dom';
-    import categories from '../../datos/Categories/categories';
+
 
     
     function NavBar() {

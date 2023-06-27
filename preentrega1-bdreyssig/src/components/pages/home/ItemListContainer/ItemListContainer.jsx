@@ -1,25 +1,35 @@
 import React, { useEffect, useState } from "react";
 import ItemList from "./ItemList/Item.List";
-import { getCategories, getProductFilms, getProductStock } from "../../../../datos/asynces/async";
+import { getFilmsByCategory,getFilms } from "../../../../datos/peliculas";
 import { NavLink, useParams } from "react-router-dom";
-import categories from "../../../../datos/Categories/categories";
+
+import films from "../../../../datos/peliculas";
+import { element } from "prop-types";
 
 
-function ItemListContainer(props) {
-    const { id } = useParams();
 
-    const [stockrecomendados, setStockrecomendados] = useState([]);
-    const [categories, SetCategories] = useState([]);
 
-    useEffect(() => {
-        getProductFilms().then((data) => {
-            setStockrecomendados(data);
-        });
-        getCategories().then((data) => {
-            SetCategories(data);
-        })
-    }, [])
-
+    function ItemListContainer(props) {
+    
+        const [films, setFilms] = useState([]);
+        const { id } = useParams();
+    
+        useEffect(() => {
+            if (id) {
+                getFilmsByCategory(id).then((data) => {
+                    setFilms(data);
+    
+                })
+            }
+            else {
+                getFilms().then((data)=>{
+                    setFilms(data);
+                })
+            }
+    
+        },[id])
+          
+                 
 
     //aca para el id de categorias
 
@@ -48,19 +58,7 @@ function ItemListContainer(props) {
             <h3>Top de recomendados</h3>
 
 
-            
-    <h2>Categorías</h2>
-
- 
-    <nav>
-                    <ul>
-                        {categories.map((category) => (
-                            <li>
-                                <NavLink to={`/category/${category.id}`}>{category.nombre} </NavLink>
-                            </li>
-                        ))}
-                    </ul>
-                </nav>
+  
 
 
 
@@ -72,7 +70,7 @@ function ItemListContainer(props) {
 
                 
              
-                <ItemList data={stockrecomendados} />
+                <ItemList data={films} />
             </div>
         </div>
     );

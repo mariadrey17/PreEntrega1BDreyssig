@@ -1,15 +1,15 @@
 //import Item from "./Item/Item";
 import React from "react";
-import stockrecomendados from "../../StockRecomendados/stockrecomendados";
+import films from "../../../../../datos/peliculas";
 
 import Card from 'react-bootstrap/Card';
 import "./ItemList.css";
 import Item from "./Item/Item";
 
 
-const ItemList =({data=[stockrecomendados]})=>{
+const ItemList =({data=[films]})=>{
     return (
-    data.map(stockrecomendados=><Item key={stockrecomendados.id} info={stockrecomendados}/>)
+    data.map(films=><Item key={films.id} info={films}/>)
 
 
 

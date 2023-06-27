@@ -1,28 +1,28 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail/ItemDetail";
-import { getProductStock } from "../../../../datos/asynces/async"
+import { getFilmsById } from "../../../../datos/peliculas";
 import { useState } from "react";
-import stockrecomendados from "../StockRecomendados/stockrecomendados"
+import films from "../../../../datos/peliculas";
+
 import ItemCount from "../ItemCount";
 
 const ItemDetailContainer =()=>{
 
-const{id}=useParams();
-const [stock ,setStock]=useState({})
+  const [film ,setFilm]=useState({})
+  const{id}=useParams();
 
-useEffect(()=>{
-    getProductStock ('1')
+  useEffect(()=>{
+    getFilmsById(id)
     .then((response)=>{
-        setStock(response)
+      setFilm(response)
     })
-
 .catch(error=>{
     console.log (error)
 })
-}
 
-)
+  },[id])
+
 
 /*return (
 <div className="ItemDetailContainer">
@@ -68,21 +68,16 @@ getData.then(res=>setData(res));
     return (
       <div>
         Cargando .... espere en breve estará listo !
-        <ItemDetail    id={stock.id}
-          nombre={stock.nombre}
-          genero={stock.genero}
-          precio={stock.precio}
-          image ={stock.image}
-          categoryId={stock.categoryId} />
+        <ItemDetail    id={film.id}
+          nombre={film.nombre}
+          genero={film.genero}
+          precio={film.precio}
+          image ={film.image}
+          categoryId={film.categoryId} />
         <button>ver detalle</button>
 
 
 
-        <div>
-        <ItemCount initial ={0} stockrecomendados={6} onAdd={(counter=> console.log('cantidad agregada',counter))}/>
-
-
-        </div>
       </div>
     );
 };

@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import stockrecomendados from "../../StockRecomendados/stockrecomendados";
+
 
 import ItemCount from "../../ItemCount";
 import { useState } from "react";
@@ -29,6 +29,11 @@ const [item,setItem]=useState(undefined);*/
          
           
         
+      <div>
+        <ItemCount initial ={0} films={6} onAdd={(counter=> console.log('cantidad agregada',counter))}/>
+
+
+        </div>
         
     
       {/*<div className="CardBody">
