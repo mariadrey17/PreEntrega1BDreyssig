@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
-import ItemList from "../ItemList/ItemList";
+import ItemList from "./ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import { getFilms, getFilmsByCategory } from "../../../../datos/peliculas";
+
+
+
+
 function ItemListContainer(props) {
     const [films, setFilms] = useState([]);
     const { id } = useParams();
