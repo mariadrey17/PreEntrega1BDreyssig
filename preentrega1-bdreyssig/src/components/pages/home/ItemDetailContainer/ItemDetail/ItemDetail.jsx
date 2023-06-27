@@ -1,17 +1,17 @@
 import { useParams } from "react-router-dom";
-import stockrecomendados from "../../StockRecomendados/stockrecomendados";
+
 
 import ItemCount from "../ItemCount/ItemCount";
 import { useState } from "react";
 import React from "react";
-import { Link } from "react-router-dom";
-import "../ItemDetail/ItemDetail.css";
 
-const ItemDetail = ({image,nombre,titulo,precio,id, genero,descripcion,categoryId}) => {
+const ItemDetail = ({image,nombre,precio,id, genero,categoryId,descripcion}) => {
+ /* const { filmId } = useParams();
+  const film = stockrecomendados.find((film) => film.id === filmId);
 
+const [item,setItem]=useState(undefined);*/
 
-
-
+    
   return (
     <div className="SectionFilm">
       <p> Este es el detalle del film </p>
@@ -19,18 +19,23 @@ const ItemDetail = ({image,nombre,titulo,precio,id, genero,descripcion,categoryI
       <ul>
         <li>{id}</li>
         <li>{nombre}</li>
-        <li>{titulo}</li>
         <li>{genero}</li>
-        <li>{descripcion}</li>
         <li>{precio}</li>
-        <img src={image} alt=""/>
+        <li>{image}</li>
         <li>{categoryId}</li>
-        
+        <li>{descripcion}</li>
       </ul>
         
          
-   
+          
         
+      <div>
+        <ItemCount initial ={0} films={6} onAdd={(counter=> console.log('cantidad agregada',counter))}/>
+
+
+        </div>
+        
+    
   
 
 
