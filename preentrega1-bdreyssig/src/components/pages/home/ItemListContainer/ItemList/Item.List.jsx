@@ -13,7 +13,7 @@ const ItemList =({data=[films]})=>{
 
     const { cart, addToCart, removeFromCart } = useContext(CartContext);
     return (
-      <div>
+   
    
 
       data.map(films=><Item key={films.id} info={films}/>)
@@ -43,7 +43,7 @@ const ItemList =({data=[films]})=>{
 
 
 
-</div>
+
 
 
 
