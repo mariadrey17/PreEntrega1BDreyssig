@@ -26,7 +26,7 @@ const ItemList =({data=[films]})=>{
 
 
 
-<h2>Películas:</h2>
+/*<h2>Películas:</h2>
       <ul>
      <li> 
             {films.title} - ${films.price}
@@ -39,7 +39,7 @@ const ItemList =({data=[films]})=>{
             )}
           </li>
         
-      </ul>
+      </ul>*/
 
 
 

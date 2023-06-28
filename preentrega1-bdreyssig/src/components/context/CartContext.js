@@ -1,5 +1,8 @@
 import React, { createContext, useState } from "react";
+import films from "../../datos/peliculas";
+import Item from "../pages/home/ItemListContainer/ItemList/Item/Item";
 
+import { useContext } from "react";
 // Crea el contexto del carrito
 export const CartContext = createContext();
 
@@ -25,9 +28,25 @@ export const CartProvider = ({ children }) => {
     removeFromCart,
   };
 
+  const { cartItems } = useContext(CartContext);
   return (
-    <CartContext.Provider value={cartContextValue}>
-      {children}
-    </CartContext.Provider>
+    <div>
+      {cartItems.map((films) => (
+        <Item key={films.id} info={films} />
+      ))}
+      <h2>Películas:</h2>
+      <ul>
+        <li>
+          {films.title} - ${films.price}
+          {cart.find((films) => films.id === films.id) ? (
+            <button onClick={() => removeFromCart(films.id)}>
+              Remover del carrito
+            </button>
+          ) : (
+            <button onClick={() => addToCart(films)}>Agregar al carrito</button>
+          )}
+        </li>
+      </ul>
+    </div>
   );
 };
