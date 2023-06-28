@@ -13,31 +13,32 @@ const ItemList =({data=[films]})=>{
 
     const { cart, addToCart, removeFromCart } = useContext(CartContext);
     return (
+      <div>
+   
 
-        <div>
-            <div>
+      data.map(films=><Item key={films.id} info={films}/>)
 
-            data.map(films=><Item key={films.id} info={films}/>)
-            </div>
+         
+    
+        
  
 
 
-<div>
+
 
 <h2>Películas:</h2>
       <ul>
-        {films.map((film) => (
-          <li key={film.id}>
-            {films.title} - ${film.price}
-            {cart.find((item) => item.id === film.id) ? (
-              <button onClick={() => removeFromCart(film.id)}>
+     <li> 
+            {films.title} - ${films.price}
+            {cart.find((item) => item.id === films.id) ? (
+              <button onClick={() => removeFromCart(films.id)}>
                 Remover del carrito
               </button>
             ) : (
-              <button onClick={() => addToCart(film)}>Agregar al carrito</button>
+              <button onClick={() => addToCart(films)}>Agregar al carrito</button>
             )}
           </li>
-        ))}
+        
       </ul>
 
 
@@ -48,7 +49,7 @@ const ItemList =({data=[films]})=>{
 
 
 
-</div>
+
 
 
 
