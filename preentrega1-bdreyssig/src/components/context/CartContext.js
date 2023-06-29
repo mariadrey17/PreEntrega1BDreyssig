@@ -1,12 +1,11 @@
 import React, { createContext, useState } from "react";
-import films from "../../datos/peliculas";
-import Item from "../pages/home/ItemListContainer/ItemList/Item/Item";
 
 import { useContext } from "react";
+import films from "../../datos/peliculas";
 // Crea el contexto del carrito
 export const CartContext = createContext();
 
-// Crea el proveedor del contexto del carrito
+/*// Crea el proveedor del contexto del carrito
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
@@ -26,12 +25,25 @@ export const CartProvider = ({ children }) => {
     cart,
     addToCart,
     removeFromCart,
+  };*/
+
+const CartProvider = ({ children }) => {
+  const [filmCart, setFilmCart] = useState([]);
+
+  const addToCart = (counter) => {
+    console.log("cantidad agregada", counter);
+
+    setFilmCart();
   };
 
-  const { cartItems } = useContext(CartContext);
+  const value = {
+    films,
+    addToCart,
+  };
+
   return (
-    <div>
-      {cartItems.map((films) => (
+    <CartContext.Provider value={value}>{children}</CartContext.Provider>
+    /*{cartItems.map((films) => (
         <Item key={films.id} info={films} />
       ))}
       <h2>Películas:</h2>
@@ -46,7 +58,8 @@ export const CartProvider = ({ children }) => {
             <button onClick={() => addToCart(films)}>Agregar al carrito</button>
           )}
         </li>
-      </ul>
-    </div>
+      </ul>*/
   );
 };
+
+export default CartProvider;

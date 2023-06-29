@@ -11,7 +11,7 @@ import { useContext } from "react";
 
 const ItemList =({data=[films]})=>{
 
-    const { cart, addToCart, removeFromCart } = useContext(CartContext);
+   
     return (
    
    

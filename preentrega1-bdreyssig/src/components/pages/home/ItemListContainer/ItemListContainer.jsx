@@ -1,10 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import ItemList from "./ItemList/Item.List";
 import { useParams } from "react-router-dom";
 import { getFilms, getFilmsByCategory } from "../../../../datos/peliculas";
+import { CartContext } from "../../../context/CartContext";
+
+
 function ItemListContainer(props) {
     const [films, setFilms] = useState([]);
     const { id } = useParams();
+
+     
+
+
     useEffect(() => {
         if (id) {
             getFilmsByCategory(id).then((data) => {
@@ -16,6 +23,7 @@ function ItemListContainer(props) {
             });
         }
     }, [id])
+   
     return (
         <div>
             <h2>{props.text}  </h2>

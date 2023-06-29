@@ -3,7 +3,8 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail/ItemDetail";
 import { getFilmsById } from "../../../../datos/peliculas";
-
+import { CartContext } from "../../../context/CartContext";
+import { useContext } from "react";
 
 
 const ItemDetailContainer =()=>{
@@ -19,8 +20,11 @@ useEffect(()=>{
 })
 },[id])
 
+const {addToCart}=useContext(CartContext)
+const onAdd=(counter)=>{
+  addToCart(counter);
 
-
+}
 
 /*return (
 <div className="ItemDetailContainer">
@@ -72,7 +76,7 @@ getData.then(res=>setData(res));
           precio={film.precio}
           image ={film.image}
           categoryId={film.categoryId} />
-        <button>ver detalle</button>
+        <button>comprar</button>
 
 
 
