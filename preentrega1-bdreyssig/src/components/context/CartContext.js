@@ -30,14 +30,14 @@ export const CartProvider = ({ children }) => {
 const CartProvider = ({ children }) => {
   const [filmCart, setFilmCart] = useState([]);
 
-  const addToCart = (counter) => {
+  const addToCart = (film, counter) => {
     console.log("cantidad agregada", counter);
 
-    setFilmCart();
+    setFilmCart(film, counter);
   };
 
   const value = {
-    films,
+    filmCart,
     addToCart,
   };
 
