@@ -35,7 +35,7 @@ const CartContextProvider = ({ children }) => {
   const totalCart = () => {
     return cart.reduce((acc, film) => (acc += film.cantidad * film.precio), 0);
   };
-
+  console.log(cart);
   return (
     <CartContext.Provider
       value={{ cart, addItem, removeItem, clear, totalCart, someItemsCart }}

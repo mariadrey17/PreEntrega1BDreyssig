@@ -17,6 +17,10 @@ export const ItemCount=({initial,films,onAdd, })=>{
     const increase=()=>{
         setCount(counter+1);
     }
+
+    /*const onAdd= (quantity)=>{
+        console.log('cantidad agregada'.quantity);}*/
+
     return (
         <div>
             <h3>Carrito</h3>
