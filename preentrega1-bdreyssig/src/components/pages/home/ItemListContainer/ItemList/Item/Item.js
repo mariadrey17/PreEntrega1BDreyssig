@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import "./Item.css";
 const Item = ({ info }) => {
   const navigate = useNavigate();
+
   return (
     <div className="filmCardContainer">
       <div className="filmCard">

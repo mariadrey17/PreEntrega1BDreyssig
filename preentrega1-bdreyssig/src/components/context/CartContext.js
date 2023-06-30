@@ -1,85 +1,48 @@
-import React, { createContext, useState } from "react";
+import { createContext, useState } from "react";
 
-import { useContext } from "react";
-import films from "../../datos/peliculas";
-// Crea el contexto del carrito
 export const CartContext = createContext();
 
-/*// Crea el proveedor del contexto del carrito
-export const CartProvider = ({ children }) => {
+const CartContextProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
-  // Función para agregar una película al carrito
-  const addToCart = (film) => {
-    setCart([...cart, film]);
+  const addItem = (film, quantity) => {
+    if (isInCart(film.id)) {
+      let position = cart.findIndex((film) => film.id === film.id);
+      cart[position].cantidad += quantity;
+      setCart([...cart]);
+    } else {
+      setCart([...cart, { ...film, cantidad: quantity }]);
+    }
   };
 
-  // Función para eliminar una película del carrito
-  const removeFromCart = (id) => {
-    const updatedCart = cart.filter((film) => film.id !== id);
-    setCart(updatedCart);
+  const removeItem = (id) => {
+    const newObj = cart.filter((film) => film.id !== id);
+    setCart([...newObj]);
   };
 
-  // Valor proporcionado por el proveedor del contexto
-  const cartContextValue = {
-    cart,
-    addToCart,
-    removeFromCart,
-  };*/
-
-const CartProvider = ({ children }) => {
-  const [filmCart, setFilmCart] = useState([]);
-
-  const addToCart = (film, counter) => {
-    console.log("cantidad agregada", counter);
-
-    const newObj = {
-      item: film,
-      counter,
-    };
-
-    setFilmCart(...films, newObj);
+  const clear = () => {
+    setCart([]);
   };
 
-  const deleteFilm = (id) => {
-    const updatedCart = filmCart.filter((element) => element.id == id);
-    setFilmCart(updatedCart);
+  const isInCart = (id) => {
+    return cart.some((film) => film.id === id);
   };
 
-  const clearCart = () => {
-    setFilmCart([]);
+  const someItemsCart = () => {
+    return cart.reduce((acc, film) => (acc += film.cantidad), 0);
   };
 
-  const isInCart = () => {
-    return films.some((element) => element.id === id);
-  };
-
-  const value = {
-    filmCart,
-    addToCart,
-    deleteFilm,
-    clearCart,
+  const totalCart = () => {
+    return cart.reduce((acc, film) => (acc += film.cantidad * film.precio), 0);
   };
 
   return (
-    <CartContext.Provider value={value}>{children}</CartContext.Provider>
-    /*{cartItems.map((films) => (
-        <Item key={films.id} info={films} />
-      ))}
-      <h2>Películas:</h2>
-      <ul>
-        <li>
-          {films.title} - ${films.price}
-          {cart.find((films) => films.id === films.id) ? (
-            <button onClick={() => removeFromCart(films.id)}>
-              Remover del carrito
-            </button>
-          ) : (
-            <button onClick={() => addToCart(films)}>Agregar al carrito</button>
-          )}
-        </li>
-      </ul>*/
+    <CartContext.Provider
+      value={{ cart, addItem, removeItem, clear, totalCart, someItemsCart }}
+    >
+      {children}
+    </CartContext.Provider>
   );
 };
 
-export default CartProvider;
+export default CartContextProvider;
