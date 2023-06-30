@@ -3,6 +3,8 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { useNavigate } from "react-router-dom";
 import "./Item.css";
+import { Link } from "react-router-dom";
+
 const Item = ({ info }) => {
   const navigate = useNavigate();
 
@@ -22,12 +24,8 @@ const Item = ({ info }) => {
             <Card.Text>{info.genero}</Card.Text>
             <Card.Text>{info.descripcion}</Card.Text>
             <Card.Text>{info.precio}</Card.Text>
-            <Button
-              variant="primary"
-              onClick={() => navigate(`/detalle/${info.id}`)}
-            >
-              ver detalle
-            </Button>
+            <Link to={`/detalle/${info.id}`}>ver detalle</Link>
+            <Link to={`/detalle/${info.id}`}>ver detalle</Link>
           </Card.Body>
         </Card>
       </div>
