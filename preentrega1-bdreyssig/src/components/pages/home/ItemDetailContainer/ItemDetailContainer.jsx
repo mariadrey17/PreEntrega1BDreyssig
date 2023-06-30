@@ -22,7 +22,7 @@ useEffect(()=>{
 
 const {addToCart}=useContext(CartContext)
 const onAdd=(counter)=>{
-  addToCart(counter);
+  addToCart(film,counter);
 
 }
 

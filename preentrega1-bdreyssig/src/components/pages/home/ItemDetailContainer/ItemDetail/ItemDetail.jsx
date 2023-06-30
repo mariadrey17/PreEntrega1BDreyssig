@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import ItemCount from "../../ItemCount";
 import { useState } from "react";
 import React from "react";
+import { Navigate } from "react-router-dom";
 
 const ItemDetail = ({image,nombre,precio,id, genero,categoryId}) => {
  /* const { filmId } = useParams();
@@ -23,7 +24,8 @@ const [item,setItem]=useState(undefined);*/
         <li>{precio}</li>
         <li>{image}</li>
         <li>{categoryId}</li>
-        <li></li>
+      <button variant="primary"
+              onClick={() => Navigate(`/cart`)}> add to cart</button>
       </ul>
         
          

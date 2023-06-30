@@ -33,12 +33,32 @@ const CartProvider = ({ children }) => {
   const addToCart = (film, counter) => {
     console.log("cantidad agregada", counter);
 
-    setFilmCart(film, counter);
+    const newObj = {
+      item: film,
+      counter,
+    };
+
+    setFilmCart(...films, newObj);
+  };
+
+  const deleteFilm = (id) => {
+    const updatedCart = filmCart.filter((element) => element.id == id);
+    setFilmCart(updatedCart);
+  };
+
+  const clearCart = () => {
+    setFilmCart([]);
+  };
+
+  const isInCart = () => {
+    return films.some((element) => element.id === id);
   };
 
   const value = {
     filmCart,
     addToCart,
+    deleteFilm,
+    clearCart,
   };
 
   return (
