@@ -6,7 +6,7 @@
     import CartWidget from './CartWidget/CartWidget';
     import './nav.css';
     import logo from '../../Assets/img/logo.jpg';
-    import ItemCount from '../pages/home/ItemCount';
+    import ItemCount from '../pages/home/ItemDetailContainer/ItemCount/ItemCount';
     import {Link, NavLink} from 'react-router-dom';
 
 

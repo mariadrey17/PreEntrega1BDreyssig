@@ -1,6 +1,6 @@
 import { Button } from "bootstrap";
 import React from "react";
-import ItemCount from "../../pages/home/ItemCount";
+import ItemCount from "../../pages/home/ItemDetailContainer/ItemCount/ItemCount";
 
 
 import { BiCartAdd } from "react-icons/bi" ; 
