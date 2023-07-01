@@ -25,7 +25,6 @@ const Item = ({ info }) => {
             <Card.Text>{info.descripcion}</Card.Text>
             <Card.Text>{info.precio}</Card.Text>
             <Link to={`/detalle/${info.id}`}>ver detalle</Link>
-            <Link to={`/detalle/${info.id}`}>ver detalle</Link>
           </Card.Body>
         </Card>
       </div>
