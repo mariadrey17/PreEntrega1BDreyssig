@@ -39,8 +39,8 @@ const handleOnAdd=(quantity)=>{
        
         
       <div>
-        {/*<ItemCount initial ={0} films={6} onAdd={(counter=> console.log('cantidad agregada',counter))}/>*/}
-        <ItemCount initial ={0} films={6} onAdd={{handleOnAdd}}/>
+        <ItemCount initial ={0} films={6} onAdd={(counter=> console.log('cantidad agregada',counter))}/>
+
 
         </div>
         
