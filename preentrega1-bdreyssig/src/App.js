@@ -12,6 +12,7 @@ import Peliculas from "./components/pages/Peliculas/peliculas";
 import "./App.css";
 import Series from "./components/pages/Series/Series";
 import { BrowserRouter, Route, Routes, NavLink, Link } from "react-router-dom";
+
 import IniciarSesion from "./components/Layouts/Formularios/IniciarSesion/IniciarSesion";
 import Footer from "./components/pages/Footer/Footer";
 import Contacto from "./components/pages/Contacto/Contacto";
