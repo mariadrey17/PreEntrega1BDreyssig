@@ -30,11 +30,14 @@ const CartWidget = () => {
           to="/Cart"
           className="CartWidget"
           style={{ display: totalCart > 0 ? "block" : "none" }}
+          
+         
         >
+          
           <BiCartAdd />
           <span>{totalCart}</span>
         </Link>
-        <p>Carrito: {totalCart} {onAdd} </p>
+        <p> {totalCart} {onAdd} </p>
       </button>
     
       {film && (

@@ -23,3 +23,4 @@ const Cart = () => {
 
   <p> Total:{totalCart()}</p>;
 };
+export default Cart;
