@@ -18,6 +18,11 @@ const CartWidget = () => {
     addItem(filmToAdd, filmToAdd.cantidad);
   };
 
+  
+  const onAdd= (quantity)=>{
+    ('comprastes ${quantity} unidades');
+     }
+
   return (
     <div>
       <button onClick={handleAddToCart}>
@@ -29,7 +34,7 @@ const CartWidget = () => {
           <BiCartAdd />
           <span>{totalCart}</span>
         </Link>
-        <p>Carrito: {totalCart} elementos</p>
+        <p>Carrito: {totalCart} {onAdd} </p>
       </button>
     
       {film && (
@@ -53,9 +58,6 @@ export default CartWidget;
 
 
 
-   /* const onAdd= (quantity)=>{
-        console.log('comprastes ${quantity} unidades');
-        }*/
   
        
             {/*<Link  to = '/Cart'className="CartWidget" style ={{display:totalCart>0? 'block' :'none'}}>
