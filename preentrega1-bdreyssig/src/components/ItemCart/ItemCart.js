@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-
+import Item from "../pages/home/ItemListContainer/ItemList/Item/Item";
 const ItemCart = ({ info }) => {
   const { removeItem } = useContext;
   return (
@@ -10,7 +10,7 @@ const ItemCart = ({ info }) => {
         <p>Cantidad: {info.cantidad} </p>
         <p>Precio : {info.precio} </p>
         <p>Total: {info.quantity} </p>
-        <button onClick={() => removeItem(item.id)}>Eliminar</button>
+        <button onClick={() => removeItem(Item.id)}>Eliminar</button>
       </div>
     </div>
   );

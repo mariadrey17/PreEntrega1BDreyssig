@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { CartContext } from "./CartContext";
+import { CartContext } from "../context/CartContext";
 import ItemCart from "../ItemCart/ItemCart";
 
 const Cart = () => {
-  const { cart, totalCart } = useContext();
+  const { cart, totalCart } = useContext(CartContext);
 
   if (cart.length === 0) {
     return (
@@ -15,12 +15,13 @@ const Cart = () => {
     );
   }
 
-  return;
-
-  {
-    cart.map((item) => <ItemCart key={item.info.titulo} item={item} />);
-  }
-
-  <p> Total:{totalCart()}</p>;
+  return (
+    <>
+      {cart.map((item) => (
+        <ItemCart key={item.info.titulo} item={item} />
+      ))}
+      <p> Total:{totalCart()}</p>
+    </>
+  );
 };
 export default Cart;

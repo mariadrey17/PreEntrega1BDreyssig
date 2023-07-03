@@ -23,6 +23,7 @@ const ItemCount = ({ initial, onAdd }) => {
     const [itemCount, setItemCount] = useState(0);
   
     const handleAddToCart = () => {
+      onAdd(counter)
       setGoToCart(true);
     };
   
