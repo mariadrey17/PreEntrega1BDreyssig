@@ -42,7 +42,7 @@ const handleOnAdd=(quantity)=>{
         <ItemCount initial ={0} films={6} onAdd={(counter=> console.log('cantidad agregada',counter))}/>
 
 
-        </div>
+  </div>
         
     
 

@@ -26,6 +26,7 @@ const CartWidget = () => {
   return (
     <div>
       <button onClick={handleAddToCart}>
+      < BiCartAdd>
         <Link
           to="/Cart"
           className="CartWidget"
@@ -34,10 +35,12 @@ const CartWidget = () => {
          
         >
           
-          <BiCartAdd />
+      
+        <p>0</p>
           <span>{totalCart}</span>
         </Link>
         <p> {totalCart} {onAdd} </p>
+        </BiCartAdd>
       </button>
     
       {film && (

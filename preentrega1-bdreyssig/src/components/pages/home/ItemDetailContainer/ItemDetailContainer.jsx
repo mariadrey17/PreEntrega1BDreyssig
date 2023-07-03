@@ -2,12 +2,58 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail/ItemDetail";
-import { getFilmsById } from "../../../../datos/peliculas";
+import { getFilmsById } from "../../../../services/firebase/firebaseConfig";
 import { CartContext } from "../../../context/CartContext";
 import { useContext } from "react";
 
 
-const ItemDetailContainer =()=>{
+
+
+
+
+
+const ItemDetailContainer = () => {
+  const [film, setFilm] = useState({});
+  const { id } = useParams();
+  const { addToCart } = useContext(CartContext);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await getFilmsById(id);
+        setFilm(response);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchData();
+  }, [id]);
+
+  const onAdd = (counter) => {
+    addToCart(film, counter);
+  };
+
+  return (
+    <div className="ItemDetailContainer">
+      <ItemDetail film={film}   
+       nombre={film.nombre}
+          genero={film.genero}
+          precio={film.precio}
+          image ={film.image}
+          categoryId={film.categoryId} />
+     
+    </div>
+  );
+};
+
+export default ItemDetailContainer;
+
+
+
+
+
+/*const ItemDetailContainer =()=>{
   const [film ,setFilm]=useState({})
   const{id}=useParams();
 useEffect(()=>{
@@ -24,7 +70,7 @@ const {addToCart}=useContext(CartContext)
 const onAdd=(counter)=>{
   addToCart(film,counter);
 
-}
+}*/   //este primer fragmento funciona
 
 /*return (
 <div className="ItemDetailContainer">
@@ -67,7 +113,8 @@ getData.then(res=>setData(res));
   const { id } = useParams();
   console.log(id);
   if (!stockrecomendados)*/
-    return (
+   //este funcionaparte 2 del primer fragmento sigue aca 
+   /*return (
       <div>
         Cargando .... espere en breve estará listo !
         <ItemDetail    id={film.id}
@@ -83,4 +130,4 @@ getData.then(res=>setData(res));
       </div>
     );
 };
-export default ItemDetailContainer;
+export default ItemDetailContainer;*/

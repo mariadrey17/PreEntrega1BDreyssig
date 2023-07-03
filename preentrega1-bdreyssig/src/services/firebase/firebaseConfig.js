@@ -1,7 +1,14 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getFirestore } from "firebase/firestore";
+import {
+  getFirestore,
+  getDocs,
+  collection,
+  where,
+  query,
+  getDoc,
+} from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -21,3 +28,67 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 const analytics = getAnalytics(app);
+
+export const getFilms = (getDocs, collectionName) => {
+  return new Promise((resolve, reject) => {
+    const db = getFirestore();
+    const filmsCollection = collection(db, collectionName);
+
+    getDocs(filmsCollection)
+      .then((querySnapshot) => {
+        const films = [];
+        querySnapshot.forEach((doc) => {
+          films.push(doc.data());
+        });
+        resolve(films);
+      })
+      .catch((error) => {
+        reject(error);
+      });
+  });
+};
+
+export const getFilmsById = async (id) => {
+  const db = getFirestore(); // Obtén la instancia de Firestore
+
+  // Crea una consulta para obtener los documentos con el campo "id" igual al valor proporcionado
+  const q = query(collection(db, "films"), where("id", "==", parseInt(id)));
+
+  try {
+    const querySnapshot = await getDoc(q); // Ejecuta la consulta y obtén los resultados
+
+    if (querySnapshot.empty) {
+      return null; // No se encontraron documentos que coincidan con el ID proporcionado
+    }
+
+    // Si se encontraron documentos, devuelve el primero de ellos
+    const document = querySnapshot.docs[0];
+    return document.data();
+  } catch (error) {
+    console.error("Error retrieving film document:", error);
+    throw error;
+  }
+};
+
+export const getFilmsByCategory = async (categoryId) => {
+  try {
+    const filmsCollectionRef = collection(db, "films"); // Reemplaza 'films' con el nombre de tu colección en Firestore
+    const filmsQuery = query(
+      filmsCollectionRef,
+      where("categoryId", "==", categoryId)
+    );
+
+    const querySnapshot = await getDoc(filmsQuery);
+    const films = [];
+
+    querySnapshot.forEach((doc) => {
+      const film = doc.data();
+      films.push(film);
+    });
+
+    return films;
+  } catch (error) {
+    console.error("Error getting films by category:", error);
+    throw error;
+  }
+};
