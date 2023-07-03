@@ -1,38 +1,22 @@
-import React, { useContext, useEffect, useState } from "react";
+
+import React, { useEffect, useState } from "react";
 import ItemList from "./ItemList/Item.List";
 import { useParams } from "react-router-dom";
 import { getFilms, getFilmsByCategory } from "../../../../services/firebase/firebaseConfig";
-import { CartContext } from "../../../context/CartContext";
-import {getDocs,collection,getFirestore} from "firebase/firestore";
-//import "firebase/firestore";
+
 
 function ItemListContainer(props) {
     const [films, setFilms] = useState([]);
     const { id } = useParams();
   
-    const getFilms = async (collectionName) => {
-      try {
-        const db = getFirestore();
-        const filmsCollection = collection(db, collectionName);
-        const querySnapshot = await getDocs(filmsCollection);
-  
-        const films = [];
-        querySnapshot.forEach((doc) => {
-          films.push(doc.data());
-        });
-  
-        return films;
-      } catch (error) {
-        throw new Error('Error al obtener los films');
-      }
-    };
+   
   
     useEffect(() => {
       const fetchData = async () => {
         try {
           if (id) {
-            const data = await getFilmsByCategory(id);
-            setFilms(data);
+            const filtereddata = await getFilmsByCategory(id);
+            setFilms( filtereddata);
           } else {
             const data = await getFilms('films');
             setFilms(data);
@@ -44,7 +28,7 @@ function ItemListContainer(props) {
   
       fetchData();
     }, [id]);
-  
+  console.log(films)
     return (
       <div>
         <h2>{props.text}</h2>
@@ -56,6 +40,8 @@ function ItemListContainer(props) {
   }
   
   export default ItemListContainer;
+
+
   
 
 

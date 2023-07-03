@@ -29,23 +29,21 @@ const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 const analytics = getAnalytics(app);
 
-export const getFilms = (getDocs, collectionName) => {
-  return new Promise((resolve, reject) => {
+export const getFilms = async (collectionName) => {
+  try {
     const db = getFirestore();
     const filmsCollection = collection(db, collectionName);
+    const querySnapshot = await getDocs(filmsCollection);
 
-    getDocs(filmsCollection)
-      .then((querySnapshot) => {
-        const films = [];
-        querySnapshot.forEach((doc) => {
-          films.push(doc.data());
-        });
-        resolve(films);
-      })
-      .catch((error) => {
-        reject(error);
-      });
-  });
+    const films = [];
+    querySnapshot.forEach((doc) => {
+      films.push({ id: doc.id, ...doc.data() });
+    });
+
+    return films;
+  } catch (error) {
+    throw new Error("Error al obtener los films");
+  }
 };
 
 export const getFilmsById = async (id) => {
