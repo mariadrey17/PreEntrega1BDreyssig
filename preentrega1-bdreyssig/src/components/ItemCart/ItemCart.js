@@ -1,16 +1,18 @@
 import React, { useContext } from "react";
-import Item from "../pages/home/ItemListContainer/ItemList/Item/Item";
-const ItemCart = ({ info }) => {
-  const { removeItem } = useContext;
+import { CartContext } from "../context/CartContext";
+
+const ItemCart = ({ item }) => {
+  const { removeItem } = useContext(CartContext);
+
   return (
     <div className="ItemCart">
-      <img src={info.image} />
+      <img src={item.image} />
       <div>
-        <p>Titulo: {info.titulo} </p>
-        <p>Cantidad: {info.cantidad} </p>
-        <p>Precio : {info.precio} </p>
-        <p>Total: {info.quantity} </p>
-        <button onClick={() => removeItem(Item.id)}>Eliminar</button>
+        <p>Titulo: {item.titulo} </p>
+        <p>Cantidad: {item.cantidad} </p>
+        <p>Precio : {item.precio} </p>
+        <p>Total: ${item.cantidad * item.precio} </p>
+        <button onClick={() => removeItem(item.id)}>Eliminar</button>
       </div>
     </div>
   );
