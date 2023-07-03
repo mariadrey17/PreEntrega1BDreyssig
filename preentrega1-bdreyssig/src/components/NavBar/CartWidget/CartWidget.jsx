@@ -4,56 +4,26 @@ import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 
 const CartWidget = () => {
-  const { totalCart, addItem, film } = useContext(CartContext);
-
-  const handleAddToCart = () => {
-    // Aquí puedes llamar a la función addItem del contexto para agregar una película al carrito
-    const filmToAdd = {
-      id: 1, // ID de la película que deseas agregar
-      nombre: "Título de la película", // Nombre de la película que deseas agregar
-      precio: 10, // Precio de la película que deseas agregar
-      image: "imagen.jpg", // URL de la imagen de la película que deseas agregar
-      cantidad: 1, // Cantidad de la película que deseas agregar
-    };
-    addItem(filmToAdd, filmToAdd.cantidad);
-  };
-
-  
-  const onAdd= (quantity)=>{
-    ('comprastes ${quantity} unidades');
-     }
+  const { someItemsCart} = useContext(CartContext);
 
   return (
     <div>
-      <button onClick={handleAddToCart}>
-      < BiCartAdd>
+      <button   style={{ display: someItemsCart()> 0 ? "block" : "none" }}>
         <Link
           to="/Cart"
           className="CartWidget"
-          style={{ display: totalCart > 0 ? "block" : "none" }}
+        
           
          
         >
-          
-      
-        <p>0</p>
-          <span>{totalCart}</span>
+      < BiCartAdd/>
+          <span>{someItemsCart()}</span>
+        
         </Link>
-        <p> {totalCart} {onAdd} </p>
-        </BiCartAdd>
+      
       </button>
     
-      {film && (
-        <div>
-          <h1>Película adquirida</h1>
-          <ul>
-            <li>{film.id}</li>
-            <li>{film.nombre}</li>
-            <li>{film.precio}</li>
-            <li>{film.image}</li>
-          </ul>
-        </div>
-      )}
+      
     </div>
   );
 };
