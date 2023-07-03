@@ -9,6 +9,7 @@ import {
   query,
   getDoc,
 } from "firebase/firestore";
+import { doc } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -50,8 +51,8 @@ export const getFilmsById = async (id) => {
   const db = getFirestore(); // Obtén la instancia de Firestore
 
   // Crea una consulta para obtener los documentos con el campo "id" igual al valor proporcionado
-  const q = query(collection(db, "films"), where("id", "==", parseInt(id)));
-
+  const q = doc(db, "films", id);
+  //traemos el documento
   try {
     const querySnapshot = await getDoc(q); // Ejecuta la consulta y obtén los resultados
 
@@ -60,8 +61,8 @@ export const getFilmsById = async (id) => {
     }
 
     // Si se encontraron documentos, devuelve el primero de ellos
-    const document = querySnapshot.docs[0];
-    return document.data();
+    const document = { id: querySnapshot.id, ...querySnapshot.data() };
+    return document;
   } catch (error) {
     console.error("Error retrieving film document:", error);
     throw error;
@@ -76,12 +77,11 @@ export const getFilmsByCategory = async (categoryId) => {
       where("categoryId", "==", categoryId)
     );
 
-    const querySnapshot = await getDoc(filmsQuery);
-    const films = [];
+    const querySnapshot = await getDocs(filmsQuery);
 
+    const films = [];
     querySnapshot.forEach((doc) => {
-      const film = doc.data();
-      films.push(film);
+      films.push({ id: doc.id, ...doc.data() });
     });
 
     return films;
