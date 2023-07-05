@@ -8,6 +8,7 @@ import {
   where,
   query,
   getDoc,
+  addDoc,
 } from "firebase/firestore";
 import { doc } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use

@@ -3,7 +3,7 @@ import React from "react";
 import "./ItemCount.css";
 import {useState} from "react";
 import films from "../../../../../datos/peliculas";
-
+import { Link } from "react-router-dom";
 
 
 
@@ -46,7 +46,9 @@ const ItemCount = ({ initial, onAdd }) => {
           <div>
             <p>Contador: {itemCount}</p>
             {goToCart ? (
-              <button>Terminar compra</button>
+              <button>
+                 <Link to = '/checkout' >terminar compra</Link>
+                </button>
             ) : (
               <button onClick={handleAddToCart}>Agregar al carrito</button>
             )}
