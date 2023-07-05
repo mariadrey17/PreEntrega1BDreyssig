@@ -5,9 +5,9 @@ import { getFirestore } from "firebase/firestore";
 // Configurando la referencia a la colección de Firestore
 const firestore = getFirestore();
 const ordersCollectionRef = collection(firestore, "orden"); // Reemplazando 'orden' con el nombre de tu colección
-const [orderId, setOrderId] = useState("");
 
 function Checkout() {
+  const [orderId, setOrderId] = useState("");
   const enviarOrden = () => {
     const orden = {
       comprador: { name: "", email: "" },
@@ -16,6 +16,7 @@ function Checkout() {
     };
     const db = getFirestore();
     const ordenesCollection = collection(db, "ordenes");
+
     addDoc(ordenesCollection, orden).then((id) => setOrderId(id));
   };
 
