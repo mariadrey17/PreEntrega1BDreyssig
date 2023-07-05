@@ -1,56 +1,50 @@
 import React, { useState } from "react";
 import { collection, addDoc } from "firebase/firestore";
 import { getFirestore } from "firebase/firestore";
-
-// Configurando la referencia a la colección de Firestore
-const firestore = getFirestore();
-const ordersCollectionRef = collection(firestore, "orden"); // Reemplazando 'orden' con el nombre de tu colección
+import Swal from "sweetalert2";
 
 function Checkout() {
-  const [setOrderId] = useState("");
+  const [clientName, setClientName] = useState("");
+  const [email, setEmail] = useState("");
+  const [filmName, setFilmName] = useState("");
+  const [quantity, setQuantity] = useState("");
+  const [deliveryDate, setDeliveryDate] = useState("");
 
-  const db = getFirestore();
-  const ordenesCollection = collection(db, "ordenes");
+  const handleSubmit = async (event) => {
+    event.preventDefault();
 
-  addDoc(ordenesCollection, orden).then((id) => setOrderId(id));
-}
+    // Creando un objeto con los valores del formulario
+    const orderData = {
+      clientName,
+      email,
+      filmName,
+      quantity,
+      deliveryDate,
+    };
 
-const [clientName, setClientName] = useState("");
-const [email, setEmail] = useState("");
-const [filmName, setFilmName] = useState("");
-const [quantity, setQuantity] = useState("");
-const [deliveryDate, setDeliveryDate] = useState("");
+    try {
+      // Agregando los valores a la colección de Firestore
+      // Configurando la referencia a la colección de Firestore
+      const firestore = getFirestore();
+      const ordersCollectionRef = collection(firestore, "orden"); // Reemplazando 'orden' con el nombre de tu colección
+      const docRef = await addDoc(ordersCollectionRef, orderData);
+      //console.log("Orden de compra enviada correctamente. ID:", docRef.id);
 
-const handleSubmit = async (event) => {
-  event.preventDefault();
-
-  // Creando un objeto con los valores del formulario
-  const orderData = {
-    clientName,
-    email,
-    filmName,
-    quantity,
-    deliveryDate,
+      Swal.fire({
+        title: `Orden de compra enviada correctamente. ID:", ${docRef.id}`,
+        icon: "success",
+        confirmButtonText: "Gracias por su compra",
+      });
+      // Reiniciando los campos del formulario después de enviar los valores
+      setClientName("");
+      setEmail("");
+      setFilmName("");
+      setQuantity("");
+      setDeliveryDate("");
+    } catch (error) {
+      console.error("Error al enviar la orden de compra:", error);
+    }
   };
-
-  try {
-    // Agregando los valores a la colección de Firestore
-    // Configurando la referencia a la colección de Firestore
-    const firestore = getFirestore();
-    const ordersCollectionRef = collection(firestore, "orden"); // Reemplazando 'orden' con el nombre de tu colección
-    const docRef = await addDoc(ordersCollectionRef, orderData);
-    console.log("Orden de compra enviada correctamente. ID:", docRef.id);
-
-    // Reiniciando los campos del formulario después de enviar los valores
-    setClientName("");
-    setEmail("");
-    setFilmName("");
-    setQuantity("");
-    setDeliveryDate("");
-  } catch (error) {
-    console.error("Error al enviar la orden de compra:", error);
-  }
-
   return (
     <form onSubmit={handleSubmit}>
       <label>
@@ -97,6 +91,6 @@ const handleSubmit = async (event) => {
       <button type="submit">Enviar orden de compra</button>
     </form>
   );
-};
+}
 
 export default Checkout;
