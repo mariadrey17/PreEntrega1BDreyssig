@@ -7,20 +7,16 @@ const firestore = getFirestore();
 const ordersCollectionRef = collection(firestore, "orden"); // Reemplazando 'orden' con el nombre de tu colección
 
 function Checkout() {
-
-
-const enviarOrden=()=> {
-    const orden={
-        comprador:{name :"", email:""},
-        filmName:[{name: "skyrojo" ,price:2000}],
-        TotalCart:2000
+  const enviarOrden = () => {
+    const orden = {
+      comprador: { name: "", email: "" },
+      filmName: [{ name: "skyrojo", price: 2000 }],
+      TotalCart: 2000,
     };
-    const db =getFirestore();
-    const ordenesCollection=collection (db,"ordenes");
-    addDoc (ordenesCollection,orden).then({id}=>setOrderId(id));
-}
-
-
+    const db = getFirestore();
+    const ordenesCollection = collection(db, "ordenes");
+    addDoc(ordenesCollection, orden).then((id) => setOrderId(id));
+  };
 
   const [clientName, setClientName] = useState("");
   const [email, setEmail] = useState("");
