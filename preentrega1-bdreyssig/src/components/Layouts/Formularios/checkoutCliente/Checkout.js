@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { collection, addDoc } from "firebase/firestore";
 import { getFirestore } from "firebase/firestore";
 
-// Configura la referencia a la colección de Firestore
+// Configurando la referencia a la colección de Firestore
 const firestore = getFirestore();
-const ordersCollectionRef = collection(firestore, "orden"); // Reemplaza 'orden' con el nombre de tu colección
+const ordersCollectionRef = collection(firestore, "orden"); // Reemplazando 'orden' con el nombre de tu colección
 
 function Checkout() {
 
@@ -31,7 +31,7 @@ const enviarOrden=()=> {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    // Crea un objeto con los valores del formulario
+    // Creando un objeto con los valores del formulario
     const orderData = {
       clientName,
       email,
@@ -41,11 +41,11 @@ const enviarOrden=()=> {
     };
 
     try {
-      // Agrega los valores a la colección de Firestore
+      // Agregando los valores a la colección de Firestore
       const docRef = await addDoc(ordersCollectionRef, orderData);
       console.log("Orden de compra enviada correctamente. ID:", docRef.id);
 
-      // Reinicia los campos del formulario después de enviar los valores
+      // Reiniciando los campos del formulario después de enviar los valores
       setClientName("");
       setEmail("");
       setFilmName("");
