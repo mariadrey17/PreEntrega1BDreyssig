@@ -13,9 +13,9 @@ import ItemListContainer from "./components/pages/home/ItemListContainer/ItemLis
 import ItemDetailContainer from "./components/pages/home/ItemDetailContainer/ItemDetailContainer";
 import Home from "./components/pages/home/Home";
 import CartWidget from "./components/NavBar/CartWidget/CartWidget";
-import CartProvider from "./components/context/CartContext";
+import CartProvider from "./components/Context/CartContext";
 import Cart from "./components/Cart/Cart";
-import Chekcout from "./components/Layouts/Formularios/checkoutCliente/Checkout";
+import Checkout from "./components/Layouts/Formularios/checkoutCliente/CheckoutCliente";
 
 function App() {
   return (
@@ -28,45 +28,11 @@ function App() {
           <Route path="/detalle/:id" element={<ItemDetailContainer />} />
           <Route path="/home" element={<Home />} />
           <Route path="/Cart" element={<Cart />} />
-          <Route path="/Checkout" element={<Chekcout />} />
+          <Route path="/Checkout" element={<Checkout />} />
         </Routes>
         <Footer />
       </BrowserRouter>
     </CartProvider>
-
-  );
-}
-
-export default App;
-
-
-
-
-
-
-<>
-<Estrenos>
-
-
-</Estrenos>
-
-</>
-
-
-</Home>
-
-<Peliculas>
-
-</Peliculas>
-
-<Series></Series>
-
-
-<Contacto/>
-
-
-
-<Footer/>*/
   );
 }
 
