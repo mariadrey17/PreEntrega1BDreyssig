@@ -4,6 +4,8 @@ import Estrenos from "./Estrenos/Estrenos";
 
 import Form from "../../Layouts/Formularios/Formulario";
 import ItemListContainer from "./ItemListContainer/ItemListContainer";
+import Peliculas from "../Peliculas/peliculas";
+import CardSeries from "../Series/CardSeries/CardSeries";
 
 
 const Home=()=> {
@@ -28,10 +30,11 @@ const Home=()=> {
         
         </div>
 
+        <Peliculas></Peliculas>
+        <CardSeries></CardSeries>
 
-        <div>
-            <p className="homeText ">Queres comunicarte con nosotros: <Link  to="/contacto"  className="linkHome">Ir a contacto</Link>click acá</p> 
-        </div>
+
+
         
         
 
