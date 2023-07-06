@@ -1,4 +1,4 @@
-const films =
+/*const films =
   //array de stock de films
   [
     {
@@ -85,4 +85,4 @@ export const getFilmsByCategory = async (categoryId) => {
   return new Promise((resolve, reject) => {
     resolve(films.filter((category) => category.categoryId === categoryId));
   });
-};
+};*/
