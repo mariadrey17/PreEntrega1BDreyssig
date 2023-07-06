@@ -1,32 +1,42 @@
+
 import React, { useEffect, useState } from "react";
 import ItemList from "./ItemList/ItemList";
 import { useParams } from "react-router-dom";
-import { getFilms, getFilmsByCategory } from "../../../../datos/peliculas";
-
-
+import { getFilms, getFilmsByCategory } from "../../../../services/firebase/firebaseConfig";
 
 
 function ItemListContainer(props) {
     const [films, setFilms] = useState([]);
     const { id } = useParams();
+  
+   
+  
     useEffect(() => {
-        if (id) {
-            getFilmsByCategory(id).then((data) => {
-                setFilms(data);
-            })
-        }else {
-            getFilms().then((data) => {
-                setFilms(data);
-            });
+      const fetchData = async () => {
+        try {
+          if (id) {
+            const filtereddata = await getFilmsByCategory(id);
+            setFilms( filtereddata);
+          } else {
+            const data = await getFilms('films');
+            setFilms(data);
+          }
+        } catch (error) {
+          console.error(error);
         }
-    }, [id])
+      };
+  
+      fetchData();
+    }, [id]);
+  console.log(films)
     return (
+      <div>
+        <h2>{props.text}</h2>
         <div>
-            <h2>{props.text}  </h2>
-            <div>
-                <ItemList data={films} />
-            </div>
+          <ItemList data={films} />
         </div>
+      </div>
     );
-}
-export default ItemListContainer;
+  }
+  
+  export default ItemListContainer;
