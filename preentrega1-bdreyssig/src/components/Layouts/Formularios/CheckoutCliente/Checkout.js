@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { collection, addDoc } from "firebase/firestore";
 import { getFirestore } from "firebase/firestore";
 import Swal from "sweetalert2";
+import "../CheckoutCliente/Checkout.css";
 
 function Checkout() {
   const [clientName, setClientName] = useState("");
@@ -46,8 +47,8 @@ function Checkout() {
     }
   };
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
+    <form className="clientDatos" onSubmit={handleSubmit}>
+      <label className="clientForm">
         Nombre delcomprador:
         <input
           type="text"
@@ -55,7 +56,7 @@ function Checkout() {
           onChange={(e) => setClientName(e.target.value)}
         />
       </label>
-      <label>
+      <label className="clientForm">
         Email:
         <input
           type="text"
@@ -63,7 +64,7 @@ function Checkout() {
           onChange={(e) => setEmail(e.target.value)}
         />
       </label>
-      <label>
+      <label className="clientForm">
         Nombre del film:
         <input
           type="text"
@@ -71,7 +72,7 @@ function Checkout() {
           onChange={(e) => setFilmName(e.target.value)}
         />
       </label>
-      <label>
+      <label className="clientForm">
         Cantidad:
         <input
           type="number"
@@ -79,7 +80,7 @@ function Checkout() {
           onChange={(e) => setQuantity(e.target.value)}
         />
       </label>
-      <label>
+      <label className="clientForm">
         Fecha de entrega:
         <input
           type="date"
