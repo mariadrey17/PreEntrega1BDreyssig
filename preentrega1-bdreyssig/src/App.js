@@ -15,7 +15,7 @@ import Home from "./components/pages/home/Home";
 import CartWidget from "./components/NavBar/CartWidget/CartWidget";
 import CartProvider from "./components/Context/CartContext";
 import Cart from "./components/Cart/Cart";
-import Checkout from "./components/Layouts/Formularios/checkoutCliente/CheckoutCliente";
+import Checkout from "../src/components/Layouts/Formularios/CheckoutCliente/Checkout";
 
 function App() {
   return (
