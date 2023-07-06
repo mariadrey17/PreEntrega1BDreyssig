@@ -1,24 +1,31 @@
-import { Button } from "bootstrap";
-import React from "react";
+import React, { useContext } from "react";
+import { BiCartAdd } from "react-icons/bi";
+import { CartContext } from "../../context/CartContext";
+import { Link } from "react-router-dom";
 
-import { BiCartAdd } from "react-icons/bi" ; 
+const CartWidget = () => {
+  const { someItemsCart} = useContext(CartContext);
 
-
-export const CartWidget =()=>{
-    return (
-        <div>
-    <button>
-        < BiCartAdd></BiCartAdd>
-        <p>0</p>
-    </button>
+  return (
+    <div>
+      <button   style={{ display: someItemsCart()> 0 ? "block" : "none" }}>
+        <Link
+          to="/Cart"
+          className="CartWidget"
+        
+          
+         
+        >
+      < BiCartAdd/>
+          <span>{someItemsCart()}</span>
+        
+        </Link>
+      
+      </button>
     
+      
+    </div>
+  );
+};
 
-
-
-        </div>
-
-    
-    );
-}
-
-export default CartWidget ;
+export default CartWidget;
