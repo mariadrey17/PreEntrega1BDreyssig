@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import ItemList from "./ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import { getFilms, getFilmsByCategory } from "../../../../services/firebase/firebaseConfig";
+import { Link } from "react-router-dom";
 
 
 function ItemListContainer(props) {
@@ -35,6 +36,7 @@ function ItemListContainer(props) {
         <div>
           <ItemList data={films} />
         </div>
+        <p className="iListCtext">  login para ver mas peliculas y series <Link  to ='/home'>ir a home</Link></p>
       </div>
     );
   }

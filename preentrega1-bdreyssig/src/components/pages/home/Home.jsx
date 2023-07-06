@@ -15,7 +15,7 @@ const Home=()=> {
 
         <div className="container-home">   
             <div className="app">
-        <ItemListContainer text ="Bienvenidos"/>
+     
         </div>
 
         

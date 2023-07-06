@@ -8,3 +8,8 @@ p.headerP {
 div.headerInicio {
   background-image: url(../../../../Assets/img/corn\ fondo.jpg);
 }
+
+p.iListCtext {
+  font-size: 25px;
+  color: rgb(208, 172, 241);
+}
