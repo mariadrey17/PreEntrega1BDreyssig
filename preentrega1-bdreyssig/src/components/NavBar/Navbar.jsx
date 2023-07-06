@@ -33,6 +33,25 @@ return (
               <NavLink to="/category/peliculas">Películas</NavLink>
               <NavLink to="category/series">Series</NavLink>
              
+              <h2>Categorías</h2>
+<li>
+        <Link to ={`/category/peliculas`}>Peliculas</Link>
+      </li>
+      
+      <li>
+        <Link to ={`/category/series`}>Series</Link>
+      </li>
+
+      <li>
+        <Link to ={`/category/estrenos`}>Estrenos</Link>
+      </li>
+                    
+</div>
+            <li>
+                <NavLink  to="/contacto" >Contacto</NavLink> </li>
+
+            </ul>
+
             </NavDropdown>
             <NavLink to="/contacto">Contacto</NavLink>
           </Nav>
