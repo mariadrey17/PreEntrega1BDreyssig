@@ -20,9 +20,9 @@ return (
 
         <Navbar className='navstyle'>
       <Container  >
-        <h1>VisualFilm Shop</h1>
+        <h1 className='h1enelnav'>VisualFilm Shop</h1>
 
-        <Navbar.Brand to="7home">
+        <Navbar.Brand to="7home" >
           Las Mejores Películas y Series{" "}
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

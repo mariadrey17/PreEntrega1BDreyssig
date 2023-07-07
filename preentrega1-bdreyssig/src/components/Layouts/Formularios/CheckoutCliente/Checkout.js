@@ -56,6 +56,9 @@ function Checkout() {
           onChange={(e) => setClientName(e.target.value)}
         />
       </label>
+      <br></br>
+      <br></br>
+      <br></br>
       <label className="clientForm">
         Email:
         <input
@@ -64,6 +67,10 @@ function Checkout() {
           onChange={(e) => setEmail(e.target.value)}
         />
       </label>
+
+      <br></br>
+      <br></br>
+      <br></br>
       <label className="clientForm">
         Nombre del film:
         <input
@@ -72,6 +79,9 @@ function Checkout() {
           onChange={(e) => setFilmName(e.target.value)}
         />
       </label>
+      <br></br>
+      <br></br>
+      <br></br>
       <label className="clientForm">
         Cantidad:
         <input
@@ -80,6 +90,9 @@ function Checkout() {
           onChange={(e) => setQuantity(e.target.value)}
         />
       </label>
+      <br></br>
+      <br></br>
+      <br></br>
       <label className="clientForm">
         Fecha de entrega:
         <input
@@ -88,6 +101,9 @@ function Checkout() {
           onChange={(e) => setDeliveryDate(e.target.value)}
         />
       </label>
+      <br></br>
+      <br></br>
+      <br></br>
 
       <button type="submit">Enviar orden de compra</button>
     </form>

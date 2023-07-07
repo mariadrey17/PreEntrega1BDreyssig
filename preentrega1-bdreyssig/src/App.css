@@ -61,3 +61,17 @@ li.detailDato {
 ul.ulDetalle {
   background-image: url(../src/Assets/img/detailfondo.jpg);
 }
+
+div.partedelosdatosdelitemcart {
+  text-align: center;
+  background-image: url(../src/Assets/img/completofondocine.jpg);
+  font-size: 20px;
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+p.totalcart {
+  color: #ddb6e5;
+  font-size: 22px;
+}
