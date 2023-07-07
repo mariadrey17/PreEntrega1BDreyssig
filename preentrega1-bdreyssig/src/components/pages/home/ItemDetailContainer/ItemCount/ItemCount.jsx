@@ -39,7 +39,7 @@ const ItemCount = ({ initial, onAdd }) => {
             <span>{counter}</span>
           </button>
   
-          <button disabled={counter >= films} onClick={increase}>
+          <button disabled={counter >= 6} onClick={increase}>
             +
           </button>
   
