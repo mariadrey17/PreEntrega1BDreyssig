@@ -1,3 +1,7 @@
+p.descripcionTextRecomendados.card {
+  height: 17px;
+}
+
 div.divCardMap {
   margin: 1em;
   padding: 1em;
@@ -23,8 +27,4 @@ div.card-body {
 
 p.card-text {
   height: 93px;
-}
-
-p.descripcionTextRecomendados.card {
-  height: 17px;
 }

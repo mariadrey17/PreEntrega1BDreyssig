@@ -36,7 +36,7 @@ function ItemListContainer(props) {
     return (
       <div>
         <h2 className="h2DelListCont">Hola  {props.text}</h2>
-        <div>
+        <div className="contieneListcontainer">
           
           <ItemList data={films} />
          
