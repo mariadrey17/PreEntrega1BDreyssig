@@ -1,4 +1,10 @@
 label {
-  color: rgb(208, 172, 241);
-  font-size: 20px;
+  color: rgb(195, 146, 223);
+  font-size: 25px;
+}
+
+form.clientDatos {
+  background-image: url(../../../../Assets/img/ticketfondo.jpg);
+  background-repeat: no-repeat;
+  text-align: center;
 }
