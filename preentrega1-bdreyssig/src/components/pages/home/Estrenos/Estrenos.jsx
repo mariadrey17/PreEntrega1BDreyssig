@@ -41,9 +41,7 @@ const Estrenos=()=> {
         <ListaPeliculasEstreno></ListaPeliculasEstreno>
         
     
-        <div>
-            <p className="homeText ">Queres comunicarte con nosotros: <Link  to="/contacto"  className="linkHome">Ir a contacto</Link>click acá</p> 
-        </div>
+      
     
     
     

@@ -10,12 +10,23 @@ footer div .elpieultimo {
 h1 {
   text-align: center;
 }
+
+h2 {
+  color: bisque;
+
+  text-align: center;
+}
 div.headerInicio {
   background-image: url(../src/Assets/img/corn\ fondo.jpg);
 }
 
 p.headerP {
   color: rgb(38, 10, 177);
+  font-size: 20px;
+}
+
+p.detalleTitle {
+  color: #ddb6e5;
   font-size: 20px;
 }
 
@@ -26,4 +37,14 @@ p.peliText {
 
 a.linkRecomendados {
   font-size: 25px;
+}
+
+p.paraLinks {
+  font-size: 25px;
+  color: antiquewhite;
+}
+
+li.detailDato {
+  color: #ddb6e5;
+  font-size: 18px;
 }

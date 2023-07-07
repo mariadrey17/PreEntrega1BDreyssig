@@ -12,6 +12,7 @@ import suleiman from '../../../../Assets/img/suleiman.jpg';
 import tierraamarga from '../../../../Assets/img/tierraamarga.jpg';
 import './CardSeries.css';
 
+
 function CardSeries() {
   return (
   
@@ -27,7 +28,7 @@ function CardSeries() {
         siendo especialmente saber cuál será la reacción de Roman y Shiv 
         tras verse derrotados por completo y sin opciones de suceder a su padre al frente de Waystar.
         </Card.Text>
-        <Button variant="primary" >comprar</Button>
+        
       </Card.Body>
     </Card>  
 
@@ -42,7 +43,7 @@ function CardSeries() {
       La serie narra su descenso de un equipo complicado pero próspero a clanes salvajes,
       al tiempo que rastrea las vidas que intentaron reconstruir casi 25 años después.
         </Card.Text>
-        <Button variant="primary">comprar</Button>
+       
       </Card.Body>
     </Card>
 
@@ -54,7 +55,7 @@ function CardSeries() {
         Serie se ambientada 18 años después de la última aparición de Jean-Luc Picard en "Star Trek: Nemesis",
         y encuentra al personaje profundamente afectado por la destrucción de Romulus como se muestra en la película "Star Trek"
         </Card.Text>
-        <Button variant="primary">comprar</Button>
+        
       </Card.Body>
     </Card>
 
@@ -67,7 +68,7 @@ function CardSeries() {
         una adolescente de doble naturaleza que se debate entre el mundo de los mortales 
         y el que se oculta debajo.
         </Card.Text>
-        <Button variant="primary">comprar</Button>
+      
       </Card.Body>
     </Card>
 
@@ -81,7 +82,6 @@ function CardSeries() {
         decidida a demostrar que Ángel mató a su padre, Alex, Giovanna contrata a un misterioso investigador,
         que acaba enamorándose de la modelo.
         </Card.Text>
-        <Button variant="primary">comprar</Button>
       </Card.Body>
     </Card>
 
@@ -94,7 +94,7 @@ function CardSeries() {
         que comienza en 1980,en Marruecos y 
         se extiende hasta la actualidad Rio de Janeiro.
         </Card.Text>
-        <Button variant="primary">comprar</Button>
+      
       </Card.Body>
     </Card>
 
@@ -109,7 +109,7 @@ function CardSeries() {
         que cruzan una de las fronteras más largas del mundo enfrentándose al gobierno de México 
         y la patrulla fronteriza de Estados Unidos.
         </Card.Text>
-        <Button variant="primary">comprar</Button>
+        
       </Card.Body>
     </Card>
 
@@ -124,7 +124,7 @@ function CardSeries() {
         Sus padres,Rosario Soler y Juan Miguez 
         desde ese momento hacen todo lo que esté a su alcance para encontrar y recuperar a su hija
         </Card.Text>
-        <Button variant="primary">comprar</Button>
+       
       </Card.Body>
     </Card>
 
@@ -138,7 +138,7 @@ function CardSeries() {
         cuenta la vida de Solomon I o Suleiman,
         el gran sultán que gobernó todo el imperio otomano expandiendo su territorio
         </Card.Text>
-        <Button variant="primary">comprar</Button>
+       
       </Card.Body>
     </Card>
 
@@ -152,10 +152,10 @@ function CardSeries() {
         y continúa en las tierras fértiles del sur de Turquía.
         Tendrá que afrontar las pruebas del mal,la ambición y la tiranía.
         </Card.Text>
-        <Button variant="primary">comprar</Button>
+        
       </Card.Body>
     </Card>
-        
+  
 </div>
 
   );

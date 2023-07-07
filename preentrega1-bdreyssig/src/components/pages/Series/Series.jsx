@@ -1,4 +1,5 @@
 
+import Footer from "../Footer/Footer";
 import CardSeries from "./CardSeries/CardSeries";
 import "./Series.css";
 
@@ -12,14 +13,14 @@ const Series=()=> {
             
         <h2>Series</h2>  
         
-        <CardSeries></CardSeries>
+      
+    <CardSeries/>
     
     
-    
         
         
         
-        
+        <Footer/>
 
         </div>
         

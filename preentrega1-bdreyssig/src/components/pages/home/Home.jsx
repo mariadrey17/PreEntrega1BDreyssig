@@ -3,9 +3,9 @@ import Estrenos from "./Estrenos/Estrenos";
 
 
 import Form from "../../Layouts/Formularios/Formulario";
-import ItemListContainer from "./ItemListContainer/ItemListContainer";
 import Peliculas from "../Peliculas/peliculas";
-import CardSeries from "../Series/CardSeries/CardSeries";
+import Series from "../Series/Series";
+
 
 const Home=()=> {
 
@@ -27,16 +27,15 @@ const Home=()=> {
 
         <div><h2>Estrenos</h2></div>   
         
-        <Estrenos></Estrenos>
+       <Estrenos/>
 
-        <Peliculas></Peliculas>
+      <Peliculas/>
 
-        <CardSeries></CardSeries>
+        <Series/>
         
         
         
     
-        
         
 
         </div>

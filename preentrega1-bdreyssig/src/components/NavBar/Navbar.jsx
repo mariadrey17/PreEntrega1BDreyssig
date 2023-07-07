@@ -27,13 +27,17 @@ return (
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+         <Nav className="me-auto">
              <NavDropdown title="Categorias" id="basic-nav-dropdown">
-              <NavLink to="category/home">Estrenos</NavLink >
+             <NavLink to="category/estrenos">Estrenos</NavLink >
               <NavLink to="/category/peliculas">Películas</NavLink>
               <NavLink to="category/series">Series</NavLink>
+                    
 
+         
+               
 
+           
             </NavDropdown>
             <NavLink to="/contacto">Contacto</NavLink>
           </Nav>

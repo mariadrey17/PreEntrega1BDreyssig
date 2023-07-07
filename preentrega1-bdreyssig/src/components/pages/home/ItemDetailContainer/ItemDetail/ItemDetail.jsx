@@ -23,15 +23,15 @@ const handleOnAdd=(quantity)=>{
     
   return (
     <div className="SectionFilm">
-      <p> Este es el detalle del film </p>
+      <p className="detalleTitle"> Este es el detalle del film </p>
 
       <ul>
-        <li>{id}</li>
-        <li>{titulo}</li>
-        <li>{genero}</li>
-        <li>{precio}</li>
+        <li className="detailDato">{id}</li>
+        <li className="detailDato" >{titulo}</li>
+        <li className="detailDato" >{genero}</li>
+        <li className="detailDato" >{precio}</li>
         <img src= {image}/>
-        <li>{categoryId}</li>
+        <li className="detailDato" >{categoryId}</li>
 </ul>
   
 <Link to={`/cart`}>ir al carrito</Link> 
@@ -43,7 +43,10 @@ const handleOnAdd=(quantity)=>{
 
 
   </div>
-        
+  <br />
+  <br />
+  <br />
+  <p className="paraLinks"> para comunicarte con nosotros  <Link  to ='/contacto'> ir a contacto</Link></p>
     
 
 
