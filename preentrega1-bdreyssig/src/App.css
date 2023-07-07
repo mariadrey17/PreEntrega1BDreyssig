@@ -35,7 +35,8 @@ p.headerP {
 
 p.detalleTitle {
   color: #ddb6e5;
-  font-size: 20px;
+
+  font-size: 35px;
 }
 
 p.peliText {
@@ -53,6 +54,10 @@ p.paraLinks {
 }
 
 li.detailDato {
-  color: #ddb6e5;
-  font-size: 18px;
+  color: #fefcff;
+  font-size: 28px;
+}
+
+ul.ulDetalle {
+  background-image: url(../src/Assets/img/detailfondo.jpg);
 }

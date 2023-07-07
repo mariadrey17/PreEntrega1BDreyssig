@@ -25,7 +25,7 @@ const handleOnAdd=(quantity)=>{
     <div className="SectionFilm">
       <p className="detalleTitle"> Este es el detalle del film </p>
 
-      <ul>
+      <ul className="ulDetalle">
         <li className="detailDato">{id}</li>
         <li className="detailDato" >{titulo}</li>
         <li className="detailDato" >{genero}</li>
